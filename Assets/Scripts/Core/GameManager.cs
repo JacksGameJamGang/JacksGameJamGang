@@ -4,11 +4,12 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     public int Lives { get; private set; }
+    public bool PlayerIsDead { get; private set; } = false;
+    public PlayerCharacter PlayerCharacter { get; private set; }
     
     [SerializeField] private int initialLives = 3;
     
     public event Action<PlayerCharacter> OnSetPlayerToFollow;
-    public PlayerCharacter PlayerCharacter { get; private set; }
     
     private GameManager()
     {

@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
+    public GameObject robotPrefab;
+    public GameObject dogPrefab;
+    private GameObject currentCharacter;
     public int Lives { get; private set; }
     public bool PlayerIsDead { get; private set; } = false;
     public PlayerCharacter PlayerCharacter { get; private set; }
@@ -43,4 +46,13 @@ public class GameManager : Singleton<GameManager>
         PlayerCharacter = player;
         OnSetPlayerToFollow?.Invoke(player);
     }
+
+    public void SetControlledCharacter(GameObject character)
+    {
+        currentCharacter = character;
+        // A CameraFollow script should be added later to the camera component
+        // Camera.main.GetComponent<CameraFollow>().target = currentCharacter;
+    }
+
+    public GameObject GetControlledCharacter() { return currentCharacter; }
 }

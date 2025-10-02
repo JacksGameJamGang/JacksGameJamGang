@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4153738946964556514, guid: 51c62923b0b25984ca9bd3ae3110b08e, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Robot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -441,6 +441,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b03ca647dc42e8870f7dbc387a2d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  robotPrefab: {fileID: 0}
+  dogPrefab: {fileID: 0}
   initialLives: 3
 --- !u!1 &1323777273
 GameObject:
@@ -629,6 +631,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8185214408319448626, guid: 25e03842f2ba70042a77034092d85cf7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508861848952407981, guid: 25e03842f2ba70042a77034092d85cf7, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

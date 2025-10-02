@@ -5,7 +5,7 @@ public enum GameState
 {
     MainMenu,
     Playing,
-    PlayerDead,
+    Corruption,
     Paused,
     GameOver,
 }
@@ -35,4 +35,5 @@ public class GameStateManager : Singleton<GameStateManager>
             Debug.Log($"Game State changed to: {newState}");
         }
     }
+
 }

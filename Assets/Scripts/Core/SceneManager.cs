@@ -1,21 +1,10 @@
-using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneManager : MonoBehaviour
+public class SceneManager : Singleton<SceneManager>
 {
-    public static SceneManager Instance { get; private set; }
-
-    private void Awake()
+    private void Start()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        LoadScene("MainMenuScene");
     }
 
     public void LoadScene(string sceneName)

@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class CorruptionStateHandler : MonoBehaviour
+public class RobotDeathStateHandler : MonoBehaviour
 {
-    [SerializeField] private float corruptionTimer = 30f;
+    [SerializeField] private float downTimeBeforeTermination = 30f;
     private float timeRemaining;
-    private bool corruptionActive = false;
-    
+    private bool isRobotDown = false;
+
     void Start()
     {
         GameStateManager.Instance.OnGameStateChange += HandleGameStateChange;
@@ -16,47 +16,45 @@ public class CorruptionStateHandler : MonoBehaviour
         GameStateManager.Instance.OnGameStateChange -= HandleGameStateChange;
     }
 
-    
+
     void Update()
     {
-        if (!corruptionActive) return;
+        if (!isRobotDown) return;
 
         timeRemaining -= Time.deltaTime;
 
         if (timeRemaining <= 0)
         {
             GameStateManager.Instance.ChangeState(GameState.GameOver);
-            corruptionActive = false;
+            isRobotDown = false;
         }
     }
 
     private void HandleGameStateChange(GameState newState)
     {
-        if (newState == GameState.Corruption)
+        if (newState == GameState.RobotTempDeath)
         {
-            StartCorruption();
+            KillRobot();
         }
         else
         {
-            corruptionActive = false;
+            isRobotDown = false;
         }
     }
 
-    private void StartCorruption()
+    private void KillRobot()
     {
         // Start timer
-        timeRemaining = corruptionTimer;
-        corruptionActive = true;
+        timeRemaining = downTimeBeforeTermination;
+        isRobotDown = true;
 
         // Switch control to Dog
         GameManager.Instance.SetControlledCharacter(GameManager.Instance.dogPrefab);
     }
 
-    private void EndCorruption()
+    private void ReviveRobot()
     {
-        Debug.Log("Corruption ended early!");
-
-        corruptionActive = false;  // stop the timer
+        isRobotDown = false;  // stop the timer
 
         // Reset player back to robot
 

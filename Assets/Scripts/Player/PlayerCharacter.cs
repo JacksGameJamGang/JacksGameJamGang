@@ -18,7 +18,7 @@ public class PlayerCharacter : MonoBehaviour
     {
         if (newState == GameState.Playing)
             GameManager.Instance.SetPlayerToFollow(GameManager.Instance.robotPrefab.GetComponent<PlayerCharacter>());
-        else if (newState == GameState.Corruption)
+        else if (newState == GameState.RobotTempDeath)
             GameManager.Instance.SetPlayerToFollow(GameManager.Instance.dogPrefab.GetComponent<PlayerCharacter>());
 
         if (GameManager.Instance.GetControlledCharacter() == GetComponentInParent<GameObject>())

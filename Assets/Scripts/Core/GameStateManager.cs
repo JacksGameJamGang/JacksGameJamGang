@@ -5,7 +5,7 @@ public enum GameState
 {
     MainMenu,
     Playing,
-    Corruption,
+    RobotTempDeath,
     Paused,
     GameOver,
 }

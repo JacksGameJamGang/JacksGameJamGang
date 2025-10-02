@@ -1,5 +1,3 @@
-using NUnit.Framework.Constraints;
-using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -25,11 +23,25 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log("is on ground?" + isGrounded);
-        // Check for grounded status
+        Jump();
+    }
+    
+    private void FixedUpdate()
+    {
+        Movement();
+    }
+
+    private void Movement()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
+        FlipPlayer(horizontalInput);
+    }
+
+    private void Jump()
+    {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
         
-        // Jumping logic
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
@@ -44,13 +56,6 @@ public class PlayerController : MonoBehaviour
         if (isGrounded) jumpCounter = 2;
         */
     }
-    private void FixedUpdate()
-    {
-        // Horizontal movement logic
-        float horizontalInput = Input.GetAxis("Horizontal");
-        rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
-        FlipPlayer(horizontalInput);
-    }
 
     void FlipPlayer(float horizontalInput)
     {
@@ -59,5 +64,4 @@ public class PlayerController : MonoBehaviour
         else if (horizontalInput < 0)
             spriteRenderer.flipX = true;
     }
-
 }

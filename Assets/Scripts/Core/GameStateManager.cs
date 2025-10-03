@@ -35,5 +35,4 @@ public class GameStateManager : Singleton<GameStateManager>
             Debug.Log($"Game State changed to: {newState}");
         }
     }
-
 }

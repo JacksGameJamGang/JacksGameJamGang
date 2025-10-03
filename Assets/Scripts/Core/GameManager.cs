@@ -1,44 +1,25 @@
 ﻿using System;
 using UnityEngine;
 
-public class GameManager : Singleton<GameManager>
+public class GameManager : LocalSingleton<GameManager>
 {
-    public GameObject robotPrefab;
-    public GameObject dogPrefab;
-    private GameObject currentCharacter;
-    public int Lives { get; private set; }
-    public bool PlayerIsDead { get; private set; } = false;
-    public PlayerCharacter PlayerCharacter { get; private set; }
+    [SerializeField] private PlayerController robotController;
+    [SerializeField] private PlayerController dogController;
+    private PlayerController currentCharacter;
     
-    [SerializeField] private int initialLives = 3;
+    public PlayerController RobotController => robotController;
+    public PlayerController DogController => dogController;
+    public PlayerController CurrentCharacter => currentCharacter;
+    public PlayerCharacter PlayerCharacter { get; private set; }
+    public bool PlayerIsDead { get; private set; } = false;
     
     public event Action<PlayerCharacter> OnSetPlayerToFollow;
     
-    private GameManager()
+    public void ResetLevel()
     {
-        Lives = initialLives;
-    }
-
-    public void AddLife(int value)
-    {
-        Lives += value;
-        Debug.Log($"Lives updated: {Lives}");
-    }
-
-    public void LoseLife()
-    {
-        Lives--;
-        // switch to PlayerDead?
-        Debug.Log($"Lives remaining: {Lives}");
-        if (Lives <= 0)
-            GameStateManager.Instance.ChangeState(GameState.GameOver);
-    }
-
-    public void ResetGame()
-    {
-        Lives = 3;
         Debug.Log("Game reset.");
-        GameStateManager.Instance.ChangeState(GameState.MainMenu);
+        //GameStateManager.Instance.ChangeState(GameState.MainMenu);
+        //SceneManager.ReloadScene();
     }
     
     public void SetPlayerToFollow(PlayerCharacter player)
@@ -47,12 +28,10 @@ public class GameManager : Singleton<GameManager>
         OnSetPlayerToFollow?.Invoke(player);
     }
 
-    public void SetControlledCharacter(GameObject character)
+    public void SetControlledCharacter(PlayerController character)
     {
         currentCharacter = character;
         // A CameraFollow script should be added later to the camera component
         // Camera.main.GetComponent<CameraFollow>().target = currentCharacter;
     }
-
-    public GameObject GetControlledCharacter() { return currentCharacter; }
 }

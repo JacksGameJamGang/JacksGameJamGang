@@ -3,8 +3,8 @@ using UnityEngine;
 public class RobotDeathStateHandler : MonoBehaviour
 {
     [SerializeField] private float downTimeBeforeTermination = 30f;
-    private float timeRemaining;
     private bool isRobotDown = false;
+    private float timeRemainingTimer;
 
     void Start()
     {
@@ -16,14 +16,13 @@ public class RobotDeathStateHandler : MonoBehaviour
         GameStateManager.Instance.OnGameStateChange -= HandleGameStateChange;
     }
 
-
     void Update()
     {
         if (!isRobotDown) return;
 
-        timeRemaining -= Time.deltaTime;
+        timeRemainingTimer -= Time.deltaTime;
 
-        if (timeRemaining <= 0)
+        if (timeRemainingTimer <= 0)
         {
             GameStateManager.Instance.ChangeState(GameState.GameOver);
             isRobotDown = false;
@@ -36,20 +35,20 @@ public class RobotDeathStateHandler : MonoBehaviour
         {
             KillRobot();
         }
-        else
-        {
-            isRobotDown = false;
-        }
+        // else
+        // {
+        //     isRobotDown = false;
+        // }
     }
 
     private void KillRobot()
     {
         // Start timer
-        timeRemaining = downTimeBeforeTermination;
+        timeRemainingTimer = downTimeBeforeTermination;
         isRobotDown = true;
 
         // Switch control to Dog
-        GameManager.Instance.SetControlledCharacter(GameManager.Instance.dogPrefab);
+        GameManager.Instance.SetControlledCharacter(GameManager.Instance.DogController);
     }
 
     private void ReviveRobot()
@@ -57,8 +56,7 @@ public class RobotDeathStateHandler : MonoBehaviour
         isRobotDown = false;  // stop the timer
 
         // Reset player back to robot
-
-        GameManager.Instance.SetControlledCharacter(GameManager.Instance.robotPrefab);
+        GameManager.Instance.SetControlledCharacter(GameManager.Instance.RobotController);
 
         // Change game state back to Playing
         GameStateManager.Instance.ChangeState(GameState.Playing);

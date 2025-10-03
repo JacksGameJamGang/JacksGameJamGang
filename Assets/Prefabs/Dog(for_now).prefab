@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8185214408319448626}
   - component: {fileID: 9022783548604867460}
   - component: {fileID: 7477692252002600976}
-  - component: {fileID: 6003411249635030932}
   - component: {fileID: 598566379593289506}
+  - component: {fileID: 6003411249635030932}
+  - component: {fileID: 2892607552607349922}
   - component: {fileID: 7570817560790697249}
-  - component: {fileID: 8508861848952407981}
   m_Layer: 0
   m_Name: Dog(for_now)
   m_TagString: Untagged
@@ -123,23 +123,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6003411249635030932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3858834892432514291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 029268619d2c42b4193ced1dce0201d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DogAIController
-  followDistance: 2
-  followSpeed: 3
-  idleTime: 2
-  interactDistance: 4
-  interactCanvas: {fileID: 3577955669632844576}
 --- !u!60 &598566379593289506
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -156,7 +139,7 @@ PolygonCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -190,6 +173,35 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &6003411249635030932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858834892432514291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 029268619d2c42b4193ced1dce0201d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DogAIController
+  followDistance: 2
+  followSpeed: 3
+  idleTime: 2
+  interactDistance: 4
+  interactCanvas: {fileID: 3577955669632844576}
+--- !u!114 &2892607552607349922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858834892432514291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4812cc8d87d64d13a23d956390ad5b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControlManager
 --- !u!114 &7570817560790697249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,20 +218,8 @@ MonoBehaviour:
   jumpForce: 5
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   groundCheck: {fileID: 0}
---- !u!114 &8508861848952407981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3858834892432514291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e4bba3c141f69c4a924c858da0b2449, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerCharacter
 --- !u!1 &4767914932481382740
 GameObject:
   m_ObjectHideFlags: 0

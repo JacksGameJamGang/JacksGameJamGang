@@ -17,14 +17,21 @@ public class ControlManager : MonoBehaviour
 
     private void HandleGameStateChange(GameState newState)
     {
-        if (newState == GameState.Playing)
-            GameManager.Instance.SetPlayerToFollow(GameManager.Instance.RobotController.GetComponent<PlayerCharacter>());
-        else if (newState == GameState.RobotTempDeath)
-            GameManager.Instance.SetPlayerToFollow(GameManager.Instance.DogController.GetComponent<PlayerCharacter>());
+        // if (newState == GameState.Playing)
+        //     GameManager.Instance.SetPlayerToFollow(GameManager.Instance.RobotController.GetComponent<PlayerCharacter>());
+        // else if (newState == GameState.RobotTempDeath)
+        //     GameManager.Instance.SetPlayerToFollow(GameManager.Instance.DogController.GetComponent<PlayerCharacter>());
+
+
 
         if (GameManager.Instance.CurrentCharacter == localController)
-            GetComponentInParent<PlayerController>().enabled = true;
-        else
+        {
             GetComponentInParent<PlayerController>().enabled = false;
+        }
+        else
+        {
+            GetComponentInParent<PlayerController>().enabled = true;
+            GameManager.Instance.SetControlledCharacter(localController);
+        }
     }
 }

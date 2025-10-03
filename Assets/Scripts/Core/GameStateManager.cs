@@ -3,7 +3,7 @@ using UnityEngine;
 
 public enum GameState
 {
-    MainMenu,
+    Loading,
     Playing,
     RobotTempDeath,
     Paused,
@@ -15,7 +15,7 @@ public enum GameState
 /// It will transmit events when the game state changes so other systems can react accordingly.
 /// such as when the game is paused, we want to stop player movement and show the pause menu.
 /// </summary>
-public class GameStateManager : Singleton<GameStateManager>
+public class GameStateManager : LocalSingleton<GameStateManager>
 {
     public GameState CurrentGameState {get; private set;}
     
@@ -23,9 +23,33 @@ public class GameStateManager : Singleton<GameStateManager>
 
     private void Start()
     {
-        ChangeState(GameState.MainMenu);
+        ChangeState(GameState.Playing); // Loading
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Escape");
+            if (CurrentGameState == GameState.Playing)
+                PauseGame();
+            else if (CurrentGameState == GameState.Paused)
+                ResumeGame();
+        }
     }
     
+    private void PauseGame()
+    {
+        Time.timeScale = 0f;
+        ChangeState(GameState.Paused);
+    }
+
+    private void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        ChangeState(GameState.Playing);
+    }
+
     public void ChangeState(GameState newState)
     {
         if (CurrentGameState != newState)

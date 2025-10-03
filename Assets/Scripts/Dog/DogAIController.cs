@@ -13,6 +13,8 @@ public class DogAIController : MonoBehaviour
         Idle,
         Following,
         Sitting,
+        ControlledByPlayer,
+        InDistress, // idk it's for when robot dies, fully - so game over
     };
     
     [Header("Follow Settings")]
@@ -32,29 +34,33 @@ public class DogAIController : MonoBehaviour
     // just for testing
     private SpriteRenderer spriteRenderer;
 
-    private void Awake()
+    private void Start()
     {
+        GameStateManager.Instance.OnGameStateChange += OnGameStateChange;
+        GameManager.Instance.OnSetPlayerToFollow += HandleSetPlayer;
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void Start()
-    {
-        GameManager.Instance.OnSetPlayerToFollow += HandleSetPlayer;
-    }
-
     private void OnDestroy()
     {
+        GameStateManager.Instance.OnGameStateChange -= OnGameStateChange;
         GameManager.Instance.OnSetPlayerToFollow -= HandleSetPlayer;
     }
 
     private void Update()
     {
+        if (currentState == DogAIState.ControlledByPlayer)
+            return;
+        
         DistanceCheck();
     }
 
     private void FixedUpdate()
     {
+        if (currentState == DogAIState.ControlledByPlayer)
+            return;
+        
         if (player == null)
         {
             if (GameManager.Instance.PlayerCharacter == null || GameManager.Instance.PlayerIsDead)
@@ -71,6 +77,8 @@ public class DogAIController : MonoBehaviour
                 HandleFollowing();
                 break;
             case DogAIState.Sitting:
+                break;
+            case DogAIState.InDistress:
                 break;
             default:
                 break;
@@ -150,5 +158,18 @@ public class DogAIController : MonoBehaviour
         player = obj;
         currentState = DogAIState.Following;
     }
-}
     
+    private void OnGameStateChange(GameState obj)
+    {
+        if (obj == GameState.RobotTempDeath)
+        {
+            currentState = DogAIState.ControlledByPlayer;
+            spriteRenderer.color = Color.magenta; // just for testing
+        }
+        else if (obj == GameState.Playing)
+        {
+            currentState = DogAIState.Following;
+            spriteRenderer.color = Color.red; // just for testing
+        }
+    }
+}

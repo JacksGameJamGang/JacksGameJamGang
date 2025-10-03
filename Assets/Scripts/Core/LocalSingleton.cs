@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
 
-public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+public class LocalSingleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     public static T Instance { get; private set; }
-    
-    protected virtual void Awake()
+
+    private void Awake()
     {
         if (Instance == null)
         {
             Instance = this as T;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {

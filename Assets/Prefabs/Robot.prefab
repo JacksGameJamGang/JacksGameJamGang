@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 2510343708090932380}
   - component: {fileID: 1847260725279301702}
   - component: {fileID: 6334647828908281029}
-  m_Layer: 0
-  m_Name: Player
+  - component: {fileID: 7977631861611495849}
+  m_Layer: 6
+  m_Name: Robot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -8932012113277911772, guid: 98816785306230d46b1cc6a5e9cb9e04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -198,6 +199,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e4bba3c141f69c4a924c858da0b2449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCharacter
+--- !u!114 &7977631861611495849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4153738946964556514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4812cc8d87d64d13a23d956390ad5b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControlManager
 --- !u!1 &4598106853526387659
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using DG.Tweening;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneManager : Singleton<SceneManager>
@@ -29,7 +30,7 @@ public class SceneManager : Singleton<SceneManager>
             yield return UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(currentActiveSceneName);
 
         currentActiveSceneName = sceneName;
-        yield return null; // wait a frame to ensure the scene is fully loaded
+        yield return new WaitForSeconds(0.3f);
         yield return GlobalUIManager.Instance.FadeOut(0.5f).WaitForCompletion();
     }
 

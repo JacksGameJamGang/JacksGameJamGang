@@ -23,7 +23,7 @@ public class GameStateManager : LocalSingleton<GameStateManager>
 
     private void Start()
     {
-        ChangeState(GameState.Playing); // Loading
+        ChangeState(GameState.Loading); // Loading
     }
 
     public void Update()
@@ -49,7 +49,12 @@ public class GameStateManager : LocalSingleton<GameStateManager>
         Time.timeScale = 1f;
         ChangeState(GameState.Playing);
     }
-
+    
+    public void SetModePlaying()
+    {
+        ChangeState(GameState.Playing);
+    }
+    
     public void ChangeState(GameState newState)
     {
         if (CurrentGameState != newState)

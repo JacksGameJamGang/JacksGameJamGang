@@ -14,7 +14,12 @@ public class GameManager : LocalSingleton<GameManager>
     public bool PlayerIsDead { get; private set; } = false;
     
     public event Action<PlayerCharacter> OnSetPlayerToFollow;
-    
+
+    private void Start()
+    {
+        SetControlledCharacter(robotController);
+    }
+
     public void ResetLevel()
     {
         Debug.Log("Game reset.");

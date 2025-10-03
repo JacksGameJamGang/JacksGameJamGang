@@ -16,6 +16,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 36.8
     width: 2048
     height: 1115.2001
@@ -24,6 +25,11 @@ MonoBehaviour:
     width: 1366
     height: 685
 >>>>>>> 9afc042 (3 background png layers)
+=======
+    y: 42.666668
+    width: 1280
+    height: 637.3334
+>>>>>>> 6f388a0 (Cover/menu background)
   m_ShowMode: 4
   m_Title: Game
   m_RootView: {fileID: 4}
@@ -103,12 +109,17 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 2048
     height: 1115.2
 =======
     width: 1366
     height: 685
 >>>>>>> 9afc042 (3 background png layers)
+=======
+    width: 1280
+    height: 637.3333
+>>>>>>> 6f388a0 (Cover/menu background)
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -133,10 +144,14 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 2048
 =======
     width: 1366
 >>>>>>> 9afc042 (3 background png layers)
+=======
+    width: 1280
+>>>>>>> 6f388a0 (Cover/menu background)
     height: 36
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -158,6 +173,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 1095.2
     width: 2048
     height: 20
@@ -166,6 +182,10 @@ MonoBehaviour:
 =======
     y: 665
     width: 1366
+=======
+    y: 617.3333
+    width: 1280
+>>>>>>> 6f388a0 (Cover/menu background)
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -188,8 +208,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 36
-    width: 1366
-    height: 629
+    width: 1280
+    height: 581.3333
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
@@ -214,8 +234,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 899
-    height: 629
+    width: 842.6667
+    height: 581.3333
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
@@ -248,8 +268,8 @@ MonoBehaviour:
   m_MaxSize: {x: 24288, y: 16192}
 =======
     y: 0
-    width: 899
-    height: 337
+    width: 842.6667
+    height: 311.33334
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
 >>>>>>> 9afc042 (3 background png layers)
@@ -326,12 +346,17 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 446.4
     height: 568
 =======
     width: 256
     height: 337
 >>>>>>> 9afc042 (3 background png layers)
+=======
+    width: 240
+    height: 311.33334
+>>>>>>> 6f388a0 (Cover/menu background)
   m_MinSize: {x: 201, y: 226}
   m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 16}
@@ -355,6 +380,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 446.4
     y: 0
     width: 1124.7999
@@ -365,6 +391,12 @@ MonoBehaviour:
     width: 643
     height: 337
 >>>>>>> 9afc042 (3 background png layers)
+=======
+    x: 240
+    y: 0
+    width: 602.6667
+    height: 311.33334
+>>>>>>> 6f388a0 (Cover/menu background)
   m_MinSize: {x: 202, y: 226}
   m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 17}
@@ -391,6 +423,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 568
     width: 1571.2
     height: 491.19995
@@ -399,6 +432,11 @@ MonoBehaviour:
     width: 899
     height: 292
 >>>>>>> 9afc042 (3 background png layers)
+=======
+    y: 311.33334
+    width: 842.6667
+    height: 269.99997
+>>>>>>> 6f388a0 (Cover/menu background)
   m_MinSize: {x: 231, y: 276}
   m_MaxSize: {x: 10001, y: 10026}
   m_ActualView: {fileID: 20}
@@ -429,10 +467,10 @@ MonoBehaviour:
   - {fileID: 13}
   m_Position:
     serializedVersion: 2
-    x: 899
+    x: 842.6667
     y: 0
-    width: 467
-    height: 629
+    width: 437.3333
+    height: 581.3333
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
@@ -457,12 +495,17 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 476.80005
     height: 588.8
 =======
     width: 467
     height: 396
 >>>>>>> 9afc042 (3 background png layers)
+=======
+    width: 437.3333
+    height: 366
+>>>>>>> 6f388a0 (Cover/menu background)
   m_MinSize: {x: 276, y: 76}
   m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 22}
@@ -488,9 +531,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 396
-    width: 467
-    height: 233
+    y: 366
+    width: 437.3333
+    height: 215.33331
   m_MinSize: {x: 101, y: 126}
   m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 15}
@@ -707,6 +750,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 612.8
     width: 475.80005
     height: 444.39996
@@ -715,6 +759,11 @@ MonoBehaviour:
     width: 466
     height: 207
 >>>>>>> 9afc042 (3 background png layers)
+=======
+    y: 390
+    width: 436.3333
+    height: 189.33331
+>>>>>>> 6f388a0 (Cover/menu background)
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -750,12 +799,17 @@ MonoBehaviour:
     x: 0
     y: 24
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 445.4
     height: 542
 =======
     width: 255
     height: 311
 >>>>>>> 9afc042 (3 background png layers)
+=======
+    width: 239
+    height: 285.33334
+>>>>>>> 6f388a0 (Cover/menu background)
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -819,6 +873,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 447.4
     y: 24
     width: 1122.7999
@@ -829,6 +884,12 @@ MonoBehaviour:
     width: 641
     height: 311
 >>>>>>> 9afc042 (3 background png layers)
+=======
+    x: 241
+    y: 24
+    width: 600.6667
+    height: 285.33334
+>>>>>>> 6f388a0 (Cover/menu background)
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1509,7 +1570,11 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 1.3690249, y: 1.0247523, z: -0.050746694}
+=======
+    m_Target: {x: -0.68296695, y: -0.20197225, z: 0.038465742}
+>>>>>>> 6f388a0 (Cover/menu background)
     speed: 2
 <<<<<<< HEAD
     m_Value: {x: 1.3690249, y: 1.0247523, z: -0.050746694}
@@ -1565,7 +1630,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 6.9489675
+=======
+    m_Target: 6.153422
+>>>>>>> 6f388a0 (Cover/menu background)
     speed: 2
 <<<<<<< HEAD
     m_Value: 6.9489675
@@ -1662,10 +1731,17 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -768
     m_HBaseRangeMax: 768
     m_VBaseRangeMin: -432
     m_VBaseRangeMax: 432
+=======
+    m_HBaseRangeMin: -640
+    m_HBaseRangeMax: 640
+    m_VBaseRangeMin: -360
+    m_VBaseRangeMax: 360
+>>>>>>> 6f388a0 (Cover/menu background)
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1683,16 +1759,24 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< HEAD
       width: 1122.7999
       height: 521
     m_Scale: {x: 0.6030093, y: 0.6030093}
     m_Translation: {x: 561.39996, y: 260.49997}
+=======
+      width: 902
+      height: 453
+    m_Scale: {x: 0.62916666, y: 0.62916666}
+    m_Translation: {x: 450.99997, y: 226.5}
+>>>>>>> 6f388a0 (Cover/menu background)
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -930.9972
       y: -431.99994
       width: 1861.9944
@@ -1700,6 +1784,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 0.6030093
   m_LastWindowPixelSize: {x: 1122.7999, y: 542}
+=======
+      x: -716.82117
+      y: -360
+      width: 1433.6423
+      height: 720
+    m_MinimalGUI: 1
+  m_defaultScale: 0.62916666
+  m_LastWindowPixelSize: {x: 902, y: 474}
+>>>>>>> 6f388a0 (Cover/menu background)
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1715,6 +1808,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
+=======
+  m_Script: {fileID: 13953, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEditor.dll::UnityEditor.PackageManager.UI.PackageManagerWindow
+  m_MinSize: {x: 280, y: 250}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Package Manager
+    m_Image: {fileID: 5076950121296946556, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Package Manager\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 359
+    y: 79
+    width: 902
+    height: 474
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+--- !u!114 &20
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+>>>>>>> 6f388a0 (Cover/menu background)
   m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: UnityEditor.Graphs.dll::UnityEditor.Graphs.AnimatorControllerTool
@@ -1782,6 +1914,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 592
     width: 1570.2
     height: 465.19995
@@ -1790,6 +1923,11 @@ MonoBehaviour:
     width: 898
     height: 266
 >>>>>>> 9afc042 (3 background png layers)
+=======
+    y: 335.33334
+    width: 841.6667
+    height: 243.99997
+>>>>>>> 6f388a0 (Cover/menu background)
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1828,10 +1966,17 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 88bb0000
     m_LastClickedID: 48008
     m_ExpandedIDs: 0000000068bb0000
+=======
+    scrollPos: {x: 0, y: 319}
+    m_SelectedIDs: ded70000
+    m_LastClickedID: 55262
+    m_ExpandedIDs: 0000000000b8000002b80000
+>>>>>>> 6f388a0 (Cover/menu background)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1860,7 +2005,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 0000000068bb0000
+=======
+    m_ExpandedIDs: 0000000000b8000002b80000
+>>>>>>> 6f388a0 (Cover/menu background)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1987,12 +2136,17 @@ MonoBehaviour:
     x: 1
     y: 24
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 475.80005
     height: 562.8
 =======
     width: 466
     height: 370
 >>>>>>> 9afc042 (3 background png layers)
+=======
+    width: 436.3333
+    height: 340
+>>>>>>> 6f388a0 (Cover/menu background)
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0

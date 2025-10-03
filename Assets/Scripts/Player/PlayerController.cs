@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform groundCheck;
+    [SerializeField] private Animator animator;
 
     // Stuff to track movement and jumping
     private Rigidbody2D rb;
@@ -36,6 +37,11 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
         FlipPlayer(horizontalInput);
+        
+        if (horizontalInput != 0)
+            animator.SetBool("IsRunning", true);
+        else
+            animator.SetBool("IsRunning", false);
     }
 
     private void Jump()

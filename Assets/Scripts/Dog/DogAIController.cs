@@ -63,7 +63,7 @@ public class DogAIController : MonoBehaviour
         
         if (player == null)
         {
-            if (GameManager.Instance.PlayerCharacter == null || GameManager.Instance.PlayerIsDead)
+            if (GameManager.Instance.PlayerCharacter == null)
                 return;
             HandleSetPlayer(GameManager.Instance.PlayerCharacter);
         }
@@ -108,9 +108,18 @@ public class DogAIController : MonoBehaviour
         {
             interactCanvas.enabled = false;
         }
-            
-        if (currentState == DogAIState.Sitting) // just for now
+
+        // just for now
+        if (currentState == DogAIState.Sitting)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("Dog is now following.");
+                currentState = DogAIState.Following;
+                spriteRenderer.color = Color.red; // just for testing
+            }
             return;
+        }
         
         if (distanceToPlayer > followDistance)
         {

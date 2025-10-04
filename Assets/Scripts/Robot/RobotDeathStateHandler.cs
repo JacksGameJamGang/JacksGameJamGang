@@ -35,10 +35,10 @@ public class RobotDeathStateHandler : MonoBehaviour
         {
             KillRobot();
         }
-        // else
-        // {
-        //     isRobotDown = false;
-        // }
+        else if (isRobotDown && newState == GameState.Playing)
+        {
+            ReviveRobot();
+        }
     }
 
     private void KillRobot()

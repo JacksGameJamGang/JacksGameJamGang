@@ -15,7 +15,7 @@ public enum GameState
 /// It will transmit events when the game state changes so other systems can react accordingly.
 /// such as when the game is paused, we want to stop player movement and show the pause menu.
 /// </summary>
-public class GameStateManager : LocalSingleton<GameStateManager>
+public class GameStateManager : Singleton<GameStateManager>
 {
     public GameState CurrentGameState {get; private set;}
     

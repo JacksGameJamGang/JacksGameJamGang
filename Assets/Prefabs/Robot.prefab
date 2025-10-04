@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8072174631063598352}
   - component: {fileID: 2510343708090932380}
   - component: {fileID: 1847260725279301702}
-  - component: {fileID: 6334647828908281029}
+  - component: {fileID: 7135902950319434645}
   - component: {fileID: 4847037807412546443}
   m_Layer: 6
   m_Name: Robot
@@ -106,7 +106,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2204e87aa816cab4683c03a7353c9951, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -130,7 +130,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0012152791, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -140,7 +140,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.8, y: 1.2}
+  m_Size: {x: 0.51562583, y: 1.2}
   m_EdgeRadius: 0
 --- !u!50 &2510343708090932380
 Rigidbody2D:
@@ -188,18 +188,27 @@ MonoBehaviour:
     m_Bits: 8
   groundCheck: {fileID: 4925019458374891591}
   animator: {fileID: 4847037807412546443}
---- !u!114 &6334647828908281029
+--- !u!114 &7135902950319434645
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4153738946964556514}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e4bba3c141f69c4a924c858da0b2449, type: 3}
+  m_Script: {fileID: 11500000, guid: 56e3d67cb04b0964fa1ff59084e89180, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerCharacter
+  m_EditorClassIdentifier: Assembly-CSharp::RobotController
+  petDogKey: 112
+  activateMechanismKey: 105
+  interactionRange: 2
+  dogLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  mechanismLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!95 &4847037807412546443
 Animator:
   serializedVersion: 7

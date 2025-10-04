@@ -1,226 +1,226 @@
 fileFormatVersion: 2
-guid: c79cf9828d8eb4c4289ce86a9688148f
+guid: bf3246b212bde0749a1ca595222059ba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5484627894755610514
-    second: pipesTileSet_0
+      213: -800600506637436001
+    second: pipesTileSet-export_0
   - first:
-      213: 4842596506732244511
-    second: pipesTileSet_1
+      213: -7074685979043333105
+    second: pipesTileSet-export_1
   - first:
-      213: 8869666122391366471
-    second: pipesTileSet_2
+      213: 3957278491729827048
+    second: pipesTileSet-export_2
   - first:
-      213: -6278165782204271560
-    second: pipesTileSet_3
+      213: 6894596728240460279
+    second: pipesTileSet-export_3
   - first:
-      213: -4361712008413267318
-    second: pipesTileSet_4
+      213: -528572190130406887
+    second: pipesTileSet-export_4
   - first:
-      213: 7380517263340434167
-    second: pipesTileSet_5
+      213: 7937287664365812585
+    second: pipesTileSet-export_5
   - first:
-      213: 7899945681611153421
-    second: pipesTileSet_6
+      213: -7584737012497387940
+    second: pipesTileSet-export_6
   - first:
-      213: 4739502555812006277
-    second: pipesTileSet_7
+      213: 1831276496851691664
+    second: pipesTileSet-export_7
   - first:
-      213: 799175806475122562
-    second: pipesTileSet_8
+      213: -4020209789694249227
+    second: pipesTileSet-export_8
   - first:
-      213: 6512982382167347331
-    second: pipesTileSet_9
+      213: 6964022269390184703
+    second: pipesTileSet-export_9
   - first:
-      213: -5791194159239757200
-    second: pipesTileSet_10
+      213: 5883278341603069347
+    second: pipesTileSet-export_10
   - first:
-      213: -701595277942747732
-    second: pipesTileSet_11
+      213: -1786921632307027365
+    second: pipesTileSet-export_11
   - first:
-      213: -4556344772770766156
-    second: pipesTileSet_12
+      213: -2268634746534810393
+    second: pipesTileSet-export_12
   - first:
-      213: -8365433514152346473
-    second: pipesTileSet_13
+      213: -2732831609584013195
+    second: pipesTileSet-export_13
   - first:
-      213: 28571258118320520
-    second: pipesTileSet_14
+      213: 6139335334322042539
+    second: pipesTileSet-export_14
   - first:
-      213: -8124684030567992681
-    second: pipesTileSet_15
+      213: 650150273498572441
+    second: pipesTileSet-export_15
   - first:
-      213: -833129437243789885
-    second: pipesTileSet_16
+      213: 43842144466906277
+    second: pipesTileSet-export_16
   - first:
-      213: -7761241570197092379
-    second: pipesTileSet_17
+      213: -1681212545654505617
+    second: pipesTileSet-export_17
   - first:
-      213: -3706004976227345966
-    second: pipesTileSet_18
+      213: -6705075440570539299
+    second: pipesTileSet-export_18
   - first:
-      213: 4982827061154055513
-    second: pipesTileSet_19
+      213: -447234259886262418
+    second: pipesTileSet-export_19
   - first:
-      213: 5482274116432167301
-    second: pipesTileSet_20
+      213: -659927938024643775
+    second: pipesTileSet-export_20
   - first:
-      213: 8238561906129108650
-    second: pipesTileSet_21
+      213: 3919034124639073808
+    second: pipesTileSet-export_21
   - first:
-      213: -4445876777965897537
-    second: pipesTileSet_22
+      213: -1467019006562914055
+    second: pipesTileSet-export_22
   - first:
-      213: 5742408235639040817
-    second: pipesTileSet_23
+      213: 9129537859659878688
+    second: pipesTileSet-export_23
   - first:
-      213: 2789321468400021611
-    second: pipesTileSet_24
+      213: 2870654613273962988
+    second: pipesTileSet-export_24
   - first:
-      213: -2977052176847158690
-    second: pipesTileSet_25
+      213: -8780560591464053945
+    second: pipesTileSet-export_25
   - first:
-      213: -5813957036258472380
-    second: pipesTileSet_26
+      213: -165184644816649966
+    second: pipesTileSet-export_26
   - first:
-      213: -2786027097386512290
-    second: pipesTileSet_27
+      213: 7534551731550056591
+    second: pipesTileSet-export_27
   - first:
-      213: -8878817658974808924
-    second: pipesTileSet_28
+      213: 8268409918027686887
+    second: pipesTileSet-export_28
   - first:
-      213: -8003071868351896569
-    second: pipesTileSet_29
+      213: 1150441866877196659
+    second: pipesTileSet-export_29
   - first:
-      213: 6486278784190395866
-    second: pipesTileSet_30
+      213: 7571989614078715336
+    second: pipesTileSet-export_30
   - first:
-      213: -3414921749548467179
-    second: pipesTileSet_31
+      213: 444142069810074380
+    second: pipesTileSet-export_31
   - first:
-      213: 6090456126326936489
-    second: pipesTileSet_32
+      213: 1259867821566776699
+    second: pipesTileSet-export_32
   - first:
-      213: 6573141889786979972
-    second: pipesTileSet_33
+      213: -852691752418782269
+    second: pipesTileSet-export_33
   - first:
-      213: -3819530315333814622
-    second: pipesTileSet_34
+      213: 8730378973705740248
+    second: pipesTileSet-export_34
   - first:
-      213: -8692139375873970850
-    second: pipesTileSet_35
+      213: -2636753984726770453
+    second: pipesTileSet-export_35
   - first:
-      213: -5753531166211132472
-    second: pipesTileSet_36
+      213: 6884216756194593971
+    second: pipesTileSet-export_36
   - first:
-      213: 6769605267699910406
-    second: pipesTileSet_37
+      213: 7409708419546441120
+    second: pipesTileSet-export_37
   - first:
-      213: 652827835122201678
-    second: pipesTileSet_38
+      213: 3420496083714831829
+    second: pipesTileSet-export_38
   - first:
-      213: -6515227015202402685
-    second: pipesTileSet_39
+      213: 1183779985695784637
+    second: pipesTileSet-export_39
   - first:
-      213: 6308979337957505478
-    second: pipesTileSet_40
+      213: 1036171413590601649
+    second: pipesTileSet-export_40
   - first:
-      213: -5356298661152897257
-    second: pipesTileSet_41
+      213: -4413550827094913125
+    second: pipesTileSet-export_41
   - first:
-      213: -5966017621505680033
-    second: pipesTileSet_42
+      213: -8800070323123539894
+    second: pipesTileSet-export_42
   - first:
-      213: 1136405631933186601
-    second: pipesTileSet_43
+      213: -6066951112525757192
+    second: pipesTileSet-export_43
   - first:
-      213: -5322730250624159258
-    second: pipesTileSet_44
+      213: -7464028827372682420
+    second: pipesTileSet-export_44
   - first:
-      213: -2236945955505424047
-    second: pipesTileSet_45
+      213: -7962559658589748403
+    second: pipesTileSet-export_45
   - first:
-      213: -1603256650243524482
-    second: pipesTileSet_46
+      213: -4603670247523528159
+    second: pipesTileSet-export_46
   - first:
-      213: 2787480727816236523
-    second: pipesTileSet_47
+      213: -6775071844972634690
+    second: pipesTileSet-export_47
   - first:
-      213: -2826925382942227615
-    second: pipesTileSet_48
+      213: 6792513878800006906
+    second: pipesTileSet-export_48
   - first:
-      213: -1784392576246167484
-    second: pipesTileSet_49
+      213: -4873861897366223676
+    second: pipesTileSet-export_49
   - first:
-      213: 8853211959834984929
-    second: pipesTileSet_50
+      213: 687501314867780160
+    second: pipesTileSet-export_50
   - first:
-      213: -496483218117861481
-    second: pipesTileSet_51
+      213: 2347410182907127817
+    second: pipesTileSet-export_51
   - first:
-      213: -7695221252662522948
-    second: pipesTileSet_52
+      213: -5400368792435899624
+    second: pipesTileSet-export_52
   - first:
-      213: -1516132755234146876
-    second: pipesTileSet_53
+      213: 7246529810489017019
+    second: pipesTileSet-export_53
   - first:
-      213: -6396636408353711572
-    second: pipesTileSet_54
+      213: -4580005239166773077
+    second: pipesTileSet-export_54
   - first:
-      213: -6469851551360017918
-    second: pipesTileSet_55
+      213: 3295470356486244469
+    second: pipesTileSet-export_55
   - first:
-      213: 971142432701847544
-    second: pipesTileSet_56
+      213: -7820544325521819932
+    second: pipesTileSet-export_56
   - first:
-      213: -5868742229446442960
-    second: pipesTileSet_57
+      213: -1078042509835153756
+    second: pipesTileSet-export_57
   - first:
-      213: -4728034260325342185
-    second: pipesTileSet_58
+      213: 4365914888237752629
+    second: pipesTileSet-export_58
   - first:
-      213: 1622570432884421412
-    second: pipesTileSet_59
+      213: 5551518311816038322
+    second: pipesTileSet-export_59
   - first:
-      213: 6243431685076252333
-    second: pipesTileSet_60
+      213: 6661563069728416024
+    second: pipesTileSet-export_60
   - first:
-      213: -4377064239938264431
-    second: pipesTileSet_61
+      213: 3963372262713502989
+    second: pipesTileSet-export_61
   - first:
-      213: 222717738164437565
-    second: pipesTileSet_62
+      213: -7690492492352247588
+    second: pipesTileSet-export_62
   - first:
-      213: 1013975611242537638
-    second: pipesTileSet_63
+      213: -2881200376918314297
+    second: pipesTileSet-export_63
   - first:
-      213: -771781635904549884
-    second: pipesTileSet_64
+      213: 4690480349376462341
+    second: pipesTileSet-export_64
   - first:
-      213: 1731224039868869257
-    second: pipesTileSet_65
+      213: -5114421250614120222
+    second: pipesTileSet-export_65
   - first:
-      213: -6508381316943979720
-    second: pipesTileSet_66
+      213: -352390587021305370
+    second: pipesTileSet-export_66
   - first:
-      213: 1042815255380970110
-    second: pipesTileSet_67
+      213: -413816066910080766
+    second: pipesTileSet-export_67
   - first:
-      213: -1187477176974177589
-    second: pipesTileSet_68
+      213: -7420490781707925196
+    second: pipesTileSet-export_68
   - first:
-      213: 7128295258562878353
-    second: pipesTileSet_69
+      213: -8267023733171405403
+    second: pipesTileSet-export_69
   - first:
-      213: 3651046839697725396
-    second: pipesTileSet_70
+      213: 591531695081849614
+    second: pipesTileSet-export_70
   - first:
-      213: 1568729181119043896
-    second: pipesTileSet_71
+      213: -7409835832946443651
+    second: pipesTileSet-export_71
   - first:
-      213: -9083057440540766606
-    second: pipesTileSet_72
+      213: -241919564361168925
+    second: pipesTileSet-export_72
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -253,7 +253,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -291,7 +291,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -320,19 +320,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 208
-        width: 48
-        height: 48
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e60b4ef0dffa2e3b0800000000000000
-      internalID: -5484627894755610514
+      spriteID: 5ad2d454daf44bb49b14e70823b2008b
+      internalID: 894915219
       vertices: []
       indices: 
       edges: []
@@ -341,20 +341,20 @@ TextureImporter:
       name: pipesTileSet_1
       rect:
         serializedVersion: 2
-        x: 47
-        y: 63
-        width: 82
-        height: 193
+        x: 64
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f1ea25e9ddb543340800000000000000
-      internalID: 4842596506732244511
+      spriteID: 4a5cdb4b216e90e49b9dd416fd877be2
+      internalID: -325786220
       vertices: []
       indices: 
       edges: []
@@ -364,19 +364,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 208
-        width: 48
-        height: 48
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 74b24754852671b70800000000000000
-      internalID: 8869666122391366471
+      spriteID: e7d8219d101b38843860622db3ed35e6
+      internalID: -1867857181
       vertices: []
       indices: 
       edges: []
@@ -385,20 +385,20 @@ TextureImporter:
       name: pipesTileSet_3
       rect:
         serializedVersion: 2
-        x: 175
-        y: 240
-        width: 15
-        height: 16
+        x: 192
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 834b3b6fb797fd8a0800000000000000
-      internalID: -6278165782204271560
+      spriteID: e6624ecc51efab246a1977bd563a3d95
+      internalID: 1567208296
       vertices: []
       indices: 
       edges: []
@@ -407,20 +407,20 @@ TextureImporter:
       name: pipesTileSet_4
       rect:
         serializedVersion: 2
-        x: 191
-        y: 240
-        width: 7
-        height: 16
+        x: 256
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a8ab8f5a9061873c0800000000000000
-      internalID: -4361712008413267318
+      spriteID: 684b78a1a1dc2794bb2b6c22e2009ad2
+      internalID: -1627787043
       vertices: []
       indices: 
       edges: []
@@ -429,20 +429,20 @@ TextureImporter:
       name: pipesTileSet_5
       rect:
         serializedVersion: 2
-        x: 218
-        y: 240
-        width: 7
-        height: 16
+        x: 320
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7f27b0ce85ddc6660800000000000000
-      internalID: 7380517263340434167
+      spriteID: bb10b1a08306d25409de6035b5466ce5
+      internalID: -1316599724
       vertices: []
       indices: 
       edges: []
@@ -451,20 +451,20 @@ TextureImporter:
       name: pipesTileSet_6
       rect:
         serializedVersion: 2
-        x: 226
-        y: 240
-        width: 15
-        height: 16
+        x: 384
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d006051edbe32ad60800000000000000
-      internalID: 7899945681611153421
+      spriteID: 6694b961ca6e6e04da9e672fba71a5fb
+      internalID: 1225907168
       vertices: []
       indices: 
       edges: []
@@ -473,20 +473,20 @@ TextureImporter:
       name: pipesTileSet_7
       rect:
         serializedVersion: 2
-        x: 240
-        y: 242
-        width: 16
-        height: 14
+        x: 448
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5890b3ba67816c140800000000000000
-      internalID: 4739502555812006277
+      spriteID: c89d912918a9842438aa3b964aaea895
+      internalID: -470612458
       vertices: []
       indices: 
       edges: []
@@ -495,20 +495,20 @@ TextureImporter:
       name: pipesTileSet_8
       rect:
         serializedVersion: 2
-        x: 256
-        y: 241
-        width: 16
-        height: 15
+        x: 512
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 287390a692e371b00800000000000000
-      internalID: 799175806475122562
+      spriteID: 8d910f999f47e2c40ad24a5e923022c8
+      internalID: 1315185120
       vertices: []
       indices: 
       edges: []
@@ -517,20 +517,20 @@ TextureImporter:
       name: pipesTileSet_9
       rect:
         serializedVersion: 2
-        x: 272
-        y: 247
-        width: 16
-        height: 7
+        x: 576
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 380567528f2c26a50800000000000000
-      internalID: 6512982382167347331
+      spriteID: 127c59218e0e2434097cd15c3e5354b3
+      internalID: 315387838
       vertices: []
       indices: 
       edges: []
@@ -539,20 +539,20 @@ TextureImporter:
       name: pipesTileSet_10
       rect:
         serializedVersion: 2
-        x: 288
-        y: 247
-        width: 16
-        height: 8
+        x: 640
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0728231689b81afa0800000000000000
-      internalID: -5791194159239757200
+      spriteID: 31bc024e135b6ba4e8d8f56cc6ced351
+      internalID: -1330241428
       vertices: []
       indices: 
       edges: []
@@ -561,20 +561,20 @@ TextureImporter:
       name: pipesTileSet_11
       rect:
         serializedVersion: 2
-        x: 288
-        y: 231
-        width: 16
-        height: 16
+        x: 704
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cad812adfce6346f0800000000000000
-      internalID: -701595277942747732
+      spriteID: 61172f3901e14324da7936497085f0f9
+      internalID: -1056652584
       vertices: []
       indices: 
       edges: []
@@ -583,20 +583,20 @@ TextureImporter:
       name: pipesTileSet_12
       rect:
         serializedVersion: 2
-        x: 175
-        y: 224
-        width: 16
-        height: 16
+        x: 768
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4b26ac8d19c94c0c0800000000000000
-      internalID: -4556344772770766156
+      spriteID: 0eb785b7032be1644a2caaf52e321f3b
+      internalID: -758643002
       vertices: []
       indices: 
       edges: []
@@ -605,20 +605,20 @@ TextureImporter:
       name: pipesTileSet_13
       rect:
         serializedVersion: 2
-        x: 191
-        y: 224
-        width: 8
-        height: 16
+        x: 832
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 79c3dc47a8208eb80800000000000000
-      internalID: -8365433514152346473
+      spriteID: 2ee51aa2b6747fa4395076abdefba342
+      internalID: -509858661
       vertices: []
       indices: 
       edges: []
@@ -627,20 +627,20 @@ TextureImporter:
       name: pipesTileSet_14
       rect:
         serializedVersion: 2
-        x: 217
-        y: 224
-        width: 8
-        height: 16
+        x: 896
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 881bdea6861856000800000000000000
-      internalID: 28571258118320520
+      spriteID: 69a9ac30c3dd9d44aba7ffd6f776f664
+      internalID: -116963841
       vertices: []
       indices: 
       edges: []
@@ -649,20 +649,20 @@ TextureImporter:
       name: pipesTileSet_15
       rect:
         serializedVersion: 2
-        x: 225
-        y: 224
-        width: 16
-        height: 16
+        x: 960
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 792b4bdabe25f3f80800000000000000
-      internalID: -8124684030567992681
+      spriteID: 53adc07915c73e449b6f0737becbe252
+      internalID: -1263615762
       vertices: []
       indices: 
       edges: []
@@ -671,20 +671,20 @@ TextureImporter:
       name: pipesTileSet_16
       rect:
         serializedVersion: 2
-        x: 240
-        y: 234
-        width: 16
-        height: 7
+        x: 1024
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3cda921e0312074f0800000000000000
-      internalID: -833129437243789885
+      spriteID: 2788fe5af2ce779439476d37fea16271
+      internalID: -621661723
       vertices: []
       indices: 
       edges: []
@@ -693,20 +693,20 @@ TextureImporter:
       name: pipesTileSet_17
       rect:
         serializedVersion: 2
-        x: 256
-        y: 233
-        width: 16
-        height: 8
+        x: 1088
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5e74868a9e78a4490800000000000000
-      internalID: -7761241570197092379
+      spriteID: ea639fcbcb7331a42b4db35db9f52db6
+      internalID: -914634485
       vertices: []
       indices: 
       edges: []
@@ -715,20 +715,20 @@ TextureImporter:
       name: pipesTileSet_18
       rect:
         serializedVersion: 2
-        x: 272
-        y: 231
-        width: 16
-        height: 15
+        x: 1152
+        y: 960
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2d993200c10a19cc0800000000000000
-      internalID: -3706004976227345966
+      spriteID: 97c5936afd86bf049badc340d0355013
+      internalID: -1089947006
       vertices: []
       indices: 
       edges: []
@@ -738,19 +738,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 160
-        width: 48
-        height: 48
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9558a4ddfce862540800000000000000
-      internalID: 4982827061154055513
+      spriteID: 3fa5be920c6624240b8090993ddc493d
+      internalID: 1187682572
       vertices: []
       indices: 
       edges: []
@@ -760,19 +760,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 160
-        width: 48
-        height: 48
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 58102473343f41c40800000000000000
-      internalID: 5482274116432167301
+      spriteID: e1abe7c4c12b2dd47984b9745758e529
+      internalID: -264225164
       vertices: []
       indices: 
       edges: []
@@ -781,20 +781,20 @@ TextureImporter:
       name: pipesTileSet_21
       rect:
         serializedVersion: 2
-        x: 175
-        y: 192
-        width: 15
-        height: 16
+        x: 192
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: aaef3e26760455270800000000000000
-      internalID: 8238561906129108650
+      spriteID: a492e08afca054a49aec47d6ad18eacd
+      internalID: 954342490
       vertices: []
       indices: 
       edges: []
@@ -803,20 +803,20 @@ TextureImporter:
       name: pipesTileSet_22
       rect:
         serializedVersion: 2
-        x: 191
-        y: 192
-        width: 7
-        height: 16
+        x: 256
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fb83f2e20a21d42c0800000000000000
-      internalID: -4445876777965897537
+      spriteID: 4134a1b1704d30e448b5e1d159fa43d8
+      internalID: 1997834450
       vertices: []
       indices: 
       edges: []
@@ -825,20 +825,20 @@ TextureImporter:
       name: pipesTileSet_23
       rect:
         serializedVersion: 2
-        x: 218
-        y: 192
-        width: 7
-        height: 16
+        x: 320
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 13bea80add121bf40800000000000000
-      internalID: 5742408235639040817
+      spriteID: a659e4c7e23868f4685fd115e0c47fef
+      internalID: 255776156
       vertices: []
       indices: 
       edges: []
@@ -847,20 +847,20 @@ TextureImporter:
       name: pipesTileSet_24
       rect:
         serializedVersion: 2
-        x: 226
-        y: 192
-        width: 15
-        height: 16
+        x: 384
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b60ba58d819a5b620800000000000000
-      internalID: 2789321468400021611
+      spriteID: d66fdc2f03b2d07408ef9a73be65b455
+      internalID: 1250079690
       vertices: []
       indices: 
       edges: []
@@ -869,20 +869,20 @@ TextureImporter:
       name: pipesTileSet_25
       rect:
         serializedVersion: 2
-        x: 240
-        y: 194
-        width: 16
-        height: 15
+        x: 448
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e52c83971d26fa6d0800000000000000
-      internalID: -2977052176847158690
+      spriteID: cf38894032ffe99469a88a25f10abf58
+      internalID: -1515204562
       vertices: []
       indices: 
       edges: []
@@ -891,20 +891,20 @@ TextureImporter:
       name: pipesTileSet_26
       rect:
         serializedVersion: 2
-        x: 256
-        y: 193
-        width: 16
-        height: 16
+        x: 512
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 44e4e6211eca05fa0800000000000000
-      internalID: -5813957036258472380
+      spriteID: ab5e9b08c5b734e499a597ea68c2a320
+      internalID: -1925061499
       vertices: []
       indices: 
       edges: []
@@ -913,20 +913,20 @@ TextureImporter:
       name: pipesTileSet_27
       rect:
         serializedVersion: 2
-        x: 272
-        y: 199
-        width: 16
-        height: 7
+        x: 576
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e501aadad1b0659d0800000000000000
-      internalID: -2786027097386512290
+      spriteID: 00d0f22dc3780594d89be3543057cba0
+      internalID: -291651826
       vertices: []
       indices: 
       edges: []
@@ -935,20 +935,20 @@ TextureImporter:
       name: pipesTileSet_28
       rect:
         serializedVersion: 2
-        x: 288
-        y: 199
-        width: 16
-        height: 8
+        x: 640
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4a45753916a18c480800000000000000
-      internalID: -8878817658974808924
+      spriteID: 555ad1d8228f9304e88a56417909abd5
+      internalID: 614495890
       vertices: []
       indices: 
       edges: []
@@ -957,20 +957,20 @@ TextureImporter:
       name: pipesTileSet_29
       rect:
         serializedVersion: 2
-        x: 288
-        y: 183
-        width: 16
-        height: 16
+        x: 704
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 704a6fea9806fe090800000000000000
-      internalID: -8003071868351896569
+      spriteID: f10d27e198bf72646a785f0d7fa149a3
+      internalID: 180719379
       vertices: []
       indices: 
       edges: []
@@ -979,20 +979,20 @@ TextureImporter:
       name: pipesTileSet_30
       rect:
         serializedVersion: 2
-        x: 175
-        y: 176
-        width: 16
-        height: 16
+        x: 768
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ad532dd3034e30a50800000000000000
-      internalID: 6486278784190395866
+      spriteID: 09e37624fdcb3ca438a2ccaea1d08b52
+      internalID: -1539955110
       vertices: []
       indices: 
       edges: []
@@ -1001,20 +1001,20 @@ TextureImporter:
       name: pipesTileSet_31
       rect:
         serializedVersion: 2
-        x: 191
-        y: 176
-        width: 8
-        height: 16
+        x: 832
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 51c786603c2cb90d0800000000000000
-      internalID: -3414921749548467179
+      spriteID: ead8e168714a6764ca739e925cc43fdd
+      internalID: -1617929688
       vertices: []
       indices: 
       edges: []
@@ -1023,20 +1023,20 @@ TextureImporter:
       name: pipesTileSet_32
       rect:
         serializedVersion: 2
-        x: 217
-        y: 176
-        width: 8
-        height: 16
+        x: 896
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9a391d90495a58450800000000000000
-      internalID: 6090456126326936489
+      spriteID: e0285f1ea3585734297fabcb42cdec40
+      internalID: 1480041490
       vertices: []
       indices: 
       edges: []
@@ -1045,20 +1045,20 @@ TextureImporter:
       name: pipesTileSet_33
       rect:
         serializedVersion: 2
-        x: 225
-        y: 176
-        width: 16
-        height: 16
+        x: 960
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4862ef609bd783b50800000000000000
-      internalID: 6573141889786979972
+      spriteID: 1134e7ea78122e84d839cd4e53c0c07b
+      internalID: -491950170
       vertices: []
       indices: 
       edges: []
@@ -1067,20 +1067,20 @@ TextureImporter:
       name: pipesTileSet_34
       rect:
         serializedVersion: 2
-        x: 240
-        y: 186
-        width: 16
-        height: 7
+        x: 1024
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2a631b93a6d4efac0800000000000000
-      internalID: -3819530315333814622
+      spriteID: 7899c1a370fd7fc43ad27a58a60c665d
+      internalID: -1862374103
       vertices: []
       indices: 
       edges: []
@@ -1089,20 +1089,20 @@ TextureImporter:
       name: pipesTileSet_35
       rect:
         serializedVersion: 2
-        x: 256
-        y: 185
-        width: 16
-        height: 8
+        x: 1088
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e5da8d26a415f5780800000000000000
-      internalID: -8692139375873970850
+      spriteID: d65ba41132d44194780cd5049b1f17d0
+      internalID: -1066022312
       vertices: []
       indices: 
       edges: []
@@ -1111,20 +1111,20 @@ TextureImporter:
       name: pipesTileSet_36
       rect:
         serializedVersion: 2
-        x: 272
-        y: 183
-        width: 16
-        height: 15
+        x: 1152
+        y: 896
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8c3b8d943e95720b0800000000000000
-      internalID: -5753531166211132472
+      spriteID: fce3b6261866ea844b1616b81a50bdcd
+      internalID: 974231543
       vertices: []
       indices: 
       edges: []
@@ -1134,19 +1134,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 112
-        width: 48
-        height: 48
+        y: 832
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 607cdd2cf1872fd50800000000000000
-      internalID: 6769605267699910406
+      spriteID: 5547b634b8dbd0441bab9a4c341d34d9
+      internalID: 1426743300
       vertices: []
       indices: 
       edges: []
@@ -1155,20 +1155,20 @@ TextureImporter:
       name: pipesTileSet_38
       rect:
         serializedVersion: 2
-        x: 128
-        y: 112
-        width: 48
-        height: 48
+        x: 64
+        y: 832
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e4432fb057f4f0900800000000000000
-      internalID: 652827835122201678
+      spriteID: 402bc8d9b31e3ec4fb8053e3ea048c96
+      internalID: -430706078
       vertices: []
       indices: 
       edges: []
@@ -1177,20 +1177,20 @@ TextureImporter:
       name: pipesTileSet_39
       rect:
         serializedVersion: 2
-        x: 175
-        y: 144
-        width: 15
-        height: 16
+        x: 128
+        y: 832
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 38e05df7c834595a0800000000000000
-      internalID: -6515227015202402685
+      spriteID: 76fafc0392ba3c3419e19062a95975a1
+      internalID: -5615707
       vertices: []
       indices: 
       edges: []
@@ -1199,20 +1199,20 @@ TextureImporter:
       name: pipesTileSet_40
       rect:
         serializedVersion: 2
-        x: 191
-        y: 144
-        width: 7
-        height: 16
+        x: 256
+        y: 832
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6c97c3e084ffd8750800000000000000
-      internalID: 6308979337957505478
+      spriteID: 49998b903d8373745b8d5a0ad88197e6
+      internalID: 1353187659
       vertices: []
       indices: 
       edges: []
@@ -1221,20 +1221,20 @@ TextureImporter:
       name: pipesTileSet_41
       rect:
         serializedVersion: 2
-        x: 218
-        y: 144
-        width: 7
-        height: 16
+        x: 512
+        y: 832
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 717c41f1fba9aa5b0800000000000000
-      internalID: -5356298661152897257
+      spriteID: 2475148713ff5ca4da6f051185915ca8
+      internalID: 824120834
       vertices: []
       indices: 
       edges: []
@@ -1243,20 +1243,20 @@ TextureImporter:
       name: pipesTileSet_42
       rect:
         serializedVersion: 2
-        x: 226
-        y: 144
-        width: 15
-        height: 16
+        x: 576
+        y: 832
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f5dde622592743da0800000000000000
-      internalID: -5966017621505680033
+      spriteID: 60361fd176d46b74eb76f59727ef9beb
+      internalID: -571331619
       vertices: []
       indices: 
       edges: []
@@ -1265,20 +1265,20 @@ TextureImporter:
       name: pipesTileSet_43
       rect:
         serializedVersion: 2
-        x: 240
-        y: 146
-        width: 16
-        height: 15
+        x: 640
+        y: 832
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 922812cb6e255cf00800000000000000
-      internalID: 1136405631933186601
+      spriteID: 0959f79117dec9b40b4afe6c3fec2790
+      internalID: 2137331082
       vertices: []
       indices: 
       edges: []
@@ -1287,20 +1287,20 @@ TextureImporter:
       name: pipesTileSet_44
       rect:
         serializedVersion: 2
-        x: 256
-        y: 145
-        width: 16
-        height: 16
+        x: 0
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6e13250c90dd126b0800000000000000
-      internalID: -5322730250624159258
+      spriteID: 2f52f343e1c1d094a911fd85a15822eb
+      internalID: -452553124
       vertices: []
       indices: 
       edges: []
@@ -1309,20 +1309,20 @@ TextureImporter:
       name: pipesTileSet_45
       rect:
         serializedVersion: 2
-        x: 272
-        y: 151
-        width: 16
-        height: 7
+        x: 64
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1593a5c5185c4f0e0800000000000000
-      internalID: -2236945955505424047
+      spriteID: 33ac26c2ec8523742919c7df926d84c9
+      internalID: 1646227842
       vertices: []
       indices: 
       edges: []
@@ -1331,20 +1331,20 @@ TextureImporter:
       name: pipesTileSet_46
       rect:
         serializedVersion: 2
-        x: 288
-        y: 151
-        width: 16
-        height: 8
+        x: 128
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e78b37e229610c9e0800000000000000
-      internalID: -1603256650243524482
+      spriteID: b6da5b3af0ec07241a615c6e1dea085b
+      internalID: -365552996
       vertices: []
       indices: 
       edges: []
@@ -1353,20 +1353,20 @@ TextureImporter:
       name: pipesTileSet_47
       rect:
         serializedVersion: 2
-        x: 288
-        y: 135
-        width: 16
-        height: 16
+        x: 192
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bedebb704fe1fa620800000000000000
-      internalID: 2787480727816236523
+      spriteID: 4136e98000eef8c43b1b972fcc2f483e
+      internalID: -1019603305
       vertices: []
       indices: 
       edges: []
@@ -1375,20 +1375,20 @@ TextureImporter:
       name: pipesTileSet_48
       rect:
         serializedVersion: 2
-        x: 175
-        y: 128
-        width: 16
-        height: 16
+        x: 256
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1638137875eb4c8d0800000000000000
-      internalID: -2826925382942227615
+      spriteID: a3f0b4fccaafbb44cb0d89d94596aa91
+      internalID: 17140070
       vertices: []
       indices: 
       edges: []
@@ -1397,20 +1397,20 @@ TextureImporter:
       name: pipesTileSet_49
       rect:
         serializedVersion: 2
-        x: 191
-        y: 128
-        width: 8
-        height: 16
+        x: 320
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 448c001f7609c37e0800000000000000
-      internalID: -1784392576246167484
+      spriteID: de1fded7828061142afdefbeeee49189
+      internalID: -1900195923
       vertices: []
       indices: 
       edges: []
@@ -1419,20 +1419,20 @@ TextureImporter:
       name: pipesTileSet_50
       rect:
         serializedVersion: 2
-        x: 217
-        y: 128
-        width: 8
-        height: 16
+        x: 384
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1e144330f5decda70800000000000000
-      internalID: 8853211959834984929
+      spriteID: 035c36eda0d5c1a40b69cb6f00799a74
+      internalID: -203283046
       vertices: []
       indices: 
       edges: []
@@ -1441,20 +1441,20 @@ TextureImporter:
       name: pipesTileSet_51
       rect:
         serializedVersion: 2
-        x: 225
-        y: 128
-        width: 16
-        height: 16
+        x: 448
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 79f5423c4232c19f0800000000000000
-      internalID: -496483218117861481
+      spriteID: dd5ec5e76b9944a42be15da0fb7d4767
+      internalID: 541350658
       vertices: []
       indices: 
       edges: []
@@ -1463,20 +1463,20 @@ TextureImporter:
       name: pipesTileSet_52
       rect:
         serializedVersion: 2
-        x: 240
-        y: 138
-        width: 16
-        height: 7
+        x: 512
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cbb830faa05153590800000000000000
-      internalID: -7695221252662522948
+      spriteID: 3c13db9e1772e944f8ab0df7894509f6
+      internalID: 766066757
       vertices: []
       indices: 
       edges: []
@@ -1485,20 +1485,20 @@ TextureImporter:
       name: pipesTileSet_53
       rect:
         serializedVersion: 2
-        x: 256
-        y: 137
-        width: 16
-        height: 8
+        x: 576
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4c53febba4d95fae0800000000000000
-      internalID: -1516132755234146876
+      spriteID: 9c5877513c156344cadf95f7df14ede1
+      internalID: 15072471
       vertices: []
       indices: 
       edges: []
@@ -1507,20 +1507,20 @@ TextureImporter:
       name: pipesTileSet_54
       rect:
         serializedVersion: 2
-        x: 272
-        y: 135
-        width: 16
-        height: 15
+        x: 640
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c2a1fb2d3159a37a0800000000000000
-      internalID: -6396636408353711572
+      spriteID: b19c92099f4bb0d42b6b592a8bb75140
+      internalID: -403256556
       vertices: []
       indices: 
       edges: []
@@ -1529,20 +1529,20 @@ TextureImporter:
       name: pipesTileSet_55
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 48
-        height: 48
+        x: 704
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 20a1da3fa487636a0800000000000000
-      internalID: -6469851551360017918
+      spriteID: 2f7e7820c8f0c7f468ba7b7ec7325e8b
+      internalID: 230895252
       vertices: []
       indices: 
       edges: []
@@ -1551,20 +1551,20 @@ TextureImporter:
       name: pipesTileSet_56
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
-        width: 48
-        height: 48
+        x: 768
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8f7908fa5e03a7d00800000000000000
-      internalID: 971142432701847544
+      spriteID: e62957cf1aa5bc84c9803bfd9972b508
+      internalID: 1455887346
       vertices: []
       indices: 
       edges: []
@@ -1573,20 +1573,20 @@ TextureImporter:
       name: pipesTileSet_57
       rect:
         serializedVersion: 2
-        x: 175
-        y: 96
-        width: 15
-        height: 16
+        x: 832
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 030c287490a0e8ea0800000000000000
-      internalID: -5868742229446442960
+      spriteID: 117be94d728374b41830a4951c0a7d15
+      internalID: 1399727702
       vertices: []
       indices: 
       edges: []
@@ -1595,20 +1595,20 @@ TextureImporter:
       name: pipesTileSet_58
       rect:
         serializedVersion: 2
-        x: 191
-        y: 96
-        width: 7
-        height: 16
+        x: 896
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7146e63f3e5a26eb0800000000000000
-      internalID: -4728034260325342185
+      spriteID: 7d6045b332e412e41b7cd6a3086fcfaa
+      internalID: 687339333
       vertices: []
       indices: 
       edges: []
@@ -1617,20 +1617,20 @@ TextureImporter:
       name: pipesTileSet_59
       rect:
         serializedVersion: 2
-        x: 218
-        y: 96
-        width: 7
-        height: 16
+        x: 960
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 423b0234637848610800000000000000
-      internalID: 1622570432884421412
+      spriteID: f5ba7c0cee4a39c40ad8ad62e124f923
+      internalID: -2057951493
       vertices: []
       indices: 
       edges: []
@@ -1639,20 +1639,20 @@ TextureImporter:
       name: pipesTileSet_60
       rect:
         serializedVersion: 2
-        x: 226
-        y: 96
-        width: 15
-        height: 16
+        x: 1024
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: da67368d90025a650800000000000000
-      internalID: 6243431685076252333
+      spriteID: bef913d2f5894ba4e9516cbd874ac09f
+      internalID: -1123752594
       vertices: []
       indices: 
       edges: []
@@ -1661,20 +1661,20 @@ TextureImporter:
       name: pipesTileSet_61
       rect:
         serializedVersion: 2
-        x: 240
-        y: 98
-        width: 16
-        height: 15
+        x: 1088
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1922a63b34b8143c0800000000000000
-      internalID: -4377064239938264431
+      spriteID: 5b921877a640103489e722ec76ade10f
+      internalID: -479071556
       vertices: []
       indices: 
       edges: []
@@ -1683,20 +1683,20 @@ TextureImporter:
       name: pipesTileSet_62
       rect:
         serializedVersion: 2
-        x: 256
-        y: 97
-        width: 16
-        height: 16
+        x: 1152
+        y: 768
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d3248745a90471300800000000000000
-      internalID: 222717738164437565
+      spriteID: 9f624700224fd5a4f92a767e245d8569
+      internalID: 643629110
       vertices: []
       indices: 
       edges: []
@@ -1705,20 +1705,20 @@ TextureImporter:
       name: pipesTileSet_63
       rect:
         serializedVersion: 2
-        x: 272
-        y: 103
-        width: 16
-        height: 7
+        x: 0
+        y: 704
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6a26507327d521e00800000000000000
-      internalID: 1013975611242537638
+      spriteID: 87e5cdd871694cf40b78d3fd8c55ee43
+      internalID: -268118241
       vertices: []
       indices: 
       edges: []
@@ -1727,20 +1727,20 @@ TextureImporter:
       name: pipesTileSet_64
       rect:
         serializedVersion: 2
-        x: 288
-        y: 103
-        width: 16
-        height: 8
+        x: 128
+        y: 704
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 40c4db3f0b41a45f0800000000000000
-      internalID: -771781635904549884
+      spriteID: 0785256525c73ff4f80a32eaa551cb02
+      internalID: -817104981
       vertices: []
       indices: 
       edges: []
@@ -1749,20 +1749,20 @@ TextureImporter:
       name: pipesTileSet_65
       rect:
         serializedVersion: 2
-        x: 288
-        y: 87
-        width: 16
-        height: 16
+        x: 192
+        y: 704
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 98a2003871b860810800000000000000
-      internalID: 1731224039868869257
+      spriteID: e3333dbe08cc0164d92cccaa7e99a4a5
+      internalID: -165819600
       vertices: []
       indices: 
       edges: []
@@ -1771,20 +1771,20 @@ TextureImporter:
       name: pipesTileSet_66
       rect:
         serializedVersion: 2
-        x: 175
-        y: 80
-        width: 16
-        height: 16
+        x: 256
+        y: 704
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 83bd3c4dca59da5a0800000000000000
-      internalID: -6508381316943979720
+      spriteID: 08d92b1f4d7affd459066a8441fa720f
+      internalID: 947419401
       vertices: []
       indices: 
       edges: []
@@ -1793,20 +1793,20 @@ TextureImporter:
       name: pipesTileSet_67
       rect:
         serializedVersion: 2
-        x: 191
-        y: 80
-        width: 8
-        height: 16
+        x: 320
+        y: 704
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e7a475f13f2d87e00800000000000000
-      internalID: 1042815255380970110
+      spriteID: fa2cdea9f850f314bbee8210337742e7
+      internalID: 1745468968
       vertices: []
       indices: 
       edges: []
@@ -1815,20 +1815,20 @@ TextureImporter:
       name: pipesTileSet_68
       rect:
         serializedVersion: 2
-        x: 217
-        y: 80
-        width: 8
-        height: 16
+        x: 384
+        y: 704
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bca029f8ccb358fe0800000000000000
-      internalID: -1187477176974177589
+      spriteID: 1d9695e3d1f11e046ba6b63a4e314604
+      internalID: 506396122
       vertices: []
       indices: 
       edges: []
@@ -1837,20 +1837,20 @@ TextureImporter:
       name: pipesTileSet_69
       rect:
         serializedVersion: 2
-        x: 225
-        y: 80
-        width: 16
-        height: 16
+        x: 448
+        y: 704
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 19bddb435cacce260800000000000000
-      internalID: 7128295258562878353
+      spriteID: 07891896950932f40a59553769f8280d
+      internalID: 1507258727
       vertices: []
       indices: 
       edges: []
@@ -1859,20 +1859,20 @@ TextureImporter:
       name: pipesTileSet_70
       rect:
         serializedVersion: 2
-        x: 240
-        y: 90
-        width: 16
-        height: 7
+        x: 512
+        y: 704
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4d7de72b1cf1ba230800000000000000
-      internalID: 3651046839697725396
+      spriteID: 5ecce9fc43e523e4e9858199941deafa
+      internalID: -340575990
       vertices: []
       indices: 
       edges: []
@@ -1881,20 +1881,20 @@ TextureImporter:
       name: pipesTileSet_71
       rect:
         serializedVersion: 2
-        x: 256
-        y: 89
-        width: 16
-        height: 8
+        x: 576
+        y: 704
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 839d365f0ee35c510800000000000000
-      internalID: 1568729181119043896
+      spriteID: b5fe820aec2414945875cd53c8b6aa42
+      internalID: 118004532
       vertices: []
       indices: 
       edges: []
@@ -1903,20 +1903,2286 @@ TextureImporter:
       name: pipesTileSet_72
       rect:
         serializedVersion: 2
-        x: 272
-        y: 87
-        width: 16
-        height: 15
+        x: 640
+        y: 704
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 27e4916c16f72f180800000000000000
-      internalID: -9083057440540766606
+      spriteID: 3e3674ffee16c244393c914cf3ebcaa7
+      internalID: 1561471281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_73
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cea13517e4f05b4895421961b57d5a3
+      internalID: 1533557365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_74
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d852e310cd502ff4aa222647e97ac41a
+      internalID: -280502527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_75
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c9f7921b1d2e14dbb1f66e18f05807
+      internalID: 393526949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_76
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c51b7960766d694ba5e7077ff717898
+      internalID: 1469125868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_77
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220cab7ae8464874eb3d440885d3cba2
+      internalID: 927744522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_78
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ad415b4a1f2f845a841da8253eda89
+      internalID: -484776471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_79
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386aeca12ab81d74d8dee747f01c87ee
+      internalID: 759606355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_80
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d72d18082ffd34fbf948a1e8dcbd0d
+      internalID: 2063385152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18b356c7a6f842438321294c9da21f3
+      internalID: 138523587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_82
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fca426b14ee7834e98e9305e59cdbf3
+      internalID: -707471059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_83
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3006620bd07bc4e47b619cd391e02b18
+      internalID: -1684494712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_84
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b9f0563f17390478a8799e6aea178e
+      internalID: 2106697485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_85
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f5dca3e6e960347827dc619ff1082a
+      internalID: -1206845968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_86
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d8819a919b98c4baf16038c32f7f95
+      internalID: -1395845309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_87
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe38660e0e8c764d8519190d01cec86
+      internalID: 1841987167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d57a9e054352643b621b9082805d59
+      internalID: 1576091407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_89
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b6d25032eecfa49ba2bdafc04c039f
+      internalID: -914702793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_90
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f90c82600c8c7954a80ad857291d959d
+      internalID: -1604829941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_91
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46b233ac94d7cb42b643e57ece6e675
+      internalID: -2026195613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_92
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c4ddac616256b44bea44a1dde0526a
+      internalID: -1034429411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_93
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b61da650a002148a8a74e94caab844
+      internalID: -740643019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_94
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4963c0b4d003c40b7055d1a6b6e77c
+      internalID: -1596231886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_95
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2e524f545fe81143906fbde567d3be5
+      internalID: -5809414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_96
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3938c49ca09f544e8a55d9236600343
+      internalID: 588811979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_97
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d548fd3e2ff69bf41929d89b2294a2c7
+      internalID: -1087759900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_98
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38db287a252d09148b4c8072f60d4b36
+      internalID: 392483546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_99
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cfec9e390029284194321c0b3862c61
+      internalID: -1212445677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_100
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131731601c520d4409f53cf8389dfbfe
+      internalID: -2012754065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_101
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f160361024e3d0747b199fbb041b7251
+      internalID: -847066014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_102
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa1f80b13efec743bf8563cb1ee3978
+      internalID: -73138163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_103
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 291386005bd469a449bfbc10c2544cb2
+      internalID: -2133785801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_104
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50afc61773674304b99fb0abe0f1498b
+      internalID: -1667557585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_105
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c3c440f72ab884b85e313adf062112
+      internalID: 1859365802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_106
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b4ded30299e014281604d93dd0e5d4
+      internalID: 1107803399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_107
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbeb61d147f60154f9f00883a3340866
+      internalID: -1718373151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_108
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d524b9d85e72d8f44b0eba955aafd38d
+      internalID: -100087011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_109
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d5acce71f040b4d882233b532ffb3b
+      internalID: 1490319423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_110
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 068e66c31d843e44ca7ff5980a885bc8
+      internalID: -745185987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_111
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb738078e3620bc428752f1d1c02a735
+      internalID: 491479337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_112
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205acec3fb1a10f43ad099532823ddc8
+      internalID: -575488552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_113
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc2b746f860b8e439e296426c65dea5
+      internalID: 1959330590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_114
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1722b1cebde3c4eb1d35a9ba3ff195
+      internalID: 1645245741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_115
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba49321709c1114fbba4f6b32956b8a
+      internalID: -792302340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_116
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4818532da343404e92e021311d1ee39
+      internalID: 581387379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_117
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06e66b7b0a4906459a6337b823dee6c
+      internalID: -1230528123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_118
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d94191114e6024dbb5e531a5a0d061
+      internalID: 1815653068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_119
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625bbb301ba282f49aab283601ee3041
+      internalID: 1530592162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_120
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b760897ff7f2ae4cb9dcd4c73824d80
+      internalID: 1366564057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_121
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe54ccc0e3ced643805bfc68c023e44
+      internalID: 458180799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_122
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3db579fbca014d44aa44b6a35f65405
+      internalID: -1640059681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_123
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2eb6a0e0d7bd5a4cb90b97b20d741d4
+      internalID: 1558630012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_124
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97365fcc6ebda264792e62d8d3c7cfad
+      internalID: 402251661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_125
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9fb44cadb80a7f4ead7fc7a781b8f4b
+      internalID: -677015019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_126
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f30937b7ecb224bb3c0c0338e0b669
+      internalID: -1604506886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_127
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f2d6e6b42dc294a85b54719227e3f8
+      internalID: 1035964525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_128
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00c73e47e5951f4780b39d740217a35
+      internalID: -138275911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_129
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d2b884f1395dd48b4234810751c94a
+      internalID: 270985262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_130
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3936f1fbac6ed4e96a67904631b8f9
+      internalID: 109697027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_131
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c6e27e2018bd945854def73e557cea
+      internalID: -1942578938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_132
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811a7ab4d4586e541a7f3faef45e13c4
+      internalID: -552351521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_133
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6c95dc7191e5f4dbff56e63352b7cc
+      internalID: 128993842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_134
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6ba0e8f424c8c24c8f1310ea56cf62b
+      internalID: 321617812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_135
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b1635fed86f0f45833fa1b4e244cf5
+      internalID: 1922161187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_136
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff579fc9a8947d647968f817933b0aca
+      internalID: 400455219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_137
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb0823c4b5d96c458262d1e6a82c073
+      internalID: -1285283460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_138
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5616276ab473b4fa9cc4e5f42bb65f
+      internalID: -1459549848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_139
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b9dc2bc8a3d8b4890d91274f129594
+      internalID: -167101387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_140
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a58aa39446c5bed4b922300662d9c96f
+      internalID: -80117753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_141
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: badc19e1f9670ed44a1a326ede4e80da
+      internalID: 2072561577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_142
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93e970767ca889b43b5c4db6c15ff39d
+      internalID: -585043095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_143
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d2e18931741d748aa240ae1522cd5e
+      internalID: 2085322279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_144
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa54c3f2ec29a3543bc71c2b8a757ef7
+      internalID: 1234420250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_145
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c60f706c5931004992550a746cae5ba
+      internalID: 1888877299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_146
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a87a9fb444d543d43bee7ea6fa736664
+      internalID: 180271926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_147
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36c816c821b716478c4704ac7ae69ae
+      internalID: 879651460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_148
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4f67ff9b046c44987a7819c71e2e73
+      internalID: -853402307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_149
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497ea6f51e406ca41830345d13cd203a
+      internalID: 411587729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_150
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a122187fe38b741a49f2009d9fd5fa
+      internalID: 1625786687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_151
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b157bb04993cf11439c1da2faa17b609
+      internalID: -909753261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_152
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da12c556b9da9cb4994abdf65005695c
+      internalID: -1302394862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_153
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd428044acf91b5469086ff2004717f2
+      internalID: -855292339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_154
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2ab9eab24009949bf69c139f7ea146
+      internalID: -1956184311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_155
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f24efbc3411ca7e418b2b9c61d6b3ded
+      internalID: -662225965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_156
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af02b14a1ab0a494abeb9cafeeb0e27a
+      internalID: -37054713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_157
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22c80cb4f4fa0a4fafde19a82d2bfc6
+      internalID: -722333546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_158
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84eb0879b5ed4f74c8737fb4a311f69f
+      internalID: 1384983589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_159
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65be1e975d3c3b541a65b7f714cca16c
+      internalID: -259922153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_160
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8bc0d4c83c07384e84b391c696c45a7
+      internalID: 525014234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_161
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa2ba200c20cc04b9098342c3540709
+      internalID: 1123081292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_162
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fbbf28cab470774d939da2326f1d7e6
+      internalID: 1610732313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_163
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54439c06fe12484d85562df82eb008b
+      internalID: -519676464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_164
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7857d846401454ea5cf2741c128919
+      internalID: 551324985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_165
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e339f8f961629fa4e960e9256f9296cd
+      internalID: -2007935008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_166
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4e3eda323aea84a9c5ed5132e15a61
+      internalID: -1103799204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_167
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba0f8ec2ef3a864b83b77ee16ce0d53
+      internalID: 907320551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_168
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bfe38c9bbaaa4d469be662a78bc97f4
+      internalID: 1477264165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_169
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061fd0bb45da88c4ea2ca3a1022614c0
+      internalID: 1809670434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_170
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56e91ecd65427b4fb1550cbc36865d9
+      internalID: -420293885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_171
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f0d6bee8d0b8a45948cda0b65c15df
+      internalID: -438147353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_172
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f0c5baadfd83dc4bbe79fe1ffbcf7ca
+      internalID: 937253913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_173
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86372c72ac76524e83b112d30c8d724
+      internalID: -535916776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_174
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf4eb76f3ce25b4bb1e9465916e05f1
+      internalID: -31682315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipesTileSet_175
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c348a4556aa7b7745b3797bcc50c29e7
+      internalID: 1991746807
       vertices: []
       indices: 
       edges: []
@@ -1925,7 +4191,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 854d170c0334b0d4bb4c050233dddf69
     internalID: 0
     vertices: []
     indices: 
@@ -1933,81 +4199,186 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      pipesTileSet_0: -5484627894755610514
-      pipesTileSet_1: 4842596506732244511
-      pipesTileSet_10: -5791194159239757200
-      pipesTileSet_11: -701595277942747732
-      pipesTileSet_12: -4556344772770766156
-      pipesTileSet_13: -8365433514152346473
-      pipesTileSet_14: 28571258118320520
-      pipesTileSet_15: -8124684030567992681
-      pipesTileSet_16: -833129437243789885
-      pipesTileSet_17: -7761241570197092379
-      pipesTileSet_18: -3706004976227345966
-      pipesTileSet_19: 4982827061154055513
-      pipesTileSet_2: 8869666122391366471
-      pipesTileSet_20: 5482274116432167301
-      pipesTileSet_21: 8238561906129108650
-      pipesTileSet_22: -4445876777965897537
-      pipesTileSet_23: 5742408235639040817
-      pipesTileSet_24: 2789321468400021611
-      pipesTileSet_25: -2977052176847158690
-      pipesTileSet_26: -5813957036258472380
-      pipesTileSet_27: -2786027097386512290
-      pipesTileSet_28: -8878817658974808924
-      pipesTileSet_29: -8003071868351896569
-      pipesTileSet_3: -6278165782204271560
-      pipesTileSet_30: 6486278784190395866
-      pipesTileSet_31: -3414921749548467179
-      pipesTileSet_32: 6090456126326936489
-      pipesTileSet_33: 6573141889786979972
-      pipesTileSet_34: -3819530315333814622
-      pipesTileSet_35: -8692139375873970850
-      pipesTileSet_36: -5753531166211132472
-      pipesTileSet_37: 6769605267699910406
-      pipesTileSet_38: 652827835122201678
-      pipesTileSet_39: -6515227015202402685
-      pipesTileSet_4: -4361712008413267318
-      pipesTileSet_40: 6308979337957505478
-      pipesTileSet_41: -5356298661152897257
-      pipesTileSet_42: -5966017621505680033
-      pipesTileSet_43: 1136405631933186601
-      pipesTileSet_44: -5322730250624159258
-      pipesTileSet_45: -2236945955505424047
-      pipesTileSet_46: -1603256650243524482
-      pipesTileSet_47: 2787480727816236523
-      pipesTileSet_48: -2826925382942227615
-      pipesTileSet_49: -1784392576246167484
-      pipesTileSet_5: 7380517263340434167
-      pipesTileSet_50: 8853211959834984929
-      pipesTileSet_51: -496483218117861481
-      pipesTileSet_52: -7695221252662522948
-      pipesTileSet_53: -1516132755234146876
-      pipesTileSet_54: -6396636408353711572
-      pipesTileSet_55: -6469851551360017918
-      pipesTileSet_56: 971142432701847544
-      pipesTileSet_57: -5868742229446442960
-      pipesTileSet_58: -4728034260325342185
-      pipesTileSet_59: 1622570432884421412
-      pipesTileSet_6: 7899945681611153421
-      pipesTileSet_60: 6243431685076252333
-      pipesTileSet_61: -4377064239938264431
-      pipesTileSet_62: 222717738164437565
-      pipesTileSet_63: 1013975611242537638
-      pipesTileSet_64: -771781635904549884
-      pipesTileSet_65: 1731224039868869257
-      pipesTileSet_66: -6508381316943979720
-      pipesTileSet_67: 1042815255380970110
-      pipesTileSet_68: -1187477176974177589
-      pipesTileSet_69: 7128295258562878353
-      pipesTileSet_7: 4739502555812006277
-      pipesTileSet_70: 3651046839697725396
-      pipesTileSet_71: 1568729181119043896
-      pipesTileSet_72: -9083057440540766606
-      pipesTileSet_8: 799175806475122562
-      pipesTileSet_9: 6512982382167347331
+      pipesTileSet_0: 894915219
+      pipesTileSet_1: -325786220
+      pipesTileSet_10: -1330241428
+      pipesTileSet_100: -2012754065
+      pipesTileSet_101: -847066014
+      pipesTileSet_102: -73138163
+      pipesTileSet_103: -2133785801
+      pipesTileSet_104: -1667557585
+      pipesTileSet_105: 1859365802
+      pipesTileSet_106: 1107803399
+      pipesTileSet_107: -1718373151
+      pipesTileSet_108: -100087011
+      pipesTileSet_109: 1490319423
+      pipesTileSet_11: -1056652584
+      pipesTileSet_110: -745185987
+      pipesTileSet_111: 491479337
+      pipesTileSet_112: -575488552
+      pipesTileSet_113: 1959330590
+      pipesTileSet_114: 1645245741
+      pipesTileSet_115: -792302340
+      pipesTileSet_116: 581387379
+      pipesTileSet_117: -1230528123
+      pipesTileSet_118: 1815653068
+      pipesTileSet_119: 1530592162
+      pipesTileSet_12: -758643002
+      pipesTileSet_120: 1366564057
+      pipesTileSet_121: 458180799
+      pipesTileSet_122: -1640059681
+      pipesTileSet_123: 1558630012
+      pipesTileSet_124: 402251661
+      pipesTileSet_125: -677015019
+      pipesTileSet_126: -1604506886
+      pipesTileSet_127: 1035964525
+      pipesTileSet_128: -138275911
+      pipesTileSet_129: 270985262
+      pipesTileSet_13: -509858661
+      pipesTileSet_130: 109697027
+      pipesTileSet_131: -1942578938
+      pipesTileSet_132: -552351521
+      pipesTileSet_133: 128993842
+      pipesTileSet_134: 321617812
+      pipesTileSet_135: 1922161187
+      pipesTileSet_136: 400455219
+      pipesTileSet_137: -1285283460
+      pipesTileSet_138: -1459549848
+      pipesTileSet_139: -167101387
+      pipesTileSet_14: -116963841
+      pipesTileSet_140: -80117753
+      pipesTileSet_141: 2072561577
+      pipesTileSet_142: -585043095
+      pipesTileSet_143: 2085322279
+      pipesTileSet_144: 1234420250
+      pipesTileSet_145: 1888877299
+      pipesTileSet_146: 180271926
+      pipesTileSet_147: 879651460
+      pipesTileSet_148: -853402307
+      pipesTileSet_149: 411587729
+      pipesTileSet_15: -1263615762
+      pipesTileSet_150: 1625786687
+      pipesTileSet_151: -909753261
+      pipesTileSet_152: -1302394862
+      pipesTileSet_153: -855292339
+      pipesTileSet_154: -1956184311
+      pipesTileSet_155: -662225965
+      pipesTileSet_156: -37054713
+      pipesTileSet_157: -722333546
+      pipesTileSet_158: 1384983589
+      pipesTileSet_159: -259922153
+      pipesTileSet_16: -621661723
+      pipesTileSet_160: 525014234
+      pipesTileSet_161: 1123081292
+      pipesTileSet_162: 1610732313
+      pipesTileSet_163: -519676464
+      pipesTileSet_164: 551324985
+      pipesTileSet_165: -2007935008
+      pipesTileSet_166: -1103799204
+      pipesTileSet_167: 907320551
+      pipesTileSet_168: 1477264165
+      pipesTileSet_169: 1809670434
+      pipesTileSet_17: -914634485
+      pipesTileSet_170: -420293885
+      pipesTileSet_171: -438147353
+      pipesTileSet_172: 937253913
+      pipesTileSet_173: -535916776
+      pipesTileSet_174: -31682315
+      pipesTileSet_175: 1991746807
+      pipesTileSet_18: -1089947006
+      pipesTileSet_19: 1187682572
+      pipesTileSet_2: -1867857181
+      pipesTileSet_20: -264225164
+      pipesTileSet_21: 954342490
+      pipesTileSet_22: 1997834450
+      pipesTileSet_23: 255776156
+      pipesTileSet_24: 1250079690
+      pipesTileSet_25: -1515204562
+      pipesTileSet_26: -1925061499
+      pipesTileSet_27: -291651826
+      pipesTileSet_28: 614495890
+      pipesTileSet_29: 180719379
+      pipesTileSet_3: 1567208296
+      pipesTileSet_30: -1539955110
+      pipesTileSet_31: -1617929688
+      pipesTileSet_32: 1480041490
+      pipesTileSet_33: -491950170
+      pipesTileSet_34: -1862374103
+      pipesTileSet_35: -1066022312
+      pipesTileSet_36: 974231543
+      pipesTileSet_37: 1426743300
+      pipesTileSet_38: -430706078
+      pipesTileSet_39: -5615707
+      pipesTileSet_4: -1627787043
+      pipesTileSet_40: 1353187659
+      pipesTileSet_41: 824120834
+      pipesTileSet_42: -571331619
+      pipesTileSet_43: 2137331082
+      pipesTileSet_44: -452553124
+      pipesTileSet_45: 1646227842
+      pipesTileSet_46: -365552996
+      pipesTileSet_47: -1019603305
+      pipesTileSet_48: 17140070
+      pipesTileSet_49: -1900195923
+      pipesTileSet_5: -1316599724
+      pipesTileSet_50: -203283046
+      pipesTileSet_51: 541350658
+      pipesTileSet_52: 766066757
+      pipesTileSet_53: 15072471
+      pipesTileSet_54: -403256556
+      pipesTileSet_55: 230895252
+      pipesTileSet_56: 1455887346
+      pipesTileSet_57: 1399727702
+      pipesTileSet_58: 687339333
+      pipesTileSet_59: -2057951493
+      pipesTileSet_6: 1225907168
+      pipesTileSet_60: -1123752594
+      pipesTileSet_61: -479071556
+      pipesTileSet_62: 643629110
+      pipesTileSet_63: -268118241
+      pipesTileSet_64: -817104981
+      pipesTileSet_65: -165819600
+      pipesTileSet_66: 947419401
+      pipesTileSet_67: 1745468968
+      pipesTileSet_68: 506396122
+      pipesTileSet_69: 1507258727
+      pipesTileSet_7: -470612458
+      pipesTileSet_70: -340575990
+      pipesTileSet_71: 118004532
+      pipesTileSet_72: 1561471281
+      pipesTileSet_73: 1533557365
+      pipesTileSet_74: -280502527
+      pipesTileSet_75: 393526949
+      pipesTileSet_76: 1469125868
+      pipesTileSet_77: 927744522
+      pipesTileSet_78: -484776471
+      pipesTileSet_79: 759606355
+      pipesTileSet_8: 1315185120
+      pipesTileSet_80: 2063385152
+      pipesTileSet_81: 138523587
+      pipesTileSet_82: -707471059
+      pipesTileSet_83: -1684494712
+      pipesTileSet_84: 2106697485
+      pipesTileSet_85: -1206845968
+      pipesTileSet_86: -1395845309
+      pipesTileSet_87: 1841987167
+      pipesTileSet_88: 1576091407
+      pipesTileSet_89: -914702793
+      pipesTileSet_9: 315387838
+      pipesTileSet_90: -1604829941
+      pipesTileSet_91: -2026195613
+      pipesTileSet_92: -1034429411
+      pipesTileSet_93: -740643019
+      pipesTileSet_94: -1596231886
+      pipesTileSet_95: -5809414
+      pipesTileSet_96: 588811979
+      pipesTileSet_97: -1087759900
+      pipesTileSet_98: 392483546
+      pipesTileSet_99: -1212445677
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

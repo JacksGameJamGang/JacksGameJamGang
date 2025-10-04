@@ -1,19 +1,22 @@
 ﻿using System;
 using UnityEngine;
+using Unity.Cinemachine;
 
-public class GameManager : LocalSingleton<GameManager>
+public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private string nextSceneName = "Level_1";
-    [SerializeField] private PlayerController robotController;
-    [SerializeField] private PlayerController dogController;
-    private PlayerController currentCharacter;
+    [SerializeField] private Transform robotController;
+    [SerializeField] private Transform dogController;
+    [SerializeField] private Unity.Cinemachine.CinemachineCamera virtualCamera;
+
+    private Transform currentCharacter;
     
-    public PlayerController RobotController => robotController;
-    public PlayerController DogController => dogController;
-    public PlayerController CurrentCharacter => currentCharacter;
-    public PlayerCharacter PlayerCharacter { get; private set; }
+    public Transform RobotController => robotController;
+    public Transform DogController => dogController;
+    public Transform CurrentCharacter => currentCharacter;
+    public Transform PlayerToFollow { get; private set; }
     
-    public event Action<PlayerCharacter> OnSetPlayerToFollow;
+    public event Action<Transform> OnSetPlayerToFollow;
     
     private void Start()
     {
@@ -30,7 +33,7 @@ public class GameManager : LocalSingleton<GameManager>
     {
         if (newState == GameState.Playing)
         {
-            SetPlayerToFollow(RobotController.GetComponent<PlayerCharacter>());
+            SetPlayerToFollow(RobotController.transform);
             SetControlledCharacter(RobotController);
         }
         else if (newState == GameState.RobotTempDeath)
@@ -46,17 +49,38 @@ public class GameManager : LocalSingleton<GameManager>
         //SceneManager.ReloadScene();
     }
     
-    public void SetPlayerToFollow(PlayerCharacter player)
+    public void SetPlayerToFollow(Transform player)
     {
-        PlayerCharacter = player;
+        PlayerToFollow = player;
         OnSetPlayerToFollow?.Invoke(player);
     }
 
-    public void SetControlledCharacter(PlayerController character)
+    public void SetControlledCharacter(Transform character)
     {
         currentCharacter = character;
-        // A CameraFollow script should be added later to the camera component
-        // Camera.main.GetComponent<CameraFollow>().target = currentCharacter;
+
+        // Disable all PlayerController components
+        RobotController.GetComponent<PlayerController>().enabled = false;
+        DogController.GetComponent<PlayerController>().enabled = false;
+
+        currentCharacter.GetComponent<PlayerController>().enabled = true;
+
+        if (currentCharacter == robotController)
+        {
+            RobotController.GetComponent<RobotController>().enabled = true;
+            DogController.GetComponent<DogAIController>().enabled = true;
+        }
+        else if (currentCharacter == dogController)
+        {
+            RobotController.GetComponent<RobotController>().enabled = false;
+            DogController.GetComponent<DogAIController>().enabled = false;
+        }
+
+        // Update Cinemachine target
+        if (virtualCamera != null)
+        {
+            virtualCamera.Follow = currentCharacter;
+        }
     }
 
     public void SwitchToNextScene()

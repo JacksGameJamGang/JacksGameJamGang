@@ -1,13 +1,13 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class OpeningDoor : MonoBehaviour
+public class TwoSwitchesDoor : MonoBehaviour
 {
     [SerializeField] private PressurePlate plate1;
     [SerializeField] private PressurePlate plate2;
-    
+
     [SerializeField] private Transform door;
-    [SerializeField] private float openDistance = 2f; 
+    [SerializeField] private float openDistance = 2f;
     [SerializeField] private float openTime = 0.5f;
 
     private bool plate1Pressed;

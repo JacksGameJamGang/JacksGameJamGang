@@ -1,51 +1,71 @@
 using System;
-using DG.Tweening;
 using UnityEngine;
 
-public class PressurePlate : MonoBehaviour
+public class PressurePlate : MonoBehaviour, ISwitch
 {
-    [SerializeField] private Transform topPart;
-    [SerializeField] private float pressDistance = 0.1f;
-    [SerializeField] private float pressTime = 0.1f;
+    [Header("Sprites (visual change)")]
+    [SerializeField] private SpriteRenderer plateRenderer;
+    [SerializeField] private Sprite unpressedSprite;
+    [SerializeField] private Sprite pressedSprite;
+
+    [Header("Tags that can trigger the plate")]
+    [SerializeField] private string[] validTags = { "Player", "Dog", "Box" };
 
     public Action<bool> OnPressurePlateTriggered;
 
-    private Vector3 initialPosition;
-    private Tween activeTween;
     private int objectsOnPlate = 0;
 
     private void Awake()
     {
-        initialPosition = topPart.position;
+        if (plateRenderer == null)
+            plateRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("Player") && !other.CompareTag("Dog")) return;
+        if (!IsValidTag(other.tag)) return;
 
         objectsOnPlate++;
-        if (objectsOnPlate == 1) // just in case if both the player and dog step on it at the same time
+        if (objectsOnPlate == 1)
         {
-            AnimatePlate(initialPosition + Vector3.down * pressDistance);
+            SetPlateSprite(true);
             OnPressurePlateTriggered?.Invoke(true);
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (!other.CompareTag("Player") && !other.CompareTag("Dog")) return;
+        if (!IsValidTag(other.tag)) return;
 
         objectsOnPlate = Mathf.Max(0, objectsOnPlate - 1);
         if (objectsOnPlate == 0)
         {
-            AnimatePlate(initialPosition);
+            SetPlateSprite(false);
             OnPressurePlateTriggered?.Invoke(false);
         }
     }
 
-    private void AnimatePlate(Vector3 targetPos)
+    private bool IsValidTag(string tag)
     {
-        activeTween?.Kill();
-        activeTween = topPart.DOMove(targetPos, pressTime).SetEase(Ease.OutQuad);
+        foreach (var validTag in validTags)
+        {
+            if (tag == validTag)
+                return true;
+        }
+        return false;
     }
+
+    private void SetPlateSprite(bool pressed)
+    {
+        if (plateRenderer == null) return;
+        plateRenderer.sprite = pressed ? pressedSprite : unpressedSprite;
+    }
+
+    public event Action<bool> OnSwitchToggled
+    {
+        add { OnPressurePlateTriggered += value; }
+        remove { OnPressurePlateTriggered -= value; }
+    }
+
+    public bool IsActive => objectsOnPlate > 0;
 }

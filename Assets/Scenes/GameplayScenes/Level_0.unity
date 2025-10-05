@@ -185,10 +185,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4153738946964556514, guid: 51c62923b0b25984ca9bd3ae3110b08e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1772079781}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51c62923b0b25984ca9bd3ae3110b08e, type: 3}
 --- !u!95 &206404855 stripped
 Animator:
@@ -1649,23 +1646,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!1 &1772079775 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4153738946964556514, guid: 51c62923b0b25984ca9bd3ae3110b08e, type: 3}
-  m_PrefabInstance: {fileID: 206404854}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1772079781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772079775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea264e92b069d504da02697bfdbf6dc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RobotColorChangerForTesting
 --- !u!1 &1811593561
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,3 @@
-using DG.Tweening;
 using UnityEngine;
 
 public class TwoSwitchesDoor : MonoBehaviour
@@ -6,18 +5,11 @@ public class TwoSwitchesDoor : MonoBehaviour
     [SerializeField] private PressurePlate plate1;
     [SerializeField] private PressurePlate plate2;
 
-    [SerializeField] private Transform door;
-    [SerializeField] private float openDistance = 2f;
-    [SerializeField] private float openTime = 0.5f;
+    [SerializeField] private Animator doorAnimator;       // Animator for open/close animations
+    [SerializeField] private Collider2D doorCollider;     // The door's physical barrier collider
 
     private bool plate1Pressed;
     private bool plate2Pressed;
-    private Vector3 initialDoorPos;
-
-    private void Awake()
-    {
-        initialDoorPos = door.position;
-    }
 
     private void OnEnable()
     {
@@ -34,30 +26,23 @@ public class TwoSwitchesDoor : MonoBehaviour
     private void HandlePlate1(bool pressed)
     {
         plate1Pressed = pressed;
-        CheckDoorState();
+        UpdateDoorState();
     }
 
     private void HandlePlate2(bool pressed)
     {
         plate2Pressed = pressed;
-        CheckDoorState();
+        UpdateDoorState();
     }
 
-    private void CheckDoorState()
-    {
-        if (plate1Pressed || plate2Pressed)
-            OpenDoor();
-        else
-            CloseDoor();
-    }
 
-    private void OpenDoor()
+    private void UpdateDoorState()
     {
-        door.DOMove(initialDoorPos + Vector3.up * openDistance, openTime).SetEase(Ease.OutQuad);
-    }
+        // Update animation
+        doorAnimator.SetBool("IsOpen", plate1Pressed && plate2Pressed);
 
-    private void CloseDoor()
-    {
-        door.DOMove(initialDoorPos, openTime).SetEase(Ease.OutQuad);
+        // Enable or disable collider based on door state
+        if (doorCollider != null)
+            doorCollider.enabled = (!plate1Pressed) || (!plate2Pressed);
     }
 }

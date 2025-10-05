@@ -2,7 +2,7 @@
 using UnityEngine;
 using Unity.Cinemachine;
 
-public class GameManager : Singleton<GameManager>
+public class GameManager : LocalSingleton<GameManager>
 {
     [SerializeField] private string nextSceneName = "Level_1";
     [SerializeField] private Transform robotController;

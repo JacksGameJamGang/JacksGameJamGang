@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Dog
+  - Box
+  - MovingPlatform
+  - PlayerFeet
   layers:
   - Default
   - TransparentFX
@@ -15,8 +18,8 @@ TagManager:
   - Player
   - Dog
   - Mechanism
-  - 
-  - 
+  - Box
+  - MovingPlatform
   - 
   - 
   - 

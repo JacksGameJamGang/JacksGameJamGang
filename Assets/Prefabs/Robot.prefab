@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4094225652684714764}
   - component: {fileID: 7743972842106505682}
-  - component: {fileID: 8072174631063598352}
+  - component: {fileID: 264524353072611293}
   - component: {fileID: 2510343708090932380}
   - component: {fileID: 1847260725279301702}
   - component: {fileID: 7135902950319434645}
   - component: {fileID: 4847037807412546443}
+  - component: {fileID: 6737030821274156420}
   m_Layer: 6
   m_Name: Robot
   m_TagString: Player
@@ -96,7 +97,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8072174631063598352
+--- !u!61 &264524353072611293
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,7 +131,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0012152791, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -140,7 +141,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.51562583, y: 1.2}
+  m_Size: {x: 0.5, y: 1.21}
   m_EdgeRadius: 0
 --- !u!50 &2510343708090932380
 Rigidbody2D:
@@ -185,7 +186,8 @@ MonoBehaviour:
   jumpForce: 5
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 1544
+  groundCheckRadius: 0.2
   groundCheck: {fileID: 4925019458374891591}
   animator: {fileID: 4847037807412546443}
 --- !u!114 &7135902950319434645
@@ -231,6 +233,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6737030821274156420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4153738946964556514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea264e92b069d504da02697bfdbf6dc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RobotColorChangerForTesting
 --- !u!1 &4598106853526387659
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +256,7 @@ GameObject:
   - component: {fileID: 4925019458374891591}
   m_Layer: 0
   m_Name: GroundCheck
-  m_TagString: Untagged
+  m_TagString: PlayerFeet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

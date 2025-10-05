@@ -205,10 +205,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   speed: 5
   jumpForce: 3
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
   groundCheck: {fileID: 4193229797333877870}
+  groundCheckRadius: 0.2
+  whatIsSolid:
+    serializedVersion: 2
+    m_Bits: 1544
   animator: {fileID: 8872229547537489814}
 --- !u!95 &8872229547537489814
 Animator:

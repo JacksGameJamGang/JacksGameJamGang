@@ -1,53 +1,36 @@
-using DG.Tweening;
 using UnityEngine;
 
 public class OneSwitchDoor : MonoBehaviour
 {
-    [SerializeField] private PressurePlate plate; // Only one plate now
+    [SerializeField] private MonoBehaviour triggerSource; // Assign either PressurePlate or LeverMechanism
+    [SerializeField] private Animator doorAnimator;       // Animator for open/close animations
+    [SerializeField] private Collider2D doorCollider;     // The door's physical barrier collider
 
-    [SerializeField] private Transform door;
-    [SerializeField] private float openDistance = 2f;
-    [SerializeField] private float openTime = 0.5f;
-
-    private bool platePressed; // Only one boolean now
-    private Vector3 initialDoorPos;
+    private ISwitch switchSource;
 
     private void Awake()
     {
-        initialDoorPos = door.position;
+        switchSource = triggerSource as ISwitch;
+        if (switchSource == null)
+            Debug.LogError($"{name}: Assigned object does not implement ISwitch!");
     }
 
     private void OnEnable()
     {
-        plate.OnPressurePlateTriggered += HandlePlate; // Only one subscription
+        if (switchSource != null)
+            switchSource.OnSwitchToggled += HandleSwitch;
     }
 
     private void OnDisable()
     {
-        plate.OnPressurePlateTriggered -= HandlePlate; // Only one unsubscription
+        if (switchSource != null)
+            switchSource.OnSwitchToggled -= HandleSwitch;
     }
 
-    private void HandlePlate(bool pressed) // Single handler
+    private void HandleSwitch(bool active)
     {
-        platePressed = pressed;
-        CheckDoorState();
+        doorAnimator.SetBool("IsOpen", active);
+        if (doorCollider) doorCollider.enabled = !active;
     }
 
-    private void CheckDoorState()
-    {
-        if (platePressed) // Simple check - if plate is pressed, open door
-            OpenDoor();
-        else
-            CloseDoor();
-    }
-
-    private void OpenDoor()
-    {
-        door.DOMove(initialDoorPos + Vector3.up * openDistance, openTime).SetEase(Ease.OutQuad);
-    }
-
-    private void CloseDoor()
-    {
-        door.DOMove(initialDoorPos, openTime).SetEase(Ease.OutQuad);
-    }
 }

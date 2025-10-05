@@ -6,15 +6,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private float groundCheckRadius = 0.2f;
+
     [SerializeField] private Transform groundCheck;
+    
     [SerializeField] private Animator animator;
 
     // Stuff to track movement and jumping
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private bool isGrounded;
-
-    // private int jumpCounter = 2; // In-case there's double jump
 
     void Awake()
     {
@@ -26,7 +27,7 @@ public class PlayerController : MonoBehaviour
     {
         Jump();
     }
-    
+
     private void FixedUpdate()
     {
         Movement();
@@ -37,7 +38,7 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
         FlipPlayer(horizontalInput);
-        
+
         if (horizontalInput != 0)
             animator.SetBool("IsRunning", true);
         else
@@ -46,21 +47,12 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-        
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        Debug.Log(isGrounded);
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
-
-        /* This is the jumping conditions in-case there's double jump 
-        if (Input.GetButtonDown("Jump") && jumpCounter > 0)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            jumpCounter--;
-        }
-        if (isGrounded) jumpCounter = 2;
-        */
     }
 
     void FlipPlayer(float horizontalInput)
@@ -70,4 +62,5 @@ public class PlayerController : MonoBehaviour
         else if (horizontalInput < 0)
             spriteRenderer.flipX = true;
     }
+
 }

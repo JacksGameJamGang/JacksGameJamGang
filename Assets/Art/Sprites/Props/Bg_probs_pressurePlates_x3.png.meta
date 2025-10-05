@@ -1,0 +1,457 @@
+fileFormatVersion: 2
+guid: 401dc3e824cddee46941d16724959c7a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4745169913075778063
+    second: Bg_probs_pressurePlates_x3_0
+  - first:
+      213: -6411617086136297974
+    second: Bg_probs_pressurePlates_x3_1
+  - first:
+      213: 8433833419107039013
+    second: Bg_probs_pressurePlates_x3_2
+  - first:
+      213: 8179615583234982572
+    second: Bg_probs_pressurePlates_x3_3
+  - first:
+      213: -945495611954812630
+    second: Bg_probs_pressurePlates_x3_4
+  - first:
+      213: 6537352263966753466
+    second: Bg_probs_pressurePlates_x3_5
+  - first:
+      213: 3806572446784166808
+    second: Bg_probs_pressurePlates_x3_6
+  - first:
+      213: 5015190741845755886
+    second: Bg_probs_pressurePlates_x3_7
+  - first:
+      213: 4986686892028926916
+    second: Bg_probs_pressurePlates_x3_8
+  - first:
+      213: -5928828653685601713
+    second: Bg_probs_pressurePlates_x3_9
+  - first:
+      213: 7006497646949984529
+    second: Bg_probs_pressurePlates_x3_10
+  - first:
+      213: 5855752415248510557
+    second: Bg_probs_pressurePlates_x3_11
+  - first:
+      213: -7032905024113605761
+    second: Bg_probs_pressurePlates_x3_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bg_probs_pressurePlates_x3_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 0
+        width: 261
+        height: 576
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd3f34ea15c52eb0800000000000000
+      internalID: -4745169913075778063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_pressurePlates_x3_1
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 369
+        width: 261
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a065509fa3c5507a0800000000000000
+      internalID: -6411617086136297974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_pressurePlates_x3_2
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 432
+        width: 144
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52771b07fcefa0570800000000000000
+      internalID: 8433833419107039013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_pressurePlates_x3_3
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 432
+        width: 144
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca288f51905d38170800000000000000
+      internalID: 8179615583234982572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_pressurePlates_x3_4
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 306
+        width: 180
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a292eb810cce0e2f0800000000000000
+      internalID: -945495611954812630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_pressurePlates_x3_5
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 288
+        width: 171
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab285596f3759ba50800000000000000
+      internalID: 6537352263966753466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_pressurePlates_x3_6
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 288
+        width: 171
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89b1c56e879a3d430800000000000000
+      internalID: 3806572446784166808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_pressurePlates_x3_7
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 252
+        width: 144
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee74b887869899540800000000000000
+      internalID: 5015190741845755886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_pressurePlates_x3_8
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 144
+        width: 171
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cb1b75ce45443540800000000000000
+      internalID: 4986686892028926916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_pressurePlates_x3_9
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 144
+        width: 171
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4a89e270c198bda0800000000000000
+      internalID: -5928828653685601713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_pressurePlates_x3_10
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 162
+        width: 144
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1196016ec741c3160800000000000000
+      internalID: 7006497646949984529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_pressurePlates_x3_11
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 0
+        width: 18
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5ee58bebcfc34150800000000000000
+      internalID: 5855752415248510557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_pressurePlates_x3_12
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 0
+        width: 18
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7306aa742a166e90800000000000000
+      internalID: -7032905024113605761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 82f7bf8d428e4174e835b39cfa7f0196
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":160.0,"y":288.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Bg_probs_pressurePlates_x3_0: -4745169913075778063
+      Bg_probs_pressurePlates_x3_1: -6411617086136297974
+      Bg_probs_pressurePlates_x3_10: 7006497646949984529
+      Bg_probs_pressurePlates_x3_11: 5855752415248510557
+      Bg_probs_pressurePlates_x3_12: -7032905024113605761
+      Bg_probs_pressurePlates_x3_2: 8433833419107039013
+      Bg_probs_pressurePlates_x3_3: 8179615583234982572
+      Bg_probs_pressurePlates_x3_4: -945495611954812630
+      Bg_probs_pressurePlates_x3_5: 6537352263966753466
+      Bg_probs_pressurePlates_x3_6: 3806572446784166808
+      Bg_probs_pressurePlates_x3_7: 5015190741845755886
+      Bg_probs_pressurePlates_x3_8: 4986686892028926916
+      Bg_probs_pressurePlates_x3_9: -5928828653685601713
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

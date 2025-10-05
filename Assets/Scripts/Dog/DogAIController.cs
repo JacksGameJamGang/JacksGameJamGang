@@ -27,7 +27,7 @@ public class DogAIController : MonoBehaviour
     [SerializeField] private Canvas interactCanvas;
 
     private DogAIState currentState = DogAIState.Idle;
-    private PlayerCharacter player;
+    private Transform player;
     private Rigidbody2D rb;
     private float idleTimer;
 
@@ -63,9 +63,9 @@ public class DogAIController : MonoBehaviour
         
         if (player == null)
         {
-            if (GameManager.Instance.PlayerCharacter == null || GameManager.Instance.PlayerIsDead)
+            if (GameManager.Instance.PlayerToFollow == null)
                 return;
-            HandleSetPlayer(GameManager.Instance.PlayerCharacter);
+            HandleSetPlayer(GameManager.Instance.PlayerToFollow);
         }
 
         switch (currentState)
@@ -108,9 +108,18 @@ public class DogAIController : MonoBehaviour
         {
             interactCanvas.enabled = false;
         }
-            
-        if (currentState == DogAIState.Sitting) // just for now
+
+        // just for now
+        if (currentState == DogAIState.Sitting)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("Dog is now following.");
+                currentState = DogAIState.Following;
+                spriteRenderer.color = Color.red; // just for testing
+            }
             return;
+        }
         
         if (distanceToPlayer > followDistance)
         {
@@ -153,7 +162,7 @@ public class DogAIController : MonoBehaviour
         }
     }
 
-    private void HandleSetPlayer(PlayerCharacter obj)
+    private void HandleSetPlayer(Transform obj)
     {
         player = obj;
         currentState = DogAIState.Following;

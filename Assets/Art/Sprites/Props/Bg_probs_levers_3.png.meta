@@ -1,0 +1,457 @@
+fileFormatVersion: 2
+guid: 446a851db3b08674b8a8182d17f5b1c2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7008030948906478614
+    second: Bg_probs_levers_3_0
+  - first:
+      213: -5699162455246733262
+    second: Bg_probs_levers_3_1
+  - first:
+      213: -994265171680651636
+    second: Bg_probs_levers_3_2
+  - first:
+      213: -8051955465547100310
+    second: Bg_probs_levers_3_3
+  - first:
+      213: 9064544802736561839
+    second: Bg_probs_levers_3_4
+  - first:
+      213: 7349965541426218756
+    second: Bg_probs_levers_3_5
+  - first:
+      213: -3846029008417818328
+    second: Bg_probs_levers_3_6
+  - first:
+      213: -3212943820620790739
+    second: Bg_probs_levers_3_7
+  - first:
+      213: 8481481607228564438
+    second: Bg_probs_levers_3_8
+  - first:
+      213: 6281302939321659802
+    second: Bg_probs_levers_3_9
+  - first:
+      213: -1791040713198548885
+    second: Bg_probs_levers_3_10
+  - first:
+      213: 5890098005273339523
+    second: Bg_probs_levers_3_11
+  - first:
+      213: 1740022694196105222
+    second: Bg_probs_levers_3_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bg_probs_levers_3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 234
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61ca3849407814160800000000000000
+      internalID: 7008030948906478614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_levers_3_1
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 288
+        width: 234
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23086c141f188e0b0800000000000000
+      internalID: -5699162455246733262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_levers_3_2
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 288
+        width: 261
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c869e6d1819a332f0800000000000000
+      internalID: -994265171680651636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_levers_3_3
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 432
+        width: 54
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6fccc84a25b14090800000000000000
+      internalID: -8051955465547100310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_levers_3_4
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 414
+        width: 54
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faed9b9d87bbbcd70800000000000000
+      internalID: 9064544802736561839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_levers_3_5
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 288
+        width: 153
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4074218d7b2500660800000000000000
+      internalID: 7349965541426218756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_levers_3_6
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 288
+        width: 153
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82978657ef820aac0800000000000000
+      internalID: -3846029008417818328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_levers_3_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 207
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d248c983e945963d0800000000000000
+      internalID: -3212943820620790739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_levers_3_8
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 0
+        width: 207
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d32edfb59644b570800000000000000
+      internalID: 8481481607228564438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_levers_3_9
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 0
+        width: 234
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9172e85ebbab2750800000000000000
+      internalID: 6281302939321659802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_levers_3_10
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 0
+        width: 261
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b68c98fe5f1f427e0800000000000000
+      internalID: -1791040713198548885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_levers_3_11
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 0
+        width: 261
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 386ed80cde4ddb150800000000000000
+      internalID: 5890098005273339523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bg_probs_levers_3_12
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 0
+        width: 297
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6005dacdb6dc52810800000000000000
+      internalID: 1740022694196105222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9181e6a033c3384418a25e3768743b49
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Bg_probs_levers_3_0: 7008030948906478614
+      Bg_probs_levers_3_1: -5699162455246733262
+      Bg_probs_levers_3_10: -1791040713198548885
+      Bg_probs_levers_3_11: 5890098005273339523
+      Bg_probs_levers_3_12: 1740022694196105222
+      Bg_probs_levers_3_2: -994265171680651636
+      Bg_probs_levers_3_3: -8051955465547100310
+      Bg_probs_levers_3_4: 9064544802736561839
+      Bg_probs_levers_3_5: 7349965541426218756
+      Bg_probs_levers_3_6: -3846029008417818328
+      Bg_probs_levers_3_7: -3212943820620790739
+      Bg_probs_levers_3_8: 8481481607228564438
+      Bg_probs_levers_3_9: 6281302939321659802
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

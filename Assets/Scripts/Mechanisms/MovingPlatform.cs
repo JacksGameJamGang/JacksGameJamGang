@@ -1,9 +1,15 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    [SerializeField] private Transform platform;    // The moving platform
+	[Header("Mechanism Settings")]
+	[SerializeField] private DoorMode doorMode = DoorMode.Any;
+	[SerializeField] private List<MonoBehaviour> mechanismSources; // Any IMechanism (Lever, Plate, etc.)
+	[SerializeField] private List<MechanismStates> mechanismStates; //internal states of all related mechanisms
+
+	[SerializeField] private Transform platform;    // The moving platform
     [SerializeField] private Transform startPoint;  // One end of the track
     [SerializeField] private Transform endPoint;    // The other end of the track
     [SerializeField] private float moveSpeed = 2f;  // Movement speed
@@ -25,21 +31,62 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    public void Activate()
-    {
-        // If platform is not moving, start it
-        if (!isMoving)
-        {
-            moveRoutine = StartCoroutine(MovePlatform());
-        }
-        else
-        {
-            // If it's already moving, reverse direction immediately
-            ReverseDirection();
-        }
-    }
+	private void Awake()
+	{
+		mechanismStates = new List<MechanismStates>();
+		foreach (var mechanism in mechanismSources)
+			mechanismStates.Add(new MechanismStates(mechanism.GetComponent<IMechanism>(), false));
+	}
 
-    private IEnumerator MovePlatform()
+	private void OnEnable()
+	{
+		foreach (var mechanismState in mechanismStates)
+			mechanismState.mechanism.OnToggleMechanism += HandleSwitchChanged;
+	}
+
+	private void OnDisable()
+	{
+		foreach (var mechanismState in mechanismStates)
+			mechanismState.mechanism.OnToggleMechanism -= HandleSwitchChanged;
+	}
+
+	private void HandleSwitchChanged(IMechanism sender, bool isActive)
+	{
+		foreach (var mechanismState in mechanismStates)
+		{
+			if (mechanismState.mechanism != sender) continue;
+			mechanismState.isActive = isActive;
+		}
+
+		if (MechanismShouldOpen())
+			ReverseDirection(true);
+		else
+			ReverseDirection(false);
+	}
+
+	private bool MechanismShouldOpen()
+	{
+		if (doorMode == DoorMode.Any)
+		{
+			foreach (var mechanismState in mechanismStates)
+			{
+				if (mechanismState.isActive)
+					return true;
+			}
+			return false;
+		}
+		else
+		{
+			foreach (var mechanismState in mechanismStates)
+			{
+				if (!mechanismState.isActive)
+					return false;
+			}
+			return true;
+		}
+	}
+
+	private IEnumerator MovePlatform()
     {
         isMoving = true;
 
@@ -67,15 +114,14 @@ public class MovingPlatform : MonoBehaviour
         movingToEnd = !movingToEnd;
         isMoving = false;
     }
-
-    private void ReverseDirection()
+    private void ReverseDirection(bool moveToEnd)
     {
         // Kill the current coroutine
         if (moveRoutine != null)
             StopCoroutine(moveRoutine);
 
         // Flip direction immediately
-        movingToEnd = !movingToEnd;
+        movingToEnd = moveToEnd;
 
         // Restart movement in new direction
         moveRoutine = StartCoroutine(MovePlatform());

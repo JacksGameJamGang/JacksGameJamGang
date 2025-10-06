@@ -1,9 +1,11 @@
 using System;
 using UnityEngine;
 
-public class PressurePlate : MonoBehaviour, ISwitch
+public class PressurePlate : MonoBehaviour, IMechanism
 {
-    [Header("Sprites (visual change)")]
+	private string mechanismName = "Pressure Plate";
+
+	[Header("Sprites (visual change)")]
     [SerializeField] private SpriteRenderer plateRenderer;
     [SerializeField] private Sprite unpressedSprite;
     [SerializeField] private Sprite pressedSprite;
@@ -11,9 +13,11 @@ public class PressurePlate : MonoBehaviour, ISwitch
     [Header("Tags that can trigger the plate")]
     [SerializeField] private string[] validTags = { "Player", "Dog", "Box" };
 
-    public event Action<ISwitch, bool> OnSwitchToggled;
+	public event Action<IMechanism, bool> OnToggleMechanism;
+	public bool IsActive => objectsOnPlate > 0;
+	private int objectsOnPlate = 0;
 
-    private int objectsOnPlate = 0;
+	public Action<bool> OnPressurePlateTriggered { get; internal set; }
 
     private void Awake()
     {
@@ -21,31 +25,45 @@ public class PressurePlate : MonoBehaviour, ISwitch
             plateRenderer = GetComponent<SpriteRenderer>();
     }
 
+	//plate trigger activation
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!IsValidTag(other.tag)) return;
-
-        objectsOnPlate++;
-        if (objectsOnPlate == 1)
-        {
-            SetPlateSprite(true);
-            OnSwitchToggled?.Invoke(this, true);
-        }
+		Activate();
     }
+	public void Activate()
+	{
+		objectsOnPlate++;
+		if (objectsOnPlate == 1)
+		{
+			SetPlateSprite(true);
+			OnToggleMechanism?.Invoke(this, true);
+		}
+	}
 
-    private void OnTriggerExit2D(Collider2D other)
+	//plate trigger deactivation
+	private void OnTriggerExit2D(Collider2D other)
     {
         if (!IsValidTag(other.tag)) return;
-
-        objectsOnPlate = Mathf.Max(0, objectsOnPlate - 1);
-        if (objectsOnPlate == 0)
-        {
-            SetPlateSprite(false);
-            OnSwitchToggled?.Invoke(this, false);
-        }
+        Deactivate();
     }
+	public void Deactivate()
+	{
+		objectsOnPlate = Mathf.Max(0, objectsOnPlate - 1);
+		if (objectsOnPlate == 0)
+		{
+			SetPlateSprite(false);
+			OnToggleMechanism?.Invoke(this, false);
+		}
+	}
 
-    private bool IsValidTag(string tag)
+	private void SetPlateSprite(bool pressed)
+	{
+		if (plateRenderer == null) return;
+		plateRenderer.sprite = pressed ? pressedSprite : unpressedSprite;
+	}
+
+	private bool IsValidTag(string tag)
     {
         foreach (var validTag in validTags)
         {
@@ -55,13 +73,5 @@ public class PressurePlate : MonoBehaviour, ISwitch
         return false;
     }
 
-    private void SetPlateSprite(bool pressed)
-    {
-        if (plateRenderer == null) return;
-        plateRenderer.sprite = pressed ? pressedSprite : unpressedSprite;
-    }
-
-    public bool IsActive => objectsOnPlate > 0;
-
-    public Action<bool> OnPressurePlateTriggered { get; internal set; }
+	public string GetMechanismName() => mechanismName;
 }

@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -37,7 +38,10 @@ public class PlayerController : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
-        FlipPlayer(horizontalInput);
+        if (gameObject.CompareTag("Player"))
+            FlipPlayer(horizontalInput);
+        else if (gameObject.CompareTag("Dog"))
+            FlipPlayer(-horizontalInput);
 
         if (horizontalInput != 0)
             animator.SetBool("IsRunning", true);
@@ -48,7 +52,7 @@ public class PlayerController : MonoBehaviour
     private void Jump()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-        Debug.Log(isGrounded);
+        //Debug.Log(isGrounded);
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);

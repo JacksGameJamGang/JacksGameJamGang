@@ -1,3 +1,4 @@
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
 public class TwoSwitchesDoor : MonoBehaviour
@@ -38,11 +39,12 @@ public class TwoSwitchesDoor : MonoBehaviour
 
     private void UpdateDoorState()
     {
+        bool isOpen = plate1Pressed || plate2Pressed;
         // Update animation
-        doorAnimator.SetBool("IsOpen", plate1Pressed && plate2Pressed);
+        doorAnimator.SetBool("IsOpen", isOpen);
 
         // Enable or disable collider based on door state
         if (doorCollider != null)
-            doorCollider.enabled = (!plate1Pressed) || (!plate2Pressed);
+            doorCollider.enabled = !isOpen;
     }
 }

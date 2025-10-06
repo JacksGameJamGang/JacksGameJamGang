@@ -16,23 +16,35 @@ public class DisappearingPlatform : MonoBehaviour
         col = GetComponent<Collider2D>();
     }
 
-    private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (hasDisappeared) return;
 
-        // Trigger only if the collision is the ground check object
-        if (collision.gameObject.CompareTag("Player"))
+        // Only care about the player
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Dog"))
         {
-            StartCoroutine(DisappearRoutine());
+            // Check if the player is standing on this platform
+            foreach (ContactPoint2D contact in collision.contacts)
+            {
+                //Debug.Log($"Contact normal: {contact.normal}, Contact point: {contact.point}");
+                // The player's feet should be above the contact point
+                if (contact.normal.y < -0.5f) // ensures contact is from above
+                {
+                    //Debug.Log("Player is standing on platform");
+                    StartCoroutine(DisappearRoutine());
+                    break;
+                }
+            }
         }
     }
 
     private IEnumerator DisappearRoutine()
     {
-        yield return new WaitForSeconds(disappearDelay);
 
         anim.SetTrigger("DisappearTrigger"); // Play animation
         hasDisappeared = true;
+        yield return new WaitForSeconds(disappearDelay);
+        DisableCollider();
     }
 
     // Called by Animation Event on the last frame

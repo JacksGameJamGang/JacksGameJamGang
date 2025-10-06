@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class OneSwitchDoor : MonoBehaviour
@@ -27,10 +28,9 @@ public class OneSwitchDoor : MonoBehaviour
             switchSource.OnSwitchToggled -= HandleSwitch;
     }
 
-    private void HandleSwitch(bool active)
+    private void HandleSwitch(ISwitch @switch, bool arg2)
     {
-        doorAnimator.SetBool("IsOpen", active);
-        if (doorCollider) doorCollider.enabled = !active;
+        throw new NotImplementedException();
     }
 
 }

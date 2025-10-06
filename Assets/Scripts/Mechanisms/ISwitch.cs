@@ -1,5 +1,5 @@
 public interface ISwitch
 {
-    event System.Action<bool> OnSwitchToggled;
+    event System.Action<ISwitch, bool> OnSwitchToggled;
     bool IsActive { get; }
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class RobotController : MonoBehaviour
@@ -17,12 +18,12 @@ public class RobotController : MonoBehaviour
     private void Update()
     {
         FindNearbyInteractables();
-    
+
         if (Input.GetKeyDown(petDogKey))
         {
-            PetDog();
+            StartCoroutine(PetDog());
         }
-    
+
         if (Input.GetKeyDown(activateMechanismKey))
         {
             ActivateMechanism();
@@ -37,18 +38,22 @@ public class RobotController : MonoBehaviour
         Collider2D mechanismCollider = Physics2D.OverlapCircle(transform.position, interactionRange, mechanismLayer);
         nearbyMechanism = mechanismCollider?.gameObject;
     }
-    
-    private void PetDog()
+
+    private IEnumerator PetDog()
     {
         if (nearbyDog != null)
         {
             Debug.Log("Robot pets the dog!");
-            // Add petting animation/effect here
-            // Maybe trigger a happy animation on the dog
+            Animator dogAnimator = nearbyDog.GetComponent<Animator>();
+
+            dogAnimator.SetBool("IsSitting", true);
+            yield return new WaitForSeconds(2f); // Wait 2 seconds (adjust duration as needed)
+            dogAnimator.SetBool("IsSitting", false);
         }
         else
         {
             Debug.Log("No dog nearby to pet!");
+            yield break; // Stops the coroutine early
         }
     }
 

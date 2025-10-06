@@ -6,20 +6,21 @@ public class LeverMechanisms : MonoBehaviour, IMechanism, ISwitch
     private string mechanismName = "Platform Lever";
 
     [Header("Lever Settings")]
-    [SerializeField] private Animator leverAnimator; // Animator for lever visual
-    [SerializeField] private MovingPlatform movingPlatform; // Reference moving platform
-    private string leverBoolName = "IsOn"; // Animator bool parameter
-    public event Action<bool> OnSwitchToggled;
+    [SerializeField] private Animator leverAnimator;
+    [SerializeField] private MovingPlatform movingPlatform;
+
+    private string leverBoolName = "IsOn";
+    public event Action<ISwitch, bool> OnSwitchToggled;
+
     private bool isActive = false;
 
-    // IMechanism implementation
     public void Activate()
     {
         isActive = !isActive;
         leverAnimator?.SetBool(leverBoolName, isActive);
 
         // Notify listeners (doors, platforms, etc.)
-        OnSwitchToggled?.Invoke(isActive);
+        OnSwitchToggled?.Invoke(this, isActive);
 
         // Optional: still directly activate platform
         movingPlatform?.Activate();
@@ -28,16 +29,11 @@ public class LeverMechanisms : MonoBehaviour, IMechanism, ISwitch
     public void Deactivate()
     {
         isActive = false;
-
-        isActive = false;
         leverAnimator?.SetBool(leverBoolName, isActive);
-        OnSwitchToggled?.Invoke(isActive);
+        OnSwitchToggled?.Invoke(this, false);
     }
 
     public bool IsActive => isActive;
 
-    public string GetMechanismName()
-    {
-        return mechanismName;
-    }
+    public string GetMechanismName() => mechanismName;
 }

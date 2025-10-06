@@ -11,7 +11,7 @@ public class PressurePlate : MonoBehaviour, ISwitch
     [Header("Tags that can trigger the plate")]
     [SerializeField] private string[] validTags = { "Player", "Dog", "Box" };
 
-    public Action<bool> OnPressurePlateTriggered;
+    public event Action<ISwitch, bool> OnSwitchToggled;
 
     private int objectsOnPlate = 0;
 
@@ -29,7 +29,7 @@ public class PressurePlate : MonoBehaviour, ISwitch
         if (objectsOnPlate == 1)
         {
             SetPlateSprite(true);
-            OnPressurePlateTriggered?.Invoke(true);
+            OnSwitchToggled?.Invoke(this, true);
         }
     }
 
@@ -41,7 +41,7 @@ public class PressurePlate : MonoBehaviour, ISwitch
         if (objectsOnPlate == 0)
         {
             SetPlateSprite(false);
-            OnPressurePlateTriggered?.Invoke(false);
+            OnSwitchToggled?.Invoke(this, false);
         }
     }
 
@@ -61,11 +61,7 @@ public class PressurePlate : MonoBehaviour, ISwitch
         plateRenderer.sprite = pressed ? pressedSprite : unpressedSprite;
     }
 
-    public event Action<bool> OnSwitchToggled
-    {
-        add { OnPressurePlateTriggered += value; }
-        remove { OnPressurePlateTriggered -= value; }
-    }
-
     public bool IsActive => objectsOnPlate > 0;
+
+    public Action<bool> OnPressurePlateTriggered { get; internal set; }
 }

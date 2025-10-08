@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using UnityEngine;
 
 public interface IMechanism
 {
@@ -13,12 +14,24 @@ public interface IMechanism
 [System.Serializable]
 public class MechanismStates
 {
+	public MonoBehaviour linkedMechanism;
 	public IMechanism mechanism;
+
+	[Tooltip("toggle to force mechanism to match specific state (requires DoorMode == Specific)")]
+	public bool forceStateActive;
+
+	[Tooltip("give order to mechanisms (requires DoorMode == Ordered)")]
+	[Range(1,10)] public int orderOfMechanism;
+
 	public bool isActive;
 
-	public MechanismStates(IMechanism mechanism, bool isActive)
+	public MechanismStates()
 	{
-		this.mechanism = mechanism;
-		this.isActive = isActive;
+		orderOfMechanism = 0;
+	}
+
+	public void Initilize()
+	{
+		mechanism = linkedMechanism.GetComponent<IMechanism>();
 	}
 }

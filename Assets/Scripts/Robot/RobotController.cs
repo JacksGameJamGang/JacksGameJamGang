@@ -63,8 +63,16 @@ public class RobotController : MonoBehaviour
         var mechanism = nearbyMechanism?.GetComponent<IMechanism>();
         if (mechanism != null)
         {
-            Debug.Log($"Robot activates {mechanism.GetMechanismName()}!");
-            mechanism.Activate();
+            if (!mechanism.IsActive)
+            {
+				Debug.Log($"Robot activates {mechanism.GetMechanismName()}!");
+				mechanism.Activate();
+			}
+            else
+            {
+				Debug.Log($"Robot deactivates {mechanism.GetMechanismName()}!");
+				mechanism.Deactivate();
+			}
         }
         else
         {

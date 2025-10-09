@@ -1,48 +1,48 @@
 using System.Collections;
 using UnityEngine;
 
-public class MovingPlatform : MonoBehaviour
+public class MovingPlatform : MechanismListener
 {
-    [SerializeField] private Transform platform;    // The moving platform
+	[SerializeField] private Transform platform;    // The moving platform
     [SerializeField] private Transform startPoint;  // One end of the track
     [SerializeField] private Transform endPoint;    // The other end of the track
     [SerializeField] private float moveSpeed = 2f;  // Movement speed
 
     private bool movingToEnd = true;                // Direction flag
     private Coroutine moveRoutine;                  // Reference to running coroutine
-    private bool isMoving = false;
 
     private Rigidbody2D platformRb;
 
-    private void Start()
+	protected override void Awake()
+	{
+        base.Awake();
+
+		platform.position = startPoint.position;
+		platformRb = platform.GetComponent<Rigidbody2D>();
+
+		if (platformRb == null)
+			platformRb = platform.gameObject.AddComponent<Rigidbody2D>();
+	}
+
+	protected override void HandleMechanismTrigger(IMechanism sender, bool isActive)
+	{
+		MechanismStates mechanism = null;
+
+		foreach (var linkedMechanism in linkedMechanisms)
+		{
+			if (linkedMechanism.mechanism != sender) continue;
+			linkedMechanism.isActive = isActive;
+			mechanism = linkedMechanism;
+		}
+
+		if (MechanismShouldOpen(mechanism, isActive))
+			ReverseDirection(true);
+		else
+			ReverseDirection(false);
+	}
+
+	IEnumerator MovePlatform()
     {
-        platform.position = startPoint.position;
-
-        platformRb = platform.GetComponent<Rigidbody2D>();
-        if (platformRb == null)
-        {
-            platformRb = platform.gameObject.AddComponent<Rigidbody2D>();
-        }
-    }
-
-    public void Activate()
-    {
-        // If platform is not moving, start it
-        if (!isMoving)
-        {
-            moveRoutine = StartCoroutine(MovePlatform());
-        }
-        else
-        {
-            // If it's already moving, reverse direction immediately
-            ReverseDirection();
-        }
-    }
-
-    private IEnumerator MovePlatform()
-    {
-        isMoving = true;
-
         Transform target = movingToEnd ? endPoint : startPoint;
 
         while (true)
@@ -65,23 +65,21 @@ public class MovingPlatform : MonoBehaviour
 
         // When finished moving, flip direction and mark idle
         movingToEnd = !movingToEnd;
-        isMoving = false;
     }
-
-    private void ReverseDirection()
+    void ReverseDirection(bool moveToEnd)
     {
         // Kill the current coroutine
         if (moveRoutine != null)
             StopCoroutine(moveRoutine);
 
         // Flip direction immediately
-        movingToEnd = !movingToEnd;
+        movingToEnd = moveToEnd;
 
         // Restart movement in new direction
         moveRoutine = StartCoroutine(MovePlatform());
     }
 
-    private void OnDrawGizmos()
+    void OnDrawGizmos()
     {
         if (startPoint && endPoint)
         {

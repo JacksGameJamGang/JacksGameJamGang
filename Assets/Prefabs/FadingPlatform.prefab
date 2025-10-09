@@ -128,6 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f7c151b561c59498d266891f996609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DisappearingPlatform
+  doorMode: 0
+  linkedMechanisms: []
   disappearDelay: 1
 --- !u!61 &1784467499130123887
 BoxCollider2D:

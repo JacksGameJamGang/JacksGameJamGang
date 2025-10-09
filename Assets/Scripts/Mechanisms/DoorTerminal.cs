@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class RoomDoorTerminal : MonoBehaviour, IMechanism
@@ -21,7 +22,14 @@ public class RoomDoorTerminal : MonoBehaviour, IMechanism
         isActive = true; //cant deactivate
     }
 
-    public string GetMechanismName()
+	public IEnumerator FailActivate()
+	{
+		isActive = false;
+		yield return null;
+		//noop
+	}
+
+	public string GetMechanismName()
     {
         return mechanismName;
     }

@@ -2,11 +2,7 @@ using UnityEngine;
 
 public class Doors : MechanismListener
 {
-	[Header("Door Components")]
-    [SerializeField] private Animator doorAnimator;
-    [SerializeField] private Collider2D doorCollider;
-
-	protected override void HandleSwitchChanged(IMechanism sender, bool isActive)
+	protected override void HandleMechanismTrigger(IMechanism sender, bool isActive)
     {
 		MechanismStates mechanism = null;
 
@@ -25,7 +21,7 @@ public class Doors : MechanismListener
 
     void OpenDoor(bool shouldOpen)
     {
-		doorAnimator.SetBool("IsOpen", shouldOpen);
-		if (doorCollider) doorCollider.enabled = !shouldOpen;
+		_Animator.SetBool("IsOpen", shouldOpen);
+		if (_Collider) _Collider.enabled = !shouldOpen;
 	}
 }

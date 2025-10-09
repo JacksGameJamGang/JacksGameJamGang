@@ -9,31 +9,38 @@ public class MechanismListener : MonoBehaviour
 	[SerializeField] protected DoorMode doorMode = DoorMode.Any;
 	[Tooltip("link mechanisms here (Lever, Plate, etc.)")]
 	[SerializeField] protected List<MechanismStates> linkedMechanisms;
-	protected MechanismStates lastToggledMechanism;
+	[SerializeField] protected MechanismStates lastToggledMechanism;
 
-	protected void Awake()
+	[Header("Shared Components")]
+	protected Animator _Animator;
+	protected Collider2D _Collider;
+
+	protected virtual void Awake()
 	{
 		foreach (var linkedMechanism in linkedMechanisms)
 			linkedMechanism.Initilize();
 
 		lastToggledMechanism = new();
+
+		_Animator = GetComponent<Animator>();
+		_Collider = GetComponent<Collider2D>();
 	}
 
 	protected void OnEnable()
 	{
 		foreach (var linkedMechanism in linkedMechanisms)
-			linkedMechanism.mechanism.OnToggleMechanism += HandleSwitchChanged;
+			linkedMechanism.mechanism.OnToggleMechanism += HandleMechanismTrigger;
 	}
 
 	protected void OnDisable()
 	{
 		foreach (var linkedMechanism in linkedMechanisms)
-			linkedMechanism.mechanism.OnToggleMechanism -= HandleSwitchChanged;
+			linkedMechanism.mechanism.OnToggleMechanism -= HandleMechanismTrigger;
 	}
 
-	protected virtual void HandleSwitchChanged(IMechanism sender, bool isActive)
+	protected virtual void HandleMechanismTrigger(IMechanism sender, bool isActive)
 	{
-		Debug.LogError("Function needs implimenting or base.HandleSwitchChanged(sender, isActive); needs removing");
+		Debug.LogError("Function needs implimenting or base.HandleMechanismTrigger(sender, isActive); needs removing");
 	}
 
 	protected bool MechanismShouldOpen(MechanismStates newToggledMechanism, bool isActive)
@@ -79,14 +86,7 @@ public class MechanismListener : MonoBehaviour
 			return false;
 		}
 
-		if (lastToggledMechanism == null) //always allow toggling of 1st mechanism despite wrong order
-		{
-			Debug.LogError("1st mechanism trigger (always works)");
-			lastToggledMechanism = newToggledMechanism;
-			return false;
-		}
-
-		if (newToggledMechanism.orderOfMechanism == lastToggledMechanism.orderOfMechanism + 1) //correct order
+		if (OrderOfMechanismCorrect(newToggledMechanism.orderOfMechanism)) //correct order
 		{
 			Debug.LogError("correct order");
 			lastToggledMechanism = newToggledMechanism;
@@ -101,13 +101,25 @@ public class MechanismListener : MonoBehaviour
 		else
 		{
 			Debug.LogError("incorrect order");
-			lastToggledMechanism.linkedMechanism = null;
+			lastToggledMechanism = new();
 
 			foreach (var linkedMechanism in linkedMechanisms) //reset all mechanisms
-				linkedMechanism.mechanism.Deactivate();
+			{
+				if (linkedMechanism == newToggledMechanism)
+					StartCoroutine(newToggledMechanism.mechanism.FailActivate());
+				else
+					linkedMechanism.mechanism.Deactivate();
+			}
 
 			return false;
 		}
+	}
+	bool OrderOfMechanismCorrect(int order)
+	{
+		if (order == lastToggledMechanism.orderOfMechanism + 1)
+			return true;
+		else
+			return false;
 	}
 
 	//door mode all check

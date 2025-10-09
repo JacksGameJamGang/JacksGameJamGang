@@ -2,19 +2,11 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(Animator), typeof(Collider2D))]
-public class DisappearingPlatform : MonoBehaviour
+public class DisappearingPlatform : MechanismListener
 {
-    [SerializeField] private float disappearDelay = 0.5f; // Delay before animation starts
+    [SerializeField] private float disappearDelay = 1f; // Delay before animation starts
 
-    private Animator anim;
-    private Collider2D col;
     private bool hasDisappeared = false;
-
-    private void Awake()
-    {
-        anim = GetComponent<Animator>();
-        col = GetComponent<Collider2D>();
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -31,26 +23,57 @@ public class DisappearingPlatform : MonoBehaviour
                 if (contact.normal.y < -0.5f) // ensures contact is from above
                 {
                     //Debug.Log("Player is standing on platform");
-                    StartCoroutine(DisappearRoutine());
+                    StartCoroutine(DisappearPlatform());
                     break;
                 }
             }
         }
     }
 
-    private IEnumerator DisappearRoutine()
-    {
+	private IEnumerator DisappearPlatform()
+	{
 
-        anim.SetTrigger("DisappearTrigger"); // Play animation
-        hasDisappeared = true;
-        yield return new WaitForSeconds(disappearDelay);
-        DisableCollider();
+		_Animator.Play("fadingPlatform");
+		hasDisappeared = true;
+		yield return new WaitForSeconds(disappearDelay);
+	}
+
+	protected override void HandleMechanismTrigger(IMechanism sender, bool isActive)
+	{
+		MechanismStates mechanism = null;
+
+		foreach (var linkedMechanism in linkedMechanisms)
+		{
+			if (linkedMechanism.mechanism != sender) continue;
+			linkedMechanism.isActive = isActive;
+			mechanism = linkedMechanism;
+		}
+
+		if (MechanismShouldOpen(mechanism, isActive))
+			StartCoroutine(ReactivatePlatform(true));
+		else
+			StartCoroutine(ReactivatePlatform(false));
+	}
+
+    private IEnumerator ReactivatePlatform(bool shouldReactivate)
+    {
+        if (shouldReactivate)
+        {
+			_Animator.Play("FadingPlatformIdle");
+			hasDisappeared = false;
+			_Collider.enabled = true;
+
+            yield return new WaitForSeconds(0.2f);
+
+			foreach (MechanismStates mechanism in linkedMechanisms)
+				mechanism.mechanism.Deactivate();
+		}
     }
 
-    // Called by Animation Event on the last frame
-    public void DisableCollider()
+	// Called by Animation Event on the last frame
+	public void DisableCollider()
     {
-        if (col != null)
-            col.enabled = false;
+        if (_Collider != null)
+			_Collider.enabled = false;
     }
 }

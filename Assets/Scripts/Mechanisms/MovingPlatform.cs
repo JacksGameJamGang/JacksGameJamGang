@@ -10,22 +10,21 @@ public class MovingPlatform : MechanismListener
 
     private bool movingToEnd = true;                // Direction flag
     private Coroutine moveRoutine;                  // Reference to running coroutine
-    private bool isMoving = false;
 
     private Rigidbody2D platformRb;
 
-	private void Start()
-    {
-        platform.position = startPoint.position;
+	protected override void Awake()
+	{
+        base.Awake();
 
-        platformRb = platform.GetComponent<Rigidbody2D>();
-        if (platformRb == null)
-        {
-            platformRb = platform.gameObject.AddComponent<Rigidbody2D>();
-        }
-    }
+		platform.position = startPoint.position;
+		platformRb = platform.GetComponent<Rigidbody2D>();
 
-	protected override void HandleSwitchChanged(IMechanism sender, bool isActive)
+		if (platformRb == null)
+			platformRb = platform.gameObject.AddComponent<Rigidbody2D>();
+	}
+
+	protected override void HandleMechanismTrigger(IMechanism sender, bool isActive)
 	{
 		MechanismStates mechanism = null;
 
@@ -42,10 +41,8 @@ public class MovingPlatform : MechanismListener
 			ReverseDirection(false);
 	}
 
-	private IEnumerator MovePlatform()
+	IEnumerator MovePlatform()
     {
-        isMoving = true;
-
         Transform target = movingToEnd ? endPoint : startPoint;
 
         while (true)
@@ -68,9 +65,8 @@ public class MovingPlatform : MechanismListener
 
         // When finished moving, flip direction and mark idle
         movingToEnd = !movingToEnd;
-        isMoving = false;
     }
-    private void ReverseDirection(bool moveToEnd)
+    void ReverseDirection(bool moveToEnd)
     {
         // Kill the current coroutine
         if (moveRoutine != null)
@@ -83,7 +79,7 @@ public class MovingPlatform : MechanismListener
         moveRoutine = StartCoroutine(MovePlatform());
     }
 
-    private void OnDrawGizmos()
+    void OnDrawGizmos()
     {
         if (startPoint && endPoint)
         {

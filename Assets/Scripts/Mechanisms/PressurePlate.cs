@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class PressurePlate : MonoBehaviour, IMechanism
@@ -21,6 +22,8 @@ public class PressurePlate : MonoBehaviour, IMechanism
 
     private void Awake()
     {
+		plateRenderer = GetComponent<SpriteRenderer>();
+
         if (plateRenderer == null)
             plateRenderer = GetComponent<SpriteRenderer>();
     }
@@ -55,6 +58,12 @@ public class PressurePlate : MonoBehaviour, IMechanism
 			SetPlateSprite(false);
 			OnToggleMechanism?.Invoke(this, false);
 		}
+	}
+
+	public IEnumerator FailActivate()
+	{
+		yield return null;
+		//noop
 	}
 
 	private void SetPlateSprite(bool pressed)

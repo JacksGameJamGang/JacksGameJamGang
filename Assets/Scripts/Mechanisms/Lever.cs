@@ -1,18 +1,23 @@
 using UnityEngine;
 using System;
+using System.Collections;
 
 public class LeverMechanisms : MonoBehaviour, IMechanism
 {
-    private string mechanismName = "Platform Lever";
-
-    [Header("Lever Settings")]
     [SerializeField] private Animator leverAnimator;
 
-    private string leverBoolName = "IsOn";
+	[Header("Lever Settings")]
+	private string mechanismName = "Platform Lever";
+	private string leverBoolName = "IsOn";
 
 	public event Action<IMechanism, bool> OnToggleMechanism;
 	public bool IsActive => isActive;
     private bool isActive;
+
+	private void Awake()
+	{
+		leverAnimator = GetComponent<Animator>();
+	}
 
 	public void Activate()
 	{
@@ -28,5 +33,13 @@ public class LeverMechanisms : MonoBehaviour, IMechanism
 		OnToggleMechanism?.Invoke(this, false);
     }
 
-    public string GetMechanismName() => mechanismName;
+	public IEnumerator FailActivate()
+	{
+		isActive = false;
+		leverAnimator?.SetBool(leverBoolName, true);
+		yield return new WaitForSeconds(0.2f);
+		leverAnimator?.SetBool(leverBoolName, false);
+	}
+
+	public string GetMechanismName() => mechanismName;
 }

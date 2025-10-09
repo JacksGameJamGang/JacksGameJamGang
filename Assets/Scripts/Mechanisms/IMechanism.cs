@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System.Collections;
 using UnityEngine;
 
 public interface IMechanism
@@ -8,6 +9,9 @@ public interface IMechanism
 
 	void Activate();
     void Deactivate();
+
+	IEnumerator FailActivate();
+
     string GetMechanismName();
 }
 

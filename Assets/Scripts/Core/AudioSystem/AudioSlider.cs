@@ -27,10 +27,21 @@ public class AudioSlider : MonoBehaviour
 		}
 	}
 
-	private void Start()
+	private void OnEnable()
 	{
-		float debugStartingVolume = 0.5f;
-		slider.value = debugStartingVolume;
+		AudioManager.OnVolumeLoadUpdateSliders += UpdateSlidersOnVolumeLoad;
+	}
+	private void OnDisable()
+	{
+		AudioManager.OnVolumeLoadUpdateSliders -= UpdateSlidersOnVolumeLoad;
+	}
+
+	void UpdateSlidersOnVolumeLoad(float volume, AudioTypes audioType)
+	{
+		if (_SliderAudioType != audioType) return;
+		
+		slider.value = volume;
+		UpdateTextUi(volume);
 	}
 
 	public void OnSliderValueChange(float volume)
@@ -38,36 +49,14 @@ public class AudioSlider : MonoBehaviour
 		switch (_SliderAudioType)
 		{
 			case AudioTypes.master:
-				UpdateMasterVolume(volume); break;
+				AudioManager.UpdateMasterVolume(volume); break;
 			case AudioTypes.music:
-				UpdateMusicVolume(volume); break;
+				AudioManager.UpdateMusicVolume(volume); break;
 			case AudioTypes.sfx:
-				UpdateSfxVolume(volume); break;
+				AudioManager.UpdateSfxVolume(volume); break;
 		}
 
 		UpdateTextUi(volume);
-	}
-
-	void UpdateMasterVolume(float volume)
-	{
-		if (volume == 0)
-			_AudioMixer.SetFloat("Master", -100);
-		else
-			_AudioMixer.SetFloat("Master", Mathf.Log10(volume) * 20);
-	}
-	void UpdateMusicVolume(float volume)
-	{
-		if (volume == 0)
-			_AudioMixer.SetFloat("Music", -100);
-		else
-			_AudioMixer.SetFloat("Music", Mathf.Log10(volume) * 20);
-	}
-	void UpdateSfxVolume(float volume)
-	{
-		if (volume == 0)
-			_AudioMixer.SetFloat("Sfx", -100);
-		else
-			_AudioMixer.SetFloat("Sfx", Mathf.Log10(volume) * 20);
 	}
 
 	void UpdateTextUi(float volume)

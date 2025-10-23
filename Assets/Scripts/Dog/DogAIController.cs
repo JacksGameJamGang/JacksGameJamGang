@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -13,9 +14,11 @@ public class DogAIController : MonoBehaviour
     };
 
     [Header("Follow Settings")]
-    [SerializeField] private float followDistance = 4.0f;
-    [SerializeField] private float followSpeed = 3.0f;
-    [SerializeField] private float idleTime = 2.0f;
+	[SerializeField] private float followSpeed = 6f;
+	[SerializeField] private float followDistanceFromIdle = 1.75f;
+	[SerializeField] private float followDistanceCatchup = 1.5f;
+	[SerializeField] private float followDistance = 1.25f;
+    [SerializeField] private float followDelay = 0.25f;
 
     [Header("Interact Settings")]
     [SerializeField] private float interactDistance = 3.0f;
@@ -24,10 +27,11 @@ public class DogAIController : MonoBehaviour
     private DogAIState currentState = DogAIState.Idle;
     private Transform player;
     private Rigidbody2D rb;
-    private float idleTimer;
+    private float followDelayTimer;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private float lastHorizontalDir;
+
 
     private void Start()
     {
@@ -50,35 +54,35 @@ public class DogAIController : MonoBehaviour
             return;
 
         DistanceCheck();
-    }
+	}
 
-    private void FixedUpdate()
-    {
-        if (currentState == DogAIState.ControlledByPlayer)
-            return;
+	private void FixedUpdate()
+	{
+		if (currentState == DogAIState.ControlledByPlayer)
+			return;
 
-        if (player == null)
-        {
-            if (GameManager.Instance.PlayerToFollow == null)
-                return;
-            HandleSetPlayer(GameManager.Instance.PlayerToFollow);
-        }
+		if (player == null)
+		{
+			if (GameManager.Instance.PlayerToFollow == null)
+				return;
+			HandleSetPlayer(GameManager.Instance.PlayerToFollow);
+		}
 
-        switch (currentState)
-        {
-            case DogAIState.Idle:
-                HandleIdle();
-                break;
-            case DogAIState.Following:
-                HandleFollowing();
-                break;
-            case DogAIState.Sitting:
-                HandleSitting();
-                break;
-        }
-    }
+		switch (currentState)
+		{
+			case DogAIState.Idle:
+			//no op
+			break;
+			case DogAIState.Following:
+			HandleFollowing();
+			break;
+			case DogAIState.Sitting:
+			//no op
+			break;
+		}
+	}
 
-    private void DistanceCheck()
+	private void DistanceCheck()
     {
         if (player == null)
             return;
@@ -90,7 +94,7 @@ public class DogAIController : MonoBehaviour
             interactCanvas.enabled = true;
             if (Input.GetKeyDown(KeyCode.E))
             {
-                SitDog();
+                ChangeDogState(DogAIState.Sitting);
                 return;
             }
         }
@@ -103,29 +107,17 @@ public class DogAIController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                StandUpDog();
-            }
+				ChangeDogState(DogAIState.Idle);
+			}
             return;
         }
 
-        if (distanceToPlayer > followDistance)
+        if (distanceToPlayer > followDistanceFromIdle)
         {
-            idleTimer += Time.fixedDeltaTime;
-            if (idleTimer >= idleTime)
-                currentState = DogAIState.Following;
-        }
-        else
-        {
-            idleTimer = 0f;
-            currentState = DogAIState.Idle;
-        }
-    }
-
-    private void HandleIdle()
-    {
-        rb.linearVelocity = Vector2.zero;
-        animator?.SetBool("IsRunning", false);
-        animator?.SetBool("IsSitting", false);
+            followDelayTimer += Time.fixedDeltaTime;
+            if (followDelayTimer >= followDelay)
+				ChangeDogState(DogAIState.Following);
+		}
     }
 
     private void HandleFollowing()
@@ -134,51 +126,71 @@ public class DogAIController : MonoBehaviour
             return;
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+
         if (distanceToPlayer > followDistance)
         {
             float differenceOnX = player.transform.position.x - transform.position.x;
             Vector2 direction = new Vector2(differenceOnX, 0f).normalized;
 
-            rb.linearVelocity = new Vector2(direction.x * followSpeed, rb.linearVelocity.y);
 
-            FlipDog(-direction.x);
-            animator?.SetBool("IsRunning", Mathf.Abs(direction.x) > 0.01f);
-            animator?.SetBool("IsSitting", false);
+            if (distanceToPlayer > followDistanceCatchup)
+            {
+				rb.linearVelocity = new Vector2(direction.x * (followSpeed + 2), rb.linearVelocity.y); //catch upto player
+				Debug.LogError("catching up, dist: " + distanceToPlayer);
+			}
+            else
+            {
+				rb.linearVelocity = new Vector2(direction.x * followSpeed, rb.linearVelocity.y);
+				Debug.LogError("base speed, dist: " + distanceToPlayer);
+			}
+
+			FlipDog(-direction.x);
 
             lastHorizontalDir = direction.x;
+
+            Debug.LogError("velocity: " + rb.linearVelocity);
         }
         else
         {
+            ChangeDogState(DogAIState.Idle);
             rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
-            animator?.SetBool("IsRunning", false);
         }
     }
 
-    private void HandleSitting()
+    private void ChangeDogState(DogAIState state)
     {
-        rb.linearVelocity = Vector2.zero;
-        animator?.SetBool("IsRunning", false);
-        animator?.SetBool("IsSitting", true);
-    }
+        currentState = state;
 
-    private void SitDog()
-    {
-        Debug.Log("Dog is now sitting.");
-        currentState = DogAIState.Sitting;
-        rb.linearVelocity = Vector2.zero;
-        animator?.SetBool("IsRunning", false);
-        animator?.SetBool("IsSitting", true);
-        interactCanvas.enabled = false;
-    }
+        switch (currentState)
+        {
+            case DogAIState.Idle:
+			Debug.Log("Dog is now idle.");
+            followDelayTimer = 0;
+			rb.linearVelocity = Vector2.zero;
+			animator?.SetBool("IsRunning", false);
+			animator?.SetBool("IsSitting", false);
+			interactCanvas.enabled = true;
+			break;
 
-    private void StandUpDog()
-    {
-        Debug.Log("Dog is now following.");
-        currentState = DogAIState.Following;
-        animator?.SetBool("IsSitting", false);
-    }
+            case DogAIState.Following:
+			Debug.Log("Dog is now following.");
+			animator?.SetBool("IsRunning", true);
+			animator?.SetBool("IsSitting", false);
+			interactCanvas.enabled = true;
+			break;
 
-    private void HandleSetPlayer(Transform obj)
+            case DogAIState.Sitting:
+			Debug.Log("Dog is now sitting.");
+			followDelayTimer = 0;
+			rb.linearVelocity = Vector2.zero;
+			animator?.SetBool("IsRunning", false);
+			animator?.SetBool("IsSitting", true);
+			interactCanvas.enabled = false;
+			break;
+        }
+	}
+
+	private void HandleSetPlayer(Transform obj)
     {
         player = obj;
         currentState = DogAIState.Following;

@@ -112,7 +112,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -138,8 +138,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DogAIController
   followSpeed: 6
   followDistanceFromIdle: 1.75
-  followDistance: 1.25
   followDistanceCatchup: 1.5
+  followDistance: 1.25
   followDelay: 0.25
   interactDistance: 3
   interactCanvas: {fileID: 3577955669632844576}
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   speed: 6
-  jumpForce: 7.5
+  jumpForce: 12
   groundLayer:
     serializedVersion: 2
     m_Bits: 8

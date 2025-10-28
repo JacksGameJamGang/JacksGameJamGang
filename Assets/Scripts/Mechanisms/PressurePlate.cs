@@ -62,8 +62,8 @@ public class PressurePlate : MonoBehaviour, IMechanism
 
 	public IEnumerator FailActivate()
 	{
-		yield return null;
-		//noop
+		yield return 0f;
+		Deactivate();
 	}
 
 	private void SetPlateSprite(bool pressed)

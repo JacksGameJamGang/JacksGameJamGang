@@ -24,9 +24,8 @@ public class RoomDoorTerminal : MonoBehaviour, IMechanism
 
 	public IEnumerator FailActivate()
 	{
-		isActive = false;
-		yield return null;
-		//noop
+		yield return 0f;
+		Deactivate();
 	}
 
 	public string GetMechanismName()

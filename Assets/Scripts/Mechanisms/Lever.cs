@@ -35,10 +35,9 @@ public class LeverMechanisms : MonoBehaviour, IMechanism
 
 	public IEnumerator FailActivate()
 	{
-		isActive = false;
 		leverAnimator?.SetBool(leverBoolName, true);
 		yield return new WaitForSeconds(0.2f);
-		leverAnimator?.SetBool(leverBoolName, false);
+		Deactivate();
 	}
 
 	public string GetMechanismName() => mechanismName;

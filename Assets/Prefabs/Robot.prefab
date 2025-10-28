@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4094225652684714764}
+  - component: {fileID: 1847260725279301702}
+  - component: {fileID: 7135902950319434645}
   - component: {fileID: 7743972842106505682}
   - component: {fileID: 264524353072611293}
   - component: {fileID: 2510343708090932380}
-  - component: {fileID: 1847260725279301702}
-  - component: {fileID: 7135902950319434645}
   - component: {fileID: 4847037807412546443}
   - component: {fileID: 6737030821274156420}
   - component: {fileID: 403410187175666530}
@@ -40,6 +40,49 @@ Transform:
   - {fileID: 4925019458374891591}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1847260725279301702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4153738946964556514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978bd8f4a7ee86547aea4b5deb0208ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  speed: 6
+  jumpForce: 20
+  fallSpeed: 2
+  fallSpeedMultiplyer: 2.5
+  groundCheck: {fileID: 4925019458374891591}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1544
+  groundCheckRadius: 0.2
+  animator: {fileID: 4847037807412546443}
+--- !u!114 &7135902950319434645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4153738946964556514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56e3d67cb04b0964fa1ff59084e89180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RobotController
+  petDogKey: 112
+  activateMechanismKey: 105
+  interactionRange: 2
+  dogLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  mechanismLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &7743972842106505682
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -159,7 +202,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 2.5
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -171,47 +214,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1847260725279301702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4153738946964556514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 978bd8f4a7ee86547aea4b5deb0208ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  speed: 6
-  jumpForce: 12
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 1544
-  groundCheckRadius: 0.2
-  groundCheck: {fileID: 4925019458374891591}
-  animator: {fileID: 4847037807412546443}
---- !u!114 &7135902950319434645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4153738946964556514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56e3d67cb04b0964fa1ff59084e89180, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RobotController
-  petDogKey: 112
-  activateMechanismKey: 105
-  interactionRange: 2
-  dogLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  mechanismLayer:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!95 &4847037807412546443
 Animator:
   serializedVersion: 7

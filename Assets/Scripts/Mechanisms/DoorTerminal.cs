@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class RoomDoorTerminal : MonoBehaviour, IMechanism
+public class RoomDoorTerminal : MonoBehaviour, IMechanism, IInteractable
 {
     private string mechanismName = "Final Door Terminal (in the room)";
 
@@ -10,7 +10,13 @@ public class RoomDoorTerminal : MonoBehaviour, IMechanism
 	public bool IsActive => isActive;
 	private bool isActive;
 
-	// IMechanism implementation
+	// IInteract
+	public void Interact()
+	{
+		Activate();
+	}
+
+	// IMechanism
 	public void Activate()
     {
         isActive = true;

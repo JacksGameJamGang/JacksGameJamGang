@@ -28,8 +28,9 @@ public class PressurePlate : MonoBehaviour, IMechanism
             plateRenderer = GetComponent<SpriteRenderer>();
     }
 
+	// IMechanism
 	//plate trigger activation
-    private void OnTriggerEnter2D(Collider2D other)
+	private void OnTriggerEnter2D(Collider2D other)
     {
         if (!IsValidTag(other.tag)) return;
 		Activate();

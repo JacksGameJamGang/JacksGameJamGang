@@ -1,8 +1,9 @@
+using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class DogAIController : MonoBehaviour
+public class DogAIController : MonoBehaviour, IInteractable
 {
     private enum DogAIState
     {
@@ -80,6 +81,20 @@ public class DogAIController : MonoBehaviour
 			//no op
 			break;
 		}
+	}
+
+    // IInteract
+	public void Interact()
+	{
+		StartCoroutine(PetDogInteraction());
+	}
+	private IEnumerator PetDogInteraction()
+	{
+		animator.SetBool("IsSitting", true);
+		yield return new WaitForSeconds(2f); // Wait 2 seconds (adjust duration as needed)
+		animator.SetBool("IsSitting", false);
+
+		Debug.Log("Robot pets the dog!");
 	}
 
 	private void DistanceCheck()

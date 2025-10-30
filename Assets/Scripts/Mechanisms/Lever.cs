@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-public class LeverMechanisms : MonoBehaviour, IMechanism
+public class LeverMechanisms : MonoBehaviour, IMechanism, IInteractable
 {
     [SerializeField] private Animator leverAnimator;
 
@@ -19,6 +19,16 @@ public class LeverMechanisms : MonoBehaviour, IMechanism
 		leverAnimator = GetComponent<Animator>();
 	}
 
+	// IInteract
+	public void Interact()
+	{
+		if (!IsActive)
+			Activate();
+		else
+			Deactivate();
+	}
+
+	// IMechanism
 	public void Activate()
 	{
 		isActive = true;

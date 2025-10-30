@@ -59,7 +59,7 @@ MonoBehaviour:
   groundCheck: {fileID: 4925019458374891591}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1544
+    m_Bits: 520
   groundCheckRadius: 0.2
   animator: {fileID: 4847037807412546443}
 --- !u!114 &7135902950319434645
@@ -76,13 +76,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RobotController
   petDogKey: 112
   activateMechanismKey: 105
+  interactKey: 105
   interactionRange: 2
-  dogLayer:
+  interactableLayers:
     serializedVersion: 2
-    m_Bits: 128
-  mechanismLayer:
-    serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1408
 --- !u!212 &7743972842106505682
 SpriteRenderer:
   m_ObjectHideFlags: 0

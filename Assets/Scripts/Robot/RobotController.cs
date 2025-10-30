@@ -4,81 +4,55 @@ using UnityEngine;
 public class RobotController : MonoBehaviour
 {
     [Header("Robot Special Abilities")]
-    [SerializeField] private KeyCode petDogKey = KeyCode.P;
-    [SerializeField] private KeyCode activateMechanismKey = KeyCode.I;
+    [SerializeField] private KeyCode interactKey = KeyCode.I;
     
     [Header("Interaction Settings")]
     [SerializeField] private float interactionRange = 2f;
-    [SerializeField] private LayerMask dogLayer;
-    [SerializeField] private LayerMask mechanismLayer;
-    
-    private DogAIController nearbyDog;
-    private GameObject nearbyMechanism;
+    [SerializeField] private LayerMask interactableLayers;
+
+    IInteractable nearestInteractable;
     
     private void Update()
     {
-        FindNearbyInteractables();
-
-        if (Input.GetKeyDown(petDogKey))
+        if (Input.GetKeyDown(interactKey))
         {
-            StartCoroutine(PetDog());
-        }
-
-        if (Input.GetKeyDown(activateMechanismKey))
-        {
-            ActivateMechanism();
-        }
+            OnInteractButtonPress();
+		}
     }
     
-    private void FindNearbyInteractables()
+    private void OnInteractButtonPress()
     {
-        Collider2D dogCollider = Physics2D.OverlapCircle(transform.position, interactionRange, dogLayer);
-        nearbyDog = dogCollider?.GetComponent<DogAIController>();
-        
-        Collider2D mechanismCollider = Physics2D.OverlapCircle(transform.position, interactionRange, mechanismLayer);
-        nearbyMechanism = mechanismCollider?.gameObject;
-    }
+		Collider2D[] interactableCollidersArray = Physics2D.OverlapCircleAll(transform.position, interactionRange, interactableLayers);
 
-    private IEnumerator PetDog()
-    {
-        if (nearbyDog != null)
+        if (interactableCollidersArray.Length == 0)
         {
-            Debug.Log("Robot pets the dog!");
-            Animator dogAnimator = nearbyDog.GetComponent<Animator>();
-
-            dogAnimator.SetBool("IsSitting", true);
-            yield return new WaitForSeconds(2f); // Wait 2 seconds (adjust duration as needed)
-            dogAnimator.SetBool("IsSitting", false);
+            Debug.LogError("no nearby interactables found");
+            return;
         }
         else
         {
-            Debug.Log("No dog nearby to pet!");
-            yield break; // Stops the coroutine early
-        }
-    }
+			Debug.LogError($"found {interactableCollidersArray.Length} interactables, grabbing closest");
+			nearestInteractable = FindClosestInteractable(interactableCollidersArray);
+		}
 
+        nearestInteractable.Interact();
+	}
 
-    private void ActivateMechanism()
+    private IInteractable FindClosestInteractable(Collider2D[] interactableColliders)
     {
-        var mechanism = nearbyMechanism?.GetComponent<IMechanism>();
-        if (mechanism != null)
+        IInteractable closestInteractable = null;
+        float shortestDistance = 100;
+
+        foreach (Collider2D collider in interactableColliders)
         {
-            if (!mechanism.IsActive)
-            {
-				Debug.Log($"Robot activates {mechanism.GetMechanismName()}!");
-				mechanism.Activate();
-			}
-            else
-            {
-				Debug.Log($"Robot deactivates {mechanism.GetMechanismName()}!");
-				mechanism.Deactivate();
-			}
+            float distance = Vector2.Distance(gameObject.transform.position, collider.gameObject.transform.position);
+
+            if (distance > shortestDistance) continue;
+
+            shortestDistance = distance;
+            closestInteractable = collider.GetComponent<IInteractable>();
         }
-        else
-        {
-            Debug.Log("No mechanism nearby to activate!");
-        }
+
+        return closestInteractable;
     }
-
-
 }

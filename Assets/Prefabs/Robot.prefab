@@ -52,9 +52,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978bd8f4a7ee86547aea4b5deb0208ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  speed: 6
+  speed: 8
   jumpForce: 20
-  fallSpeed: 2
+  fallSpeed: 2.5
   fallSpeedMultiplyer: 2.5
   groundCheck: {fileID: 4925019458374891591}
   groundLayer:
@@ -74,9 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e3d67cb04b0964fa1ff59084e89180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RobotController
-  petDogKey: 112
-  activateMechanismKey: 105
-  interactKey: 105
+  interactKey: 102
   interactionRange: 2
   interactableLayers:
     serializedVersion: 2

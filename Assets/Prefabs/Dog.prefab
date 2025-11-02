@@ -51,9 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978bd8f4a7ee86547aea4b5deb0208ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  speed: 6
+  speed: 8
   jumpForce: 20
-  fallSpeed: 2
+  fallSpeed: 2.5
   fallSpeedMultiplyer: 2.5
   groundCheck: {fileID: 4193229797333877870}
   groundLayer:
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 029268619d2c42b4193ced1dce0201d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DogAIController
-  followSpeed: 6
+  followSpeed: 8
   followDistanceFromIdle: 1.75
   followDistanceCatchup: 1.5
   followDistance: 1.25

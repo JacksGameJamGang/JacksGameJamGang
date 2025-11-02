@@ -4,7 +4,7 @@ using UnityEngine;
 public class RobotController : MonoBehaviour
 {
     [Header("Robot Special Abilities")]
-    [SerializeField] private KeyCode interactKey = KeyCode.I;
+    [SerializeField] private KeyCode interactKey = KeyCode.F;
     
     [Header("Interaction Settings")]
     [SerializeField] private float interactionRange = 2f;

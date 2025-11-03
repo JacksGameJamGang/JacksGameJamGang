@@ -789,7 +789,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6.500447
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -979,6 +979,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3277420821762830484, guid: 7d3dff478e887b44294830762d6ce454, type: 3}
+      propertyPath: linkedElevator
+      value: 
+      objectReference: {fileID: 4022359062477813965}
     - target: {fileID: 5623077185927208712, guid: 7d3dff478e887b44294830762d6ce454, type: 3}
       propertyPath: m_Name
       value: Elevator (1)
@@ -988,6 +992,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d3dff478e887b44294830762d6ce454, type: 3}
+--- !u!114 &978486553 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3277420821762830484, guid: 7d3dff478e887b44294830762d6ce454, type: 3}
+  m_PrefabInstance: {fileID: 978486552}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc957aa6c5bcda4bbd9bb9f0f584143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Elevator
 --- !u!1 &1080754863
 GameObject:
   m_ObjectHideFlags: 0
@@ -3453,7 +3468,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 34
-    OrthographicSize: 6.500447
+    OrthographicSize: 10
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -3519,6 +3534,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3277420821762830484, guid: 7d3dff478e887b44294830762d6ce454, type: 3}
+      propertyPath: linkedElevator
+      value: 
+      objectReference: {fileID: 978486553}
     - target: {fileID: 5623077185927208712, guid: 7d3dff478e887b44294830762d6ce454, type: 3}
       propertyPath: m_Name
       value: Elevator
@@ -3528,6 +3547,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d3dff478e887b44294830762d6ce454, type: 3}
+--- !u!114 &4022359062477813965 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3277420821762830484, guid: 7d3dff478e887b44294830762d6ce454, type: 3}
+  m_PrefabInstance: {fileID: 4022359062477813964}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc957aa6c5bcda4bbd9bb9f0f584143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Elevator
 --- !u!1001 &5641038610022900757
 PrefabInstance:
   m_ObjectHideFlags: 0

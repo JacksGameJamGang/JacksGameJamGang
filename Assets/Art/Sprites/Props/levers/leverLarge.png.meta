@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 70a99e34a763753458ddb9c2b4bd6b6f
+guid: 06e21b190fbf76640b302456367dfa2f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -368718826349097156
-    second: pressurePlate_0
+      213: -8851917645521196740
+    second: leverLarge_0
   - first:
-      213: -6025554343243793721
-    second: pressurePlate_1
+      213: 3485246264412035250
+    second: leverLarge_1
+  - first:
+      213: -5679067464582812280
+    second: leverLarge_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,17 +102,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pressurePlate_0
+      name: leverLarge_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
-        height: 48
+        width: 320
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3f86755e2c02eaf0800000000000000
-      internalID: -368718826349097156
+      spriteID: c3962b50dcba72580800000000000000
+      internalID: -8851917645521196740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pressurePlate_1
+      name: leverLarge_1
       rect:
         serializedVersion: 2
-        x: 192
+        x: 320
         y: 0
-        width: 192
-        height: 48
+        width: 320
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +156,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ca3424ef3ee06ca0800000000000000
-      internalID: -6025554343243793721
+      spriteID: 2b8590903051e5030800000000000000
+      internalID: 3485246264412035250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leverLarge_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 320
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88d201eda36ef21b0800000000000000
+      internalID: -5679067464582812280
       vertices: []
       indices: 
       edges: []
@@ -150,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 04b19d1388c8aff48ae944a35c9a0d4c
+    spriteID: 5744ab9bc959bb445ad79fcbf122bd25
     internalID: 0
     vertices: []
     indices: 
@@ -160,10 +198,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":192.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":320.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      pressurePlate_0: -368718826349097156
-      pressurePlate_1: -6025554343243793721
+      leverLarge_0: -8851917645521196740
+      leverLarge_1: 3485246264412035250
+      leverLarge_2: -5679067464582812280
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

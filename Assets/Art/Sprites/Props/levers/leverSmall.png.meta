@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: e27734b50b7327a4b87b0eae3243afeb
+guid: 03228135fb6b59e4d960004aaf11ff32
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1912667288129218371
-    second: movingPlatformTrackVertical_0
+      213: -1610235756073171886
+    second: leverSmall_0
+  - first:
+      213: 6389629037140618928
+    second: leverSmall_1
+  - first:
+      213: -1445405753222705405
+    second: leverSmall_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,27 +102,84 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: movingPlatformTrackVertical_0
+      name: leverSmall_0
       rect:
         serializedVersion: 2
-        x: 13
+        x: 0
         y: 0
-        width: 38
-        height: 160
+        width: 256
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: db85c853c37d475e0800000000000000
-      internalID: -1912667288129218371
+      spriteID: 25440aa7c1b47a9e0800000000000000
+      internalID: -1610235756073171886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leverSmall_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bea94d61c58ca850800000000000000
+      internalID: 6389629037140618928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leverSmall_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30fcad22023e0fbe0800000000000000
+      internalID: -1445405753222705405
       vertices: []
       indices: 
       edges: []
@@ -125,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f5f502006ac9e8d4fa7f747dfe9a9262
     internalID: 0
     vertices: []
     indices: 
@@ -133,9 +196,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":256.0,"y":192.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      movingPlatformTrackVertical_0: -1912667288129218371
+      leverSmall_0: -1610235756073171886
+      leverSmall_1: 6389629037140618928
+      leverSmall_2: -1445405753222705405
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

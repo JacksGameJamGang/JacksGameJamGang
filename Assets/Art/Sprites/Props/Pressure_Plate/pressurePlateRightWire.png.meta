@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: b6e38b939009f5141973f65fdf7686ae
+guid: fabf2a0c69f9efd42b2ef18cd06d3649
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3088479411057225374
-    second: PlatformSwitch_0
+      213: -3297703436879463653
+    second: pressurePlateRightWire_0
+  - first:
+      213: -4037482563400697323
+    second: pressurePlateRightWire_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +99,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlatformSwitch_0
+      name: pressurePlateRightWire_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 63
-        height: 99
+        width: 192
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,30 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 26193dfc6548325d0800000000000000
-      internalID: -3088479411057225374
+      spriteID: b1bf63632343c32d0800000000000000
+      internalID: -3297703436879463653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlatformSwitch_1
+      name: pressurePlateRightWire_1
       rect:
         serializedVersion: 2
-        x: 63
+        x: 192
         y: 0
-        width: 63
-        height: 99
+        width: 192
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 83683217f9c449b41b74a4d4202961c1
-      internalID: -33139040
+      spriteID: 51afaa5000bf7f7c0800000000000000
+      internalID: -4037482563400697323
       vertices: []
       indices: 
       edges: []
@@ -147,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c0c175ea8458a314d83e24a92897e763
+    spriteID: 294481d4492071c43860fe9987ee313e
     internalID: 0
     vertices: []
     indices: 
@@ -157,10 +173,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":63.0,"y":99.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":192.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      PlatformSwitch_0: -3088479411057225374
-      PlatformSwitch_1: -33139040
+      pressurePlateRightWire_0: -3297703436879463653
+      pressurePlateRightWire_1: -4037482563400697323
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

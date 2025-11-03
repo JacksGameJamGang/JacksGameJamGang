@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class MovingPlatform : MechanismListener
 {
+	[SerializeField] private bool flipStartPosition;
 	[SerializeField] private Transform platform;    // The moving platform
     [SerializeField] private Transform startPoint;  // One end of the track
     [SerializeField] private Transform endPoint;    // The other end of the track
@@ -16,6 +17,16 @@ public class MovingPlatform : MechanismListener
 	protected override void Awake()
 	{
         base.Awake();
+
+        Transform initialStartPoint = startPoint;
+        Transform initialEndPoint = endPoint;
+
+        if (flipStartPosition)
+        {
+            startPoint = initialEndPoint;
+            endPoint = initialStartPoint;
+            platform.transform.position = startPoint.transform.position;
+        }
 
 		platform.position = startPoint.position;
 		platformRb = platform.GetComponent<Rigidbody2D>();

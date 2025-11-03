@@ -1,37 +1,37 @@
 fileFormatVersion: 2
-guid: c78425f6ffe7a5d42805476544c57c4e
+guid: bc96921b5e4107042be7d0957e262ef4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 891924221715314531
-    second: door_openClose_sheet_x3_0
+      213: 5416072654107509299
+    second: door_thin_openClose_shee_x3t_0
   - first:
-      213: -5653099431223548615
-    second: door_openClose_sheet_x3_1
+      213: -8358285491230840395
+    second: door_thin_openClose_shee_x3t_1
   - first:
-      213: 3492996242344259914
-    second: door_openClose_sheet_x3_2
+      213: -38608026196618186
+    second: door_thin_openClose_shee_x3t_2
   - first:
-      213: -842715908470462658
-    second: door_openClose_sheet_x3_3
+      213: 230575962234558181
+    second: door_thin_openClose_shee_x3t_3
   - first:
-      213: -5146238424142763965
-    second: door_openClose_sheet_x3_4
+      213: 2604725876960636624
+    second: door_thin_openClose_shee_x3t_4
   - first:
-      213: 6994795128108026245
-    second: door_openClose_sheet_x3_5
+      213: -2476390391366071555
+    second: door_thin_openClose_shee_x3t_5
   - first:
-      213: 9207914427150179797
-    second: door_openClose_sheet_x3_6
+      213: 2395299373690041003
+    second: door_thin_openClose_shee_x3t_6
   - first:
-      213: -5728782231718286298
-    second: door_openClose_sheet_x3_7
+      213: -4473446480585285583
+    second: door_thin_openClose_shee_x3t_7
   - first:
-      213: 8813668135856416297
-    second: door_openClose_sheet_x3_8
+      213: -432081810681237870
+    second: door_thin_openClose_shee_x3t_8
   - first:
-      213: -9103452430304731652
-    second: door_openClose_sheet_x3_9
+      213: -8446825460452197719
+    second: door_thin_openClose_shee_x3t_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -78,7 +78,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,11 +123,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: door_openClose_sheet_x3_0
+      name: door_thin_openClose_shee_x3t_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 36778e1aa50c06c00800000000000000
-      internalID: 891924221715314531
+      spriteID: 33209c12261c92b40800000000000000
+      internalID: 5416072654107509299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_openClose_sheet_x3_1
+      name: door_thin_openClose_shee_x3t_1
       rect:
         serializedVersion: 2
         x: 96
@@ -164,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 93525f9c4082c81b0800000000000000
-      internalID: -5653099431223548615
+      spriteID: 5b962eb31a7610c80800000000000000
+      internalID: -8358285491230840395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_openClose_sheet_x3_2
+      name: door_thin_openClose_shee_x3t_2
       rect:
         serializedVersion: 2
         x: 192
@@ -186,14 +199,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a4134b2639d997030800000000000000
-      internalID: 3492996242344259914
+      spriteID: 63452196436d67ff0800000000000000
+      internalID: -38608026196618186
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_openClose_sheet_x3_3
+      name: door_thin_openClose_shee_x3t_3
       rect:
         serializedVersion: 2
         x: 288
@@ -208,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e372c0d98521e44f0800000000000000
-      internalID: -842715908470462658
+      spriteID: 5e61cb2bd9b233300800000000000000
+      internalID: 230575962234558181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_openClose_sheet_x3_4
+      name: door_thin_openClose_shee_x3t_4
       rect:
         serializedVersion: 2
         x: 384
@@ -230,14 +243,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 348218f4b63e498b0800000000000000
-      internalID: -5146238424142763965
+      spriteID: 0dea1897268d52420800000000000000
+      internalID: 2604725876960636624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_openClose_sheet_x3_5
+      name: door_thin_openClose_shee_x3t_5
       rect:
         serializedVersion: 2
         x: 480
@@ -252,14 +265,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5890387eb11821160800000000000000
-      internalID: 6994795128108026245
+      spriteID: dfa4f6d3f0812add0800000000000000
+      internalID: -2476390391366071555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_openClose_sheet_x3_6
+      name: door_thin_openClose_shee_x3t_6
       rect:
         serializedVersion: 2
         x: 0
@@ -274,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5dd1b78c26519cf70800000000000000
-      internalID: 9207914427150179797
+      spriteID: ba2b28be610dd3120800000000000000
+      internalID: 2395299373690041003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_openClose_sheet_x3_7
+      name: door_thin_openClose_shee_x3t_7
       rect:
         serializedVersion: 2
         x: 96
@@ -296,14 +309,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 62cacd2a9e64f70b0800000000000000
-      internalID: -5728782231718286298
+      spriteID: 1302ef290202be1c0800000000000000
+      internalID: -4473446480585285583
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_openClose_sheet_x3_8
+      name: door_thin_openClose_shee_x3t_8
       rect:
         serializedVersion: 2
         x: 192
@@ -318,14 +331,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 926a6e50970705a70800000000000000
-      internalID: 8813668135856416297
+      spriteID: 29eef68e1efe00af0800000000000000
+      internalID: -432081810681237870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_openClose_sheet_x3_9
+      name: door_thin_openClose_shee_x3t_9
       rect:
         serializedVersion: 2
         x: 288
@@ -340,14 +353,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cfd150e2f3a0aa180800000000000000
-      internalID: -9103452430304731652
+      spriteID: 9aa75063ff8d6ca80800000000000000
+      internalID: -8446825460452197719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_openClose_sheet_x3_10
+      name: door_thin_openClose_shee_x3t_10
       rect:
         serializedVersion: 2
         x: 384
@@ -362,8 +375,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c12f71e0797d1794895fd92d46047e0a
-      internalID: 204375199
+      spriteID: 45d6a25cc78139246bef6f2299fdd2d4
+      internalID: -90857969
       vertices: []
       indices: 
       edges: []
@@ -372,7 +385,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f2e2a43ca0c3f0f47bf2a329c61f6318
+    spriteID: 9ea7ebbc246fe5a459e5593d4b327b48
     internalID: 0
     vertices: []
     indices: 
@@ -384,17 +397,17 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":192.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      door_openClose_sheet_x3_0: 891924221715314531
-      door_openClose_sheet_x3_1: -5653099431223548615
-      door_openClose_sheet_x3_10: 204375199
-      door_openClose_sheet_x3_2: 3492996242344259914
-      door_openClose_sheet_x3_3: -842715908470462658
-      door_openClose_sheet_x3_4: -5146238424142763965
-      door_openClose_sheet_x3_5: 6994795128108026245
-      door_openClose_sheet_x3_6: 9207914427150179797
-      door_openClose_sheet_x3_7: -5728782231718286298
-      door_openClose_sheet_x3_8: 8813668135856416297
-      door_openClose_sheet_x3_9: -9103452430304731652
+      door_thin_openClose_shee_x3t_0: 5416072654107509299
+      door_thin_openClose_shee_x3t_1: -8358285491230840395
+      door_thin_openClose_shee_x3t_10: -90857969
+      door_thin_openClose_shee_x3t_2: -38608026196618186
+      door_thin_openClose_shee_x3t_3: 230575962234558181
+      door_thin_openClose_shee_x3t_4: 2604725876960636624
+      door_thin_openClose_shee_x3t_5: -2476390391366071555
+      door_thin_openClose_shee_x3t_6: 2395299373690041003
+      door_thin_openClose_shee_x3t_7: -4473446480585285583
+      door_thin_openClose_shee_x3t_8: -432081810681237870
+      door_thin_openClose_shee_x3t_9: -8446825460452197719
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

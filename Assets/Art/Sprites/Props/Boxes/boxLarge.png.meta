@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: fabf2a0c69f9efd42b2ef18cd06d3649
+guid: 429cd11d32e9e6b46877f1757e1cad9c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3297703436879463653
-    second: pressurePlateRightWire_0
-  - first:
-      213: -4037482563400697323
-    second: pressurePlateRightWire_1
+      213: 491113259147209143
+    second: boxLarge_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,49 +96,40 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pressurePlateRightWire_0
+      name: boxLarge_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
-        height: 48
+        width: 288
+        height: 288
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b1bf63632343c32d0800000000000000
-      internalID: -3297703436879463653
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pressurePlateRightWire_1
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 192
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 51afaa5000bf7f7c0800000000000000
-      internalID: -4037482563400697323
+      spriteID: 7b924fb38e8c0d600800000000000000
+      internalID: 491113259147209143
       vertices: []
       indices: 
       edges: []
@@ -150,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 294481d4492071c43860fe9987ee313e
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -158,12 +146,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":192.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      pressurePlateRightWire_0: -3297703436879463653
-      pressurePlateRightWire_1: -4037482563400697323
+      boxLarge_0: 491113259147209143
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

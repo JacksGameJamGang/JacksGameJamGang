@@ -1,9 +1,12 @@
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class Elevator : MonoBehaviour, IInteractable
 {
 	protected Collider2D _Collider;
+
+	public Elevator linkedElevator;
 
 	[Header("Interact notif text")]
 	public GameObject interactCanvasObject;
@@ -12,12 +15,16 @@ public class Elevator : MonoBehaviour, IInteractable
 	{
 		_Collider = GetComponent<Collider2D>();
 		interactCanvasObject.SetActive(false);
+
+		if (linkedElevator == null)
+			Debug.LogError("no linked elevator, assign one in inspector");
 	}
 
 	public void Interact()
 	{
 		Debug.LogError("Elevator Interact");
-		//code to teleport robot/dog to other elevators
+
+		GameManager.Instance.RobotController.transform.position = linkedElevator.transform.position;
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)

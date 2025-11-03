@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 4d76d091cf735994ba9e411d6bfbd3ad
+guid: 2ae1d9da0be7195409de1b5ba16f25f8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4244170295081616394
-    second: wallLever_0
-  - first:
-      213: -4104329531299908132
-    second: wallLever_1
-  - first:
-      213: -2065823141442706462
-    second: wallLever_2
-  - first:
-      213: -3190142603396439211
-    second: wallLever_3
+      213: 8490146199659383971
+    second: movingPlatformVertical_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,49 +96,40 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wallLever_0
+      name: movingPlatformVertical_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 7
         y: 0
-        width: 160
-        height: 288
+        width: 434
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6fb356b6a9da915c0800000000000000
-      internalID: -4244170295081616394
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wallLever_1
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 160
-        height: 288
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cd539b5790e7a07c0800000000000000
-      internalID: -4104329531299908132
+      spriteID: 3ac84d16cfe03d570800000000000000
+      internalID: 8490146199659383971
       vertices: []
       indices: 
       edges: []
@@ -156,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7ff700b9ffc9ed343bca755b4d28d43b
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -164,12 +146,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":160.0,"y":288.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      wallLever_0: -4244170295081616394
-      wallLever_1: -4104329531299908132
+      movingPlatformVertical_0: 8490146199659383971
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

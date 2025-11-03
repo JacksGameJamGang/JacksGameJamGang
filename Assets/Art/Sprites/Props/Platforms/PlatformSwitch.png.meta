@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a3d2c462da9ad5140afa86c278ce5e35
+guid: b6e38b939009f5141973f65fdf7686ae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6329572791353764165
-    second: boxSmall_0
+      213: -3088479411057225374
+    second: PlatformSwitch_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,27 +96,62 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boxSmall_0
+      name: PlatformSwitch_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 180
-        height: 90
+        width: 63
+        height: 99
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5496e901be827d750800000000000000
-      internalID: 6329572791353764165
+      spriteID: 26193dfc6548325d0800000000000000
+      internalID: -3088479411057225374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatformSwitch_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 63
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83683217f9c449b41b74a4d4202961c1
+      internalID: -33139040
       vertices: []
       indices: 
       edges: []
@@ -125,7 +160,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c0c175ea8458a314d83e24a92897e763
     internalID: 0
     vertices: []
     indices: 
@@ -133,9 +168,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":63.0,"y":99.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      boxSmall_0: 6329572791353764165
+      PlatformSwitch_0: -3088479411057225374
+      PlatformSwitch_1: -33139040
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

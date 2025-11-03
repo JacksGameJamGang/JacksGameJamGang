@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 2ae1d9da0be7195409de1b5ba16f25f8
+guid: be9d8e2e735b55746b4aba0910440857
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8490146199659383971
-    second: movingPlatformVertical_0
+      213: -7937348772470433567
+    second: floorLeverLarge_0
+  - first:
+      213: 6499158779262445858
+    second: floorLeverLarge_1
+  - first:
+      213: -1340035299045504901
+    second: floorLeverLarge_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,27 +102,84 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: movingPlatformVertical_0
+      name: floorLeverLarge_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 0
         y: 0
-        width: 434
-        height: 128
+        width: 320
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ac84d16cfe03d570800000000000000
-      internalID: 8490146199659383971
+      spriteID: 1e85486685fd8d190800000000000000
+      internalID: -7937348772470433567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorLeverLarge_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 320
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 229acc8c976a13a50800000000000000
+      internalID: 6499158779262445858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorLeverLarge_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 320
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7888edcefc376de0800000000000000
+      internalID: -1340035299045504901
       vertices: []
       indices: 
       edges: []
@@ -125,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0fc99f0c4bb442244a1ff81553402ac6
     internalID: 0
     vertices: []
     indices: 
@@ -133,9 +196,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":320.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      movingPlatformVertical_0: 8490146199659383971
+      floorLeverLarge_0: -7937348772470433567
+      floorLeverLarge_1: 6499158779262445858
+      floorLeverLarge_2: -1340035299045504901
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

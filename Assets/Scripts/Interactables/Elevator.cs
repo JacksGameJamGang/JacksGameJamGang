@@ -1,3 +1,5 @@
+using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -22,9 +24,22 @@ public class Elevator : MonoBehaviour, IInteractable
 
 	public void Interact()
 	{
-		Debug.LogError("Elevator Interact");
+		Debug.Log("Elevator Interact");
+
+		if (GameStateManager.Instance.CurrentGameState == GameState.Loading) return;
+		StartCoroutine(TeleportPlayer());
+	}
+
+	IEnumerator TeleportPlayer()
+	{
+		GameStateManager.Loading();
+		yield return GlobalUIManager.Instance.FadeIn(0.5f).WaitForCompletion();
 
 		GameManager.Instance.RobotController.transform.position = linkedElevator.transform.position;
+
+		yield return new WaitForSeconds(0.25f);
+		yield return GlobalUIManager.Instance.FadeOut(0.5f).WaitForCompletion();
+		GameStateManager.Playing();
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)

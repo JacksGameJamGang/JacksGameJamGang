@@ -92,7 +92,7 @@ public class Chip : MonoBehaviour
         isPickedUp = false;
         isFollowingDog = false;
 
-        GameStateManager.Instance.ChangeState(GameState.Playing);
+        GameStateManager.Playing();
 
         Destroy(gameObject);
     }

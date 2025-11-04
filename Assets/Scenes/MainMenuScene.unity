@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26295a8b620887c47bbd91df640c65e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuSystem
-  firstSceneName: Level_0
+  firstSceneName: Hub
 --- !u!1 &150749511
 GameObject:
   m_ObjectHideFlags: 0
@@ -2604,7 +2604,7 @@ GameObject:
   - component: {fileID: 3312291583912844192}
   - component: {fileID: 6098016796450425139}
   m_Layer: 5
-  m_Name: BlackQuitButton
+  m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2740,7 +2740,7 @@ GameObject:
   - component: {fileID: 4576356616487598589}
   - component: {fileID: 4576356616487598588}
   m_Layer: 5
-  m_Name: BlackPlayButton
+  m_Name: PlayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2898,7 +2898,7 @@ GameObject:
   - component: {fileID: 6833936513583724880}
   - component: {fileID: 5071939140631840764}
   m_Layer: 5
-  m_Name: BlackOptionsButton
+  m_Name: OptionsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

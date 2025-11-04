@@ -23,7 +23,7 @@ public class RobotColorChangerForTesting : MonoBehaviour
 
     private void OnGameStateChange(GameState newState)
     {
-        if (newState == GameState.RobotTempDeath)
+        if (newState == GameState.RobotDowned)
         {
             // Robot dies - change color to red
             if (spriteRenderer != null)

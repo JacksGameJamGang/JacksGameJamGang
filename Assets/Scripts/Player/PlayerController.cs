@@ -39,12 +39,16 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Jump();
+        if (!GameStateManager.IsInPlayableState()) return;
+
+		Jump();
     }
 
     private void FixedUpdate()
-    {
-        Movement();
+	{
+		if (!GameStateManager.IsInPlayableState()) return;
+
+		Movement();
     }
 
     private void Movement()

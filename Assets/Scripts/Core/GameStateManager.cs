@@ -5,7 +5,7 @@ public enum GameState
 {
     Loading,
     Playing,
-    RobotTempDeath,
+    RobotDowned,
     Paused,
     GameOver,
 }
@@ -23,7 +23,7 @@ public class GameStateManager : LocalSingleton<GameStateManager>
 
     private void Start()
     {
-        ChangeState(GameState.Loading); // Loading
+        ChangeState(GameState.Playing); // Loading
     }
 
     public void Update()
@@ -38,26 +38,48 @@ public class GameStateManager : LocalSingleton<GameStateManager>
         }
     }
     
+    //pausing
     private void PauseGame()
     {
         Time.timeScale = 0f;
         ChangeState(GameState.Paused);
     }
-
     private void ResumeGame()
     {
         Time.timeScale = 1f;
         ChangeState(GameState.Playing);
     }
-    
-    public void SetModePlaying()
+
+    public static bool IsInPlayableState()
     {
-        ChangeState(GameState.Playing);
+        if (Instance.CurrentGameState == GameState.Playing || Instance.CurrentGameState == GameState.RobotDowned)
+            return true;
+        else return false;
     }
-    
-    public void ChangeState(GameState newState)
+
+    //game state changes
+    public static void Playing()
     {
-        if (CurrentGameState != newState)
+		Instance.ChangeState(GameState.Playing);
+    }
+	public static void Loading()
+	{
+		Instance.ChangeState(GameState.Loading);
+	}
+	public static void GameOver()
+	{
+		Instance.ChangeState(GameState.GameOver);
+	}
+    public static void RobotDowned()
+    {
+        Instance.ChangeState(GameState.RobotDowned);
+    }
+
+	void ChangeState(GameState newState)
+    {
+		Debug.LogError($"change game state");
+
+		if (CurrentGameState != newState)
         {
             CurrentGameState = newState;
             OnGameStateChange?.Invoke(newState);

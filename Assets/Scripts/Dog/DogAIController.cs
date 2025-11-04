@@ -149,21 +149,12 @@ public class DogAIController : MonoBehaviour, IInteractable
 
 
             if (distanceToPlayer > followDistanceCatchup)
-            {
 				rb.linearVelocity = new Vector2(direction.x * (followSpeed + 2), rb.linearVelocity.y); //catch upto player
-				Debug.LogError("catching up, dist: " + distanceToPlayer);
-			}
             else
-            {
 				rb.linearVelocity = new Vector2(direction.x * followSpeed, rb.linearVelocity.y);
-				Debug.LogError("base speed, dist: " + distanceToPlayer);
-			}
 
 			FlipDog(-direction.x);
-
             lastHorizontalDir = direction.x;
-
-            Debug.LogError("velocity: " + rb.linearVelocity);
         }
         else
         {
@@ -213,7 +204,7 @@ public class DogAIController : MonoBehaviour, IInteractable
 
     private void OnGameStateChange(GameState obj)
     {
-        if (obj == GameState.RobotTempDeath)
+        if (obj == GameState.RobotDowned)
         {
             currentState = DogAIState.ControlledByPlayer;
         }

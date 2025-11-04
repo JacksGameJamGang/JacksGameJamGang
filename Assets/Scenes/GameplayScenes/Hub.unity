@@ -339,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7978070016512752273, guid: 484be29f3ed81f643847fe0d62042680, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -589,6 +589,10 @@ PrefabInstance:
     - target: {fileID: 749730485938561801, guid: 840323b374eeb00458db5b480e588d1d, type: 3}
       propertyPath: m_Name
       value: Door To Room (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407133276424138532, guid: 840323b374eeb00458db5b480e588d1d, type: 3}
+      propertyPath: nameOfSceneToLoad
+      value: Level_1
       objectReference: {fileID: 0}
     - target: {fileID: 6783656766649682839, guid: 840323b374eeb00458db5b480e588d1d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1048,6 +1052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door To Room (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3407133276424138532, guid: 840323b374eeb00458db5b480e588d1d, type: 3}
+      propertyPath: nameOfSceneToLoad
+      value: Level_1
+      objectReference: {fileID: 0}
     - target: {fileID: 6783656766649682839, guid: 840323b374eeb00458db5b480e588d1d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.21
@@ -1217,7 +1225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7978070016512752273, guid: 484be29f3ed81f643847fe0d62042680, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1290,7 +1298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7978070016512752273, guid: 484be29f3ed81f643847fe0d62042680, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3184,7 +3192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7978070016512752273, guid: 484be29f3ed81f643847fe0d62042680, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3202,6 +3210,10 @@ PrefabInstance:
     - target: {fileID: 749730485938561801, guid: 840323b374eeb00458db5b480e588d1d, type: 3}
       propertyPath: m_Name
       value: Door To Room (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407133276424138532, guid: 840323b374eeb00458db5b480e588d1d, type: 3}
+      propertyPath: nameOfSceneToLoad
+      value: Level_1
       objectReference: {fileID: 0}
     - target: {fileID: 6783656766649682839, guid: 840323b374eeb00458db5b480e588d1d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3626,6 +3638,10 @@ PrefabInstance:
     - target: {fileID: 749730485938561801, guid: 840323b374eeb00458db5b480e588d1d, type: 3}
       propertyPath: m_Name
       value: Door To Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407133276424138532, guid: 840323b374eeb00458db5b480e588d1d, type: 3}
+      propertyPath: nameOfSceneToLoad
+      value: Level_1
       objectReference: {fileID: 0}
     - target: {fileID: 6783656766649682839, guid: 840323b374eeb00458db5b480e588d1d, type: 3}
       propertyPath: m_LocalPosition.x

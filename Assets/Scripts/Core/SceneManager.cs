@@ -23,25 +23,28 @@ public class SceneManager : Singleton<SceneManager>
 
     private IEnumerator LoadSceneAdditiveWithFadeCo(string sceneName)
     {
-        yield return GlobalUIManager.Instance.FadeIn(1f).WaitForCompletion();
+		yield return GlobalUIManager.Instance.FadeIn(1f).WaitForCompletion();
+
+		if (!string.IsNullOrEmpty(currentActiveSceneName))
+			yield return UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(currentActiveSceneName);
+		
         yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
 
-        if (!string.IsNullOrEmpty(currentActiveSceneName))
-            yield return UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(currentActiveSceneName);
-
         currentActiveSceneName = sceneName;
+
         yield return new WaitForSeconds(0.3f);
         yield return GlobalUIManager.Instance.FadeOut(0.5f).WaitForCompletion();
     }
 
     private IEnumerator LoadSceneAdditiveFastCo(string sceneName)
-    {
+	{
+		if (!string.IsNullOrEmpty(currentActiveSceneName))
+			yield return UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(currentActiveSceneName);
+		
         yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
 
-        if (!string.IsNullOrEmpty(currentActiveSceneName))
-            yield return UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(currentActiveSceneName);
-
         currentActiveSceneName = sceneName;
+		
         yield return null; // wait a frame to ensure the scene is fully loaded
     }
 

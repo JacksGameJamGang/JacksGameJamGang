@@ -20,7 +20,7 @@ public class RoomDoorTerminal : MonoBehaviour, IMechanism, IInteractable
 	public void Activate()
     {
         isActive = true;
-		GameStateManager.Instance.ChangeState(GameState.RobotTempDeath);
+		GameStateManager.RobotDowned();
 	}
 
     public void Deactivate()

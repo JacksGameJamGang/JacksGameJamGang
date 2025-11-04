@@ -24,14 +24,14 @@ public class RobotDeathStateHandler : MonoBehaviour
 
         if (timeRemainingTimer <= 0)
         {
-            GameStateManager.Instance.ChangeState(GameState.GameOver);
+            GameStateManager.GameOver();
             isRobotDown = false;
         }
     }
 
     private void HandleGameStateChange(GameState newState)
     {
-        if (newState == GameState.RobotTempDeath)
+        if (newState == GameState.RobotDowned)
         {
             KillRobot();
         }
@@ -57,8 +57,5 @@ public class RobotDeathStateHandler : MonoBehaviour
 
         // Reset player back to robot
         GameManager.Instance.SetControlledCharacter(GameManager.Instance.RobotController);
-
-        // Change game state back to Playing
-        GameStateManager.Instance.ChangeState(GameState.Playing);
     }
 }

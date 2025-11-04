@@ -15,7 +15,7 @@ public class SaveStation : MonoBehaviour, IInteractable
 
 	public void Interact()
 	{
-		Debug.LogError("Save Station Interact");
+		Debug.Log("Save Station Interact");
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)

@@ -36,7 +36,7 @@ public class GameManager : LocalSingleton<GameManager>
             SetPlayerToFollow(RobotController.transform);
             SetControlledCharacter(RobotController);
         }
-        else if (newState == GameState.RobotTempDeath)
+        else if (newState == GameState.RobotDowned)
         {
             SetControlledCharacter(DogController);
         }

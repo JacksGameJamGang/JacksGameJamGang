@@ -4,6 +4,9 @@ public class DoorToScenes : MonoBehaviour, IInteractable
 {
 	protected Collider2D _Collider;
 
+	[Header("Loading Next Scene")]
+	public string nameOfSceneToLoad;
+
 	[Header("Interact notif text")]
 	public GameObject interactCanvasObject;
 
@@ -15,8 +18,9 @@ public class DoorToScenes : MonoBehaviour, IInteractable
 
 	public void Interact()
 	{
-		Debug.LogError("Door To Different Scene Interact");
-		//code to load other scenes
+		Debug.Log("Door To Different Scene Interact");
+
+		SceneManager.Instance.LoadSceneAdditive(nameOfSceneToLoad, true);
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)

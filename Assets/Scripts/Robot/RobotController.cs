@@ -14,7 +14,9 @@ public class RobotController : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetKeyDown(interactKey))
+		if (!GameStateManager.IsInPlayableState()) return;
+
+		if (Input.GetKeyDown(interactKey))
         {
             OnInteractButtonPress();
 		}
@@ -26,12 +28,12 @@ public class RobotController : MonoBehaviour
 
         if (interactableCollidersArray.Length == 0)
         {
-            Debug.LogError("no nearby interactables found");
+            Debug.Log("no nearby interactables found");
             return;
         }
         else
         {
-			Debug.LogError($"found {interactableCollidersArray.Length} interactables, grabbing closest");
+			Debug.Log($"found {interactableCollidersArray.Length} interactables, grabbing closest");
 			nearestInteractable = FindClosestInteractable(interactableCollidersArray);
 		}
 

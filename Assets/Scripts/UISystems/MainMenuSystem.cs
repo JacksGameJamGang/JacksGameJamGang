@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MainMenuSystem : MonoBehaviour
 {
-    [SerializeField] private string firstSceneName = "Level_0";
+    [SerializeField] private string firstSceneName = "Hub";
     
     public void OnStartButtonClick()
     {

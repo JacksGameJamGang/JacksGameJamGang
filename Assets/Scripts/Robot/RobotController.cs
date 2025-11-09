@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class RobotController : MonoBehaviour
 {
+    PlayerController playerController;
+
     [Header("Robot Special Abilities")]
     [SerializeField] private KeyCode interactKey = KeyCode.F;
     
@@ -11,18 +14,94 @@ public class RobotController : MonoBehaviour
     [SerializeField] private LayerMask interactableLayers;
 
     IInteractable nearestInteractable;
-    
-    private void Update()
-    {
+
+	//track ground info
+    private GameObject objectPlayerStoodOn;
+    private Vector3 playerLeftGroundPosition;
+	private Vector3 playerTouchedGroundPosition;
+
+    //waypoint + events
+    private WaypointManager waypointManager;
+
+	private void Awake()
+	{
+        playerController = GetComponent<PlayerController>();
+        waypointManager = GetComponent<WaypointManager>();
+		PlayerController.OnPlayerJump += OnPlayerJump;
+
+		playerLeftGroundPosition = transform.position;
+		playerTouchedGroundPosition = transform.position;
+	}
+	private void OnDestroy()
+	{
+		PlayerController.OnPlayerJump -= OnPlayerJump;
+	}
+
+	private void Update()
+	{
 		if (!GameStateManager.IsInPlayableState()) return;
 
 		if (Input.GetKeyDown(interactKey))
-        {
-            OnInteractButtonPress();
+		{
+			OnInteractButtonPress();
 		}
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		TouchingNewGround(collision);
     }
-    
-    private void OnInteractButtonPress()
+
+	//ground checks
+	private void TouchingNewGround(Collision2D collision)
+	{
+		if (!CollisionIsGroundLayer(collision)) return;
+		if (!playerController.TouchingGroundCheck()) return;
+
+		playerTouchedGroundPosition = transform.position;
+		waypointManager.AllowBasicWaypointSpacing();
+
+		if (StandingOnDifferentGroundOrLevel(collision.gameObject))
+		{
+			objectPlayerStoodOn = collision.gameObject;
+			waypointManager.CreateJumpWaypointPair(playerLeftGroundPosition, playerTouchedGroundPosition);
+		}
+	}
+	private bool CollisionIsGroundLayer(Collision2D collision)
+	{
+		if (((1 << collision.gameObject.layer) & playerController.GetGroundLayerMask()) != 0)
+			return true;
+		else
+			return false;
+	}
+	private bool StandingOnDifferentGroundOrLevel(GameObject gameObject)
+	{
+        if (objectPlayerStoodOn == null) //should be first time loading in so ignore and set it
+        {
+            objectPlayerStoodOn = gameObject;
+			return false;
+		}
+
+		if (objectPlayerStoodOn != gameObject)
+			return true;
+		else
+		{
+			float distance = transform.position.y - GameManager.Instance.DogController.transform.position.y - 0.5f; //0.5 offset
+
+			if (distance >= 0.25f)
+                return true;
+			else
+                return false;
+		}
+	}
+	private void OnPlayerJump()
+	{
+		playerLeftGroundPosition = transform.position;
+		waypointManager.BlockBasicWaypointSpacing();
+	}
+
+	//interactions
+	private void OnInteractButtonPress()
     {
 		Collider2D[] interactableCollidersArray = Physics2D.OverlapCircleAll(transform.position, interactionRange, interactableLayers);
 
@@ -39,7 +118,6 @@ public class RobotController : MonoBehaviour
 
         nearestInteractable.Interact();
 	}
-
     private IInteractable FindClosestInteractable(Collider2D[] interactableColliders)
     {
         IInteractable closestInteractable = null;

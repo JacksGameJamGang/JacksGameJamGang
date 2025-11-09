@@ -36,6 +36,7 @@ public class Elevator : MonoBehaviour, IInteractable
 		yield return GlobalUIManager.Instance.FadeIn(0.5f).WaitForCompletion();
 
 		GameManager.Instance.RobotController.transform.position = linkedElevator.transform.position;
+		GameManager.Instance.DogController.transform.position = linkedElevator.transform.position;
 
 		yield return new WaitForSeconds(0.25f);
 		yield return GlobalUIManager.Instance.FadeOut(0.5f).WaitForCompletion();

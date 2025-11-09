@@ -80,6 +80,9 @@ MonoBehaviour:
   followDelay: 0.25
   interactDistance: 2
   interactCanvas: {fileID: 3577955669632844576}
+  robotVisibleCheck:
+    serializedVersion: 2
+    m_Bits: 72
 --- !u!212 &9022783548604867460
 SpriteRenderer:
   m_ObjectHideFlags: 0

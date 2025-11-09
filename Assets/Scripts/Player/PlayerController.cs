@@ -1,13 +1,12 @@
-using NaughtyAttributes;
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Inspector stuff
+    [Header("Movement Settings")]
     [SerializeField] private float speed = 6f;
     [SerializeField] private float jumpForce = 20f;
 
-    //fall speed
     [SerializeField] private float fallSpeed = 2f;
     [SerializeField] private float fallSpeedMultiplyer = 2.5f;
 
@@ -16,9 +15,12 @@ public class PlayerController : MonoBehaviour
 	private float gravityScaleBase;
     private float gravityScaleMax;
 
-    [SerializeField] private Transform groundCheck;
+	[Header("Ground Check Settings")]
+	[SerializeField] private Transform groundCheck;
 	[SerializeField] private LayerMask groundLayer;
 	[SerializeField] private float groundCheckRadius = 0.2f;
+
+    public static event Action OnPlayerJump;
 
 	[SerializeField] private Animator animator;
 
@@ -51,6 +53,7 @@ public class PlayerController : MonoBehaviour
 		Movement();
     }
 
+    //movement
     private void Movement()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -68,14 +71,14 @@ public class PlayerController : MonoBehaviour
         UpdateFallSpeed();
 
 	}
-
     private void Jump()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-        //Debug.Log(isGrounded);
+        isGrounded = TouchingGroundCheck();
+
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            OnPlayerJump?.Invoke();
         }
     }
     private void UpdateFallSpeed()
@@ -100,4 +103,13 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = true;
     }
 
+    //ground
+    public bool TouchingGroundCheck()
+    {
+		return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+	}
+    public LayerMask GetGroundLayerMask()
+    {
+        return groundLayer;
+    }
 }

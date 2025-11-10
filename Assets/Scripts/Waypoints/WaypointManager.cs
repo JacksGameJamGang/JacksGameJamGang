@@ -1,56 +1,63 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static Waypoint;
 
-public class WaypointManager : MonoBehaviour
+public class WaypointManager : LocalSingleton<WaypointManager>
 {
-	private PlayerController playerController;
-
 	public GameObject WaypointPrefab;
 	[SerializeField] private float waypointsSpacing;
 	[SerializeField] private LayerMask waypointLayer;
 
 	private List<Waypoint> waypoints = new();
 
-	public Waypoint ClosestWaypoint;
+	public Waypoint RobotsClosestWaypoint;
+	public Waypoint DogsClosestWaypoint;
 	public Waypoint LastPlacedWaypoint;
 
 	public static event Action<List<Waypoint>> MakeDogFollowWaypoint;
 
 	private bool blockBasicWaypointPlacing;
 
-	private void Awake()
+	private void OnDestroy()
 	{
-		playerController = GetComponent<PlayerController>();
+		UnityEngine.SceneManagement.SceneManager.sceneLoaded -= CleanUpOldWaypoints;
 	}
 	private void Start()
 	{
-		CreateSpacedWaypoint();
+		UnityEngine.SceneManagement.SceneManager.sceneLoaded += CleanUpOldWaypoints;
 	}
 
-	public void Update()
+	private void CleanUpOldWaypoints(Scene scene, LoadSceneMode loadSceneMode)
 	{
-		BasicWaypointPlacing();
+		for (int i = waypoints.Count - 1; i > 0; i--)
+			Destroy(waypoints[i].gameObject);
+
+		waypoints.Clear();
+		Debug.LogError("clearing waypoints");
 	}
 
 	//waypoint path generation
-	public List<Waypoint> GetWaypointPath(Vector2 positionToPathTo)
+	public void GetWaypointPath()
 	{
-		Debug.LogError("dog getting new path");
+		Vector2 dogsPosition = GameManager.Instance.DogController.transform.position;
+		Vector2 robotsPosition = GameManager.Instance.RobotController.transform.position;
 
-		ClosestWaypoint = FindClosestWaypoint(transform.position);
-		Waypoint waypointToFind = FindClosestWaypoint(positionToPathTo);
+		DogsClosestWaypoint = FindClosestWaypoint(dogsPosition);
+		RobotsClosestWaypoint = FindClosestWaypoint(robotsPosition);
 
-		List<Waypoint> path = FindPathToTargetWaypoint(ClosestWaypoint, waypointToFind, true)
-			?? FindPathToTargetWaypoint(ClosestWaypoint, waypointToFind, false); //find path by looking at next/previous waypoints
+		Debug.LogError("(new path) dog pos: " + dogsPosition + " | closeset: " + DogsClosestWaypoint.transform.position);
+		Debug.LogError("(new path) robot pos: " + robotsPosition + " | closest: " + RobotsClosestWaypoint.transform.position);
+
+		List<Waypoint> path = FindPathToTargetWaypoint(DogsClosestWaypoint, RobotsClosestWaypoint, true)
+			?? FindPathToTargetWaypoint(DogsClosestWaypoint, RobotsClosestWaypoint, false); //find path by looking at next/previous waypoints
 
 		if (path == null)
 			Debug.LogError("found no path searching forwards and backwards");
 
-		return path;
+		MakeDogFollowWaypoint?.Invoke(path);
 	}
 	private List<Waypoint> FindPathToTargetWaypoint(Waypoint currentWaypoint, Waypoint targetWaypoint, bool searchNext)
 	{
@@ -76,31 +83,34 @@ public class WaypointManager : MonoBehaviour
 	}
 
 	//waypoint creation
-	private void BasicWaypointPlacing()
+	public void BasicWaypointPlacing(Vector2 robotCurrentPos, bool isGrounded)
 	{
 		if (blockBasicWaypointPlacing) return;
 
-		float distance = Vector2.Distance(ClosestWaypoint.transform.position, transform.position);
-
-		if (distance <= waypointsSpacing || !playerController.TouchingGroundCheck()) return; //dont place waypoints too close or floating ones
-		if (CheckSurroundingsForWaypoints(WaypointType.basic, waypointsSpacing)) return;
-
-		CreateSpacedWaypoint();
-	}
-	private void CreateSpacedWaypoint()
-	{
-		Waypoint nextWaypont = CreateWaypoint(transform.position);
+		Waypoint newWaypoint;
 
 		if (LastPlacedWaypoint == null)
-			nextWaypont.InitilizeWaypoint(WaypointType.start, LastPlacedWaypoint, null);
-		else
-			nextWaypont.InitilizeWaypoint(WaypointType.basic, LastPlacedWaypoint, null);
+		{
+			newWaypoint = CreateWaypoint(robotCurrentPos);
+			newWaypoint.InitilizeWaypoint(WaypointType.start, LastPlacedWaypoint, null);
+			UpdateInfoOnWaypointCreation(newWaypoint);
+		}
 
-		UpdateInfoOnWaypointCreation(nextWaypont);
+		float distance = Vector2.Distance(RobotsClosestWaypoint.transform.position, robotCurrentPos);
+
+		if (distance <= waypointsSpacing || !isGrounded) return; //dont place waypoints too close or floating ones
+		if (CheckSurroundingsForWaypoints(robotCurrentPos, waypointsSpacing)) return;
+
+		newWaypoint = CreateWaypoint(robotCurrentPos);
+		newWaypoint.InitilizeWaypoint(WaypointType.basic, LastPlacedWaypoint, null);
+		UpdateInfoOnWaypointCreation(newWaypoint);
 	}
 	public void CreateJumpWaypointPair(Vector2 playerLeftGroundPosition, Vector2 playerTouchedGroundPosition)
 	{
-		if (CheckSurroundingsForWaypoints(WaypointType.jumpEnd, 2f)) return; //should stop multiple jump points for the same jump
+		if (CheckForDuplicateJumpWaypoints(WaypointType.jumpStart, playerLeftGroundPosition, 2f) && 
+			CheckForDuplicateJumpWaypoints(WaypointType.jumpEnd, playerTouchedGroundPosition, 2f)) return; //stop dupe jump points for same jump
+
+		Debug.LogError("duplicate jump waypoints check passed");
 
 		Waypoint previousWaypoint = CreateWaypoint(playerLeftGroundPosition);
 		Waypoint nextWaypoint = CreateWaypoint(playerTouchedGroundPosition);
@@ -110,8 +120,6 @@ public class WaypointManager : MonoBehaviour
 
 		UpdateInfoOnWaypointCreation(previousWaypoint);
 		UpdateInfoOnWaypointCreation(nextWaypoint);
-
-		MakeDogFollowWaypoint?.Invoke(GetWaypointPath(GameManager.Instance.DogController.transform.position));
 	}
 	private Waypoint CreateWaypoint(Vector2 position)
 	{
@@ -125,7 +133,7 @@ public class WaypointManager : MonoBehaviour
 			LastPlacedWaypoint.AddNextWaypoint(newWaypoint);
 
 		LastPlacedWaypoint = newWaypoint;
-		ClosestWaypoint = newWaypoint;
+		RobotsClosestWaypoint = newWaypoint;
 		waypoints.Add(newWaypoint);
 		newWaypoint.name = $"Waypoint {waypoints.Count}";
 	}
@@ -149,24 +157,23 @@ public class WaypointManager : MonoBehaviour
 	}
 
 	//waypoint checking
-	private bool CheckSurroundingsForWaypoints(WaypointType typeToCheckFor, float checkDistance)
+	private bool CheckSurroundingsForWaypoints(Vector2 checkPosition, float checkDistance)
 	{
-		if (typeToCheckFor == WaypointType.jumpEnd)
-		{
-			Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, checkDistance, waypointLayer);
+		return Physics2D.OverlapCircle(checkPosition, checkDistance - 1, waypointLayer);
+	}
+	private bool CheckForDuplicateJumpWaypoints(WaypointType waypointType, Vector2 checkPosition, float checkDistance)
+	{
+		Collider2D[] hits = Physics2D.OverlapCircleAll(checkPosition, checkDistance, waypointLayer);
 
-			foreach (Collider2D hit in hits)
-			{
-				if (hit.GetComponent<Waypoint>().GetWaypointType() == WaypointType.jumpEnd)
-					return true;
-			}
-
-			return false;
-		}
-		else
+		foreach (Collider2D hit in hits)
 		{
-			return Physics2D.OverlapCircle(transform.position, checkDistance - 1, waypointLayer);
+			Waypoint waypoint = hit.GetComponent<Waypoint>();
+
+			if (waypoint.GetWaypointType() == waypointType)
+				return true;
 		}
+
+		return false;
 	}
 
 	//basic waypoint blocking after jumping
@@ -176,13 +183,12 @@ public class WaypointManager : MonoBehaviour
 	}
 	public void AllowBasicWaypointSpacing()
 	{
-		blockBasicWaypointPlacing = true;
 		StopCoroutine(FinishedJumpingTimer());
 		StartCoroutine(FinishedJumpingTimer());
 	}
 	private IEnumerator FinishedJumpingTimer()
 	{
-		yield return new WaitForSeconds(0.1f);
+		yield return new WaitForSeconds(5f);
 		blockBasicWaypointPlacing = false;
 	}
 

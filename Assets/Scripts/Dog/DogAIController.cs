@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,6 +8,8 @@ using static WaypointManager;
 [RequireComponent(typeof(Rigidbody2D))]
 public class DogAIController : MonoBehaviour, IInteractable
 {
+    private PlayerController playerController;
+
 	private enum DogAIState
     {
         Idle,
@@ -18,7 +21,6 @@ public class DogAIController : MonoBehaviour, IInteractable
     };
 
     [Header("Follow Settings")]
-    private bool useWaypointFollow;
     [SerializeField] private float followSpeed = 6f;
     [SerializeField] private float followDistanceFromIdle = 1.75f;
     [SerializeField] private float followDistanceCatchup = 1.5f;
@@ -33,12 +35,8 @@ public class DogAIController : MonoBehaviour, IInteractable
 	[SerializeField] private LayerMask robotVisibleCheck;
 
     [Header("Waypoint Pathing")]
-    private WaypointManager waypointManager;
     public List<Waypoint> waypointPath = new();
 	public Waypoint waypointTarget;
-
-    private float waypointPathValidTimer;
-    private float waypointPathValidCooldown;
 
 	[SerializeField] private DogAIState currentState = DogAIState.Idle;
     private Transform player;
@@ -50,12 +48,16 @@ public class DogAIController : MonoBehaviour, IInteractable
 
 	private void Start()
     {
-        GameStateManager.Instance.OnGameStateChange += OnGameStateChange;
+        playerController = GetComponent<PlayerController>();
+		rb = GetComponent<Rigidbody2D>();
+		spriteRenderer = GetComponent<SpriteRenderer>();
+		animator = GetComponent<Animator>();
+
+		GameStateManager.Instance.OnGameStateChange += OnGameStateChange;
         GameManager.Instance.OnSetPlayerToFollow += HandleSetPlayer;
         WaypointManager.MakeDogFollowWaypoint += GetWaypointPath;
-        rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
+
+        PlayerController.OnPlayerJump += CopyPlayerJump;
     }
 
     private void OnDestroy()
@@ -63,6 +65,8 @@ public class DogAIController : MonoBehaviour, IInteractable
         GameStateManager.Instance.OnGameStateChange -= OnGameStateChange;
         GameManager.Instance.OnSetPlayerToFollow -= HandleSetPlayer;
 		WaypointManager.MakeDogFollowWaypoint -= GetWaypointPath;
+
+		PlayerController.OnPlayerJump -= CopyPlayerJump;
 	}
 
     private void Update()
@@ -70,9 +74,13 @@ public class DogAIController : MonoBehaviour, IInteractable
         if (currentState == DogAIState.ControlledByPlayer)
             return;
 
-        DistanceCheck();
-		RobotVisibleCheck();
-        PathStillValidCheck();
+		playerController.DogTouchingGroundCheck();
+		playerController.UpdateFallSpeed();
+
+		InteractDistanceCheck();
+
+        DogTooFarFromPlayerCheck();
+		PathStillValidCheck();
     }
 
     private void FixedUpdate()
@@ -117,93 +125,7 @@ public class DogAIController : MonoBehaviour, IInteractable
 
         Debug.Log("Robot pets the dog!");
     }
-
-    //follow behaviour
-    private void HandleFollowing()
-    {
-		if (player == null)
-			return;
-
-		float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
-
-		if (distanceToPlayer > followDistance)
-		{
-			float differenceOnX = player.transform.position.x - transform.position.x;
-			Vector2 direction = new Vector2(differenceOnX, 0f).normalized;
-
-
-			if (distanceToPlayer > followDistanceCatchup)
-				rb.linearVelocity = new Vector2(direction.x * (followSpeed + 2), rb.linearVelocity.y); //catch upto player
-			else
-				rb.linearVelocity = new Vector2(direction.x * followSpeed, rb.linearVelocity.y);
-
-			FlipDog(-direction.x);
-			lastHorizontalDir = direction.x;
-		}
-		else
-		{
-			ChangeDogState(DogAIState.Idle);
-			rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
-		}
-	}
-    private void HandleWaypointFollowing()
-    {
-		if (player == null || waypointTarget == null)
-			return;
-
-        //find waypoint path to player, move to 1st waypoint, depending on waypoint type do x, then move to next waypoint
-        //continue above till next waypoint is empty then switch to following player normally
-        if (waypointPath.Count == 0)
-            ChangeDogState(DogAIState.Following);
-
-        if (waypointTarget.ReachedWaypoint(transform))
-        {
-            Waypoint.WaypointType waypointType = waypointTarget.GetWaypointType();
-
-            if (waypointType == Waypoint.WaypointType.jumpStart)
-			{
-				Debug.LogError("jump start");
-                transform.position = waypointTarget.GetNextWaypoint().transform.position; //tp to next jump waypoint for now
-			}
-            else if (waypointType == Waypoint.WaypointType.jumpEnd)
-            {
-				Debug.LogError("jump end");
-            }
-            else
-            {
-                Debug.LogError("not set up");
-            }
-
-            waypointPath.Remove(waypointTarget);
-			waypointTarget = waypointTarget.GetNextWaypoint();
-		}
-        else
-        {
-			float differenceOnX = waypointTarget.transform.position.x - transform.position.x;
-			Vector2 direction = new Vector2(differenceOnX, 0f).normalized;
-
-			rb.linearVelocity = new Vector2(direction.x * (followSpeed + 2), rb.linearVelocity.y); //catch upto player
-
-			FlipDog(-direction.x);
-			lastHorizontalDir = direction.x;
-		}
-	}
-    private void GetWaypointPath(List<Waypoint> waypointPath)
-    {
-		this.waypointPath = waypointPath;
-        waypointTarget = waypointPath[^1];
-        ChangeDogState(DogAIState.WaypointFollowing);
-    }
-	private void FlipDog(float horizontalInput)
-	{
-		if (horizontalInput > 0.05f)
-			spriteRenderer.flipX = false;
-		else if (horizontalInput < -0.05f)
-			spriteRenderer.flipX = true;
-	}
-
-	//AI pathfinding checks
-	private void DistanceCheck()
+	private void InteractDistanceCheck()
 	{
 		if (player == null)
 			return;
@@ -240,31 +162,153 @@ public class DogAIController : MonoBehaviour, IInteractable
 				ChangeDogState(DogAIState.Following);
 		}
 	}
-	private void RobotVisibleCheck()
-    {
-        Vector2 raycastStartPos = new(transform.position.x, transform.position.y + 0.5f);
-        RaycastHit2D hit = Physics2D.Linecast(raycastStartPos, player.position, robotVisibleCheck);
 
-        if (hit.rigidbody.GetComponent<RobotController>() == null)
+	//follow behaviour
+	private void HandleFollowing()
+    {
+		if (player == null)
+			return;
+
+		float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+
+		if (distanceToPlayer > followDistance)
+		{
+			float differenceOnX = player.transform.position.x - transform.position.x;
+
+			if (Mathf.Abs(differenceOnX) < 0.1f) return;
+
+			Vector2 direction = new Vector2(differenceOnX, 0f).normalized;
+
+			if (distanceToPlayer > followDistanceCatchup)
+				rb.linearVelocity = new Vector2(direction.x * (followSpeed + 2), rb.linearVelocity.y); //catch upto player
+			else
+				rb.linearVelocity = new Vector2(direction.x * followSpeed, rb.linearVelocity.y);
+
+			FlipDog(-direction.x);
+			lastHorizontalDir = direction.x;
+		}
+		else
+		{
+			ChangeDogState(DogAIState.Idle);
+			rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+		}
+	}
+    private void HandleWaypointFollowing()
+    {
+		if (player == null || waypointTarget == null)
+			return;
+
+        //find waypoint path to player, move to 1st waypoint, depending on waypoint type do x, then move to next waypoint
+        //continue above till next waypoint is empty then switch to following player normally
+        if (waypointPath.Count == 0)
+            ChangeDogState(DogAIState.Following);
+
+        if (waypointTarget.ReachedWaypoint(transform))
         {
-            //Debug.LogError("robot not visible: " + hit.rigidbody.gameObject.name);
-        }
+            Waypoint.WaypointType waypointType = waypointTarget.GetWaypointType();
+
+            if (waypointType == Waypoint.WaypointType.jumpStart)
+			{
+				Debug.LogError("jump start");
+				playerController.DogAiForceJump();
+			}
+            else if (waypointType == Waypoint.WaypointType.jumpEnd)
+            {
+				Debug.LogError("jump end");
+            }
+
+            waypointPath.Remove(waypointTarget);
+
+            if (waypointPath.Count == 0)
+				ChangeDogState(DogAIState.Following);
+            else
+			    waypointTarget = waypointPath[0];
+		}
         else
         {
-			//Debug.LogError("robot visible: " + hit.rigidbody.gameObject.name);
+			float differenceOnX = waypointTarget.transform.position.x - transform.position.x;
+
+			if (Mathf.Abs(differenceOnX) < 0.1f) return;
+
+			Vector2 direction = new Vector2(differenceOnX, 0f).normalized;
+			rb.linearVelocity = new Vector2(direction.x * (followSpeed + 2), rb.linearVelocity.y); //catch upto player
+
+			FlipDog(-direction.x);
+			lastHorizontalDir = direction.x;
 		}
+	}
+    private void GetWaypointPath(List<Waypoint> waypointPath)
+    {
+        this.waypointPath = waypointPath;
+        waypointTarget = waypointPath[0];
+        ChangeDogState(DogAIState.WaypointFollowing);
     }
+	private void FlipDog(float horizontalInput)
+	{
+		if (horizontalInput > 0.05f)
+			spriteRenderer.flipX = false;
+		else if (horizontalInput < -0.05f)
+			spriteRenderer.flipX = true;
+	}
+
+    private void CopyPlayerJump()
+    {
+        if (playerController.isActiveAndEnabled) return; //currently dog so dont double jump
+
+        StopCoroutine(DelayCopyPlayerJump());
+        StartCoroutine(DelayCopyPlayerJump());
+    }
+    private IEnumerator DelayCopyPlayerJump()
+    {
+        yield return new WaitForSeconds(0.25f);
+        playerController.DogAiForceJump();
+    }
+
+	//AI pathfinding checks
+	private void DogTooFarFromPlayerCheck()
+    {
+		if (RobotVisibleCheck()) return;
+
+        Vector2 distance = transform.position - player.position;
+
+		if (Mathf.Abs(distance.x) > 8 || Mathf.Abs(distance.y) > 2)
+		{
+			ChangeDogState(DogAIState.Idle);
+			WaypointManager.Instance.GetWaypointPath();
+		}
+	}
+	private bool RobotVisibleCheck()
+	{
+		Vector2 raycastStartPos = new(transform.position.x, transform.position.y + 0.5f);
+		RaycastHit2D hit = Physics2D.Linecast(raycastStartPos, player.position, robotVisibleCheck);
+
+		if (hit.rigidbody.GetComponent<RobotController>() != null)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	/// <summary>
+	/// fix dog getting stuck endlessly checking and regrabbing path every x seconds
+	/// </summary>
+
 	private void PathStillValidCheck()
 	{
 		if (currentState != DogAIState.WaypointFollowing || waypointTarget == null) return;
+		if (!playerController.isGrounded) return;
 
-        float yDistance = waypointTarget.transform.position.y - transform.position.y;
+		Vector2 distance = transform.position - player.position;
 
-		Debug.LogError("Distance: " + yDistance);
+		Debug.LogError("path valid check: " + distance);
 
-		if (yDistance > 2 || yDistance < -2)
-        {
-			waypointManager.GetWaypointPath(transform.position);
+		if (Mathf.Abs(distance.y) > 2)
+		{
+			ChangeDogState(DogAIState.Idle);
+			WaypointManager.Instance.GetWaypointPath();
 		}
 	}
 
@@ -313,7 +357,6 @@ public class DogAIController : MonoBehaviour, IInteractable
 	private void HandleSetPlayer(Transform obj)
     {
         player = obj;
-        waypointManager = player.GetComponent<WaypointManager>();
         currentState = DogAIState.Following;
     }
     private void OnGameStateChange(GameState obj)

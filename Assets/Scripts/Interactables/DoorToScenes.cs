@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class DoorToScenes : MonoBehaviour, IInteractable
@@ -9,6 +10,8 @@ public class DoorToScenes : MonoBehaviour, IInteractable
 
 	[Header("Interact notif text")]
 	public GameObject interactCanvasObject;
+
+	public static event Action OnEnterNewScene;
 
 	private void Start()
 	{

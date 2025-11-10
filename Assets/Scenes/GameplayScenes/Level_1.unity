@@ -1839,7 +1839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1929651122782407761, guid: 5104c702f7691ac448f6ed012eb76d1a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -74.99
+      value: -75.19
       objectReference: {fileID: 0}
     - target: {fileID: 1929651122782407761, guid: 5104c702f7691ac448f6ed012eb76d1a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2912,6 +2912,7 @@ Transform:
   m_Children:
   - {fileID: 246073276}
   - {fileID: 407991174}
+  - {fileID: 1160732638}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1085438502
@@ -3291,6 +3292,58 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1222356880406347603, guid: d16187265fd6f224d9a4aa136b38251d, type: 3}
   m_PrefabInstance: {fileID: 1157850721}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1160732637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1160732638}
+  - component: {fileID: 1160732639}
+  m_Layer: 0
+  m_Name: WaypointManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1160732638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160732637}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1080754864}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1160732639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160732637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efbe9a0595d41464c978bb870352b460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaypointManager
+  WaypointPrefab: {fileID: 8158413708055470778, guid: f69c648392c6bc34f9e0eacb5c4f5214, type: 3}
+  waypointsSpacing: 8
+  waypointLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+  RobotsClosestWaypoint: {fileID: 0}
+  DogsClosestWaypoint: {fileID: 0}
+  LastPlacedWaypoint: {fileID: 0}
 --- !u!1001 &1181234484
 PrefabInstance:
   m_ObjectHideFlags: 0

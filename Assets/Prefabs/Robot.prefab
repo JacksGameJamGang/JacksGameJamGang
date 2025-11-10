@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4094225652684714764}
   - component: {fileID: 1847260725279301702}
   - component: {fileID: 7135902950319434645}
-  - component: {fileID: -2892572035043027705}
   - component: {fileID: 7743972842106505682}
   - component: {fileID: 264524353072611293}
   - component: {fileID: 2510343708090932380}
@@ -80,23 +79,6 @@ MonoBehaviour:
   interactableLayers:
     serializedVersion: 2
     m_Bits: 1408
---- !u!114 &-2892572035043027705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4153738946964556514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efbe9a0595d41464c978bb870352b460, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaypointManager
-  WaypointPrefab: {fileID: 8158413708055470778, guid: f69c648392c6bc34f9e0eacb5c4f5214, type: 3}
-  waypointsSpacing: 8
-  waypointLayer:
-    serializedVersion: 2
-    m_Bits: 2048
 --- !u!212 &7743972842106505682
 SpriteRenderer:
   m_ObjectHideFlags: 0

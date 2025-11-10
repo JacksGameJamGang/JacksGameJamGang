@@ -21,13 +21,14 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] private float groundCheckRadius = 0.2f;
 
     public static event Action OnPlayerJump;
+    public static event Action<Collider2D> OnPlayerTouchGround;
 
 	[SerializeField] private Animator animator;
 
     // Stuff to track movement and jumping
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-    private bool isGrounded;
+    public bool isGrounded { get; private set; }
 
     void Awake()
     {
@@ -67,9 +68,6 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsRunning", true);
         else
             animator.SetBool("IsRunning", false);
-
-        UpdateFallSpeed();
-
 	}
     private void Jump()
     {
@@ -81,7 +79,11 @@ public class PlayerController : MonoBehaviour
             OnPlayerJump?.Invoke();
         }
     }
-    private void UpdateFallSpeed()
+    public void DogAiForceJump()
+    {
+		rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+	}
+    public void UpdateFallSpeed()
     {
         if (isGrounded && rb.gravityScale != gravityScaleBase)
         {
@@ -104,12 +106,27 @@ public class PlayerController : MonoBehaviour
     }
 
     //ground
-    public bool TouchingGroundCheck()
+    private bool TouchingGroundCheck()
     {
-		return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        Collider2D touchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        if (!isGrounded && touchingGround)
+			OnPlayerTouchGround?.Invoke(touchingGround);
+
+        return touchingGround;
 	}
-    public LayerMask GetGroundLayerMask()
+    public void DogTouchingGroundCheck()
+    {
+		isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+	}
+	public LayerMask GetGroundLayerMask()
     {
         return groundLayer;
     }
+
+	private void OnDrawGizmos()
+	{
+		Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+	}
 }

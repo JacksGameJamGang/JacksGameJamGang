@@ -74,15 +74,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DogAIController
   followSpeed: 8
-  followDistanceFromIdle: 1.75
-  followDistanceCatchup: 1.5
-  followDistance: 1.25
+  followDistanceFromIdle: 2
+  followDistanceCatchup: 1.75
+  followDistance: 1.5
   followDelay: 0.25
   interactDistance: 2
   interactCanvas: {fileID: 3577955669632844576}
   robotVisibleCheck:
     serializedVersion: 2
     m_Bits: 72
+  waypointPath: []
+  waypointTarget: {fileID: 0}
+  currentState: 0
 --- !u!212 &9022783548604867460
 SpriteRenderer:
   m_ObjectHideFlags: 0

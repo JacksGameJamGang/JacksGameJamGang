@@ -31,8 +31,9 @@ public class SceneManager : Singleton<SceneManager>
         yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
 
         currentActiveSceneName = sceneName;
+		UnityEngine.SceneManagement.SceneManager.SetActiveScene(UnityEngine.SceneManagement.SceneManager.GetSceneByName(sceneName));
 
-        yield return new WaitForSeconds(0.3f);
+		yield return new WaitForSeconds(0.3f);
         yield return GlobalUIManager.Instance.FadeOut(0.5f).WaitForCompletion();
     }
 
@@ -43,9 +44,10 @@ public class SceneManager : Singleton<SceneManager>
 		
         yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
 
-        currentActiveSceneName = sceneName;
-		
-        yield return null; // wait a frame to ensure the scene is fully loaded
+		currentActiveSceneName = sceneName;
+		UnityEngine.SceneManagement.SceneManager.SetActiveScene(UnityEngine.SceneManagement.SceneManager.GetSceneByName(sceneName));
+
+		yield return null; // wait a frame to ensure the scene is fully loaded
     }
 
     public void ReloadScene()

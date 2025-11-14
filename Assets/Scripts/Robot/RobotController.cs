@@ -40,6 +40,8 @@ public class RobotController : MonoBehaviour
 		if (!GameStateManager.IsInPlayableState()) return;
 
 		playerController.UpdateFallSpeed();
+
+		WaypointManager.Instance.UpdateRobotsClosestWaypoint(transform.position);
 		WaypointManager.Instance.BasicWaypointPlacing(transform.position, playerController.isGrounded);
 
 		if (Input.GetKeyDown(interactKey))
@@ -61,8 +63,6 @@ public class RobotController : MonoBehaviour
 
 		if (StandingOnDifferentGroundOrLevel(collider.gameObject))
 		{
-			Debug.LogError("just touched ground check passed");
-
 			objectPlayerStoodOn = collider.gameObject;
 			WaypointManager.Instance.CreateJumpWaypointPair(playerLeftGroundPosition, playerTouchedGroundPosition);
 		}

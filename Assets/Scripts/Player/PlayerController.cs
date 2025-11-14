@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     public static event Action OnPlayerJump;
     public static event Action<Collider2D> OnPlayerTouchGround;
+	public GameObject ObjectStoodOn { get; private set; }
 
 	[SerializeField] private Animator animator;
 
@@ -111,7 +112,10 @@ public class PlayerController : MonoBehaviour
         Collider2D touchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         if (!isGrounded && touchingGround)
+        {
+            ObjectStoodOn = touchingGround.gameObject;
 			OnPlayerTouchGround?.Invoke(touchingGround);
+		}
 
         return touchingGround;
 	}

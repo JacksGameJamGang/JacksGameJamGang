@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 using static Waypoint;
 
 public class WaypointManager : LocalSingleton<WaypointManager>
@@ -11,7 +12,7 @@ public class WaypointManager : LocalSingleton<WaypointManager>
 	[SerializeField] private float waypointsSpacing;
 	[SerializeField] private LayerMask waypointLayer;
 
-	private List<Waypoint> waypoints = new();
+	public List<Waypoint> waypoints = new();
 
 	public Waypoint RobotsClosestWaypoint;
 	public Waypoint DogsClosestWaypoint;
@@ -21,35 +22,25 @@ public class WaypointManager : LocalSingleton<WaypointManager>
 
 	private bool blockBasicWaypointPlacing;
 
-	private void OnDestroy()
-	{
-		UnityEngine.SceneManagement.SceneManager.sceneLoaded -= CleanUpOldWaypoints;
-	}
-	private void Start()
-	{
-		UnityEngine.SceneManagement.SceneManager.sceneLoaded += CleanUpOldWaypoints;
-	}
+	private float robotsClosestWaypointTimer;
+	private float dogsClosestWaypointTimer;
 
-	private void CleanUpOldWaypoints(Scene scene, LoadSceneMode loadSceneMode)
-	{
-		for (int i = waypoints.Count - 1; i > 0; i--)
-			Destroy(waypoints[i].gameObject);
-
-		waypoints.Clear();
-		Debug.LogError("clearing waypoints");
-	}
-
+	/// <summary>
+	/// DYNAMIC WAYPOINT PLACEMENT ISSUE FIXES:
+	/// link start and jump waypoints to other waypoints within waypointsSpacing limit
+	/// define a dictionary for linked waypoints including a ref to said waypoint + a new waypoint link type eg: basic, jump etc...
+	/// 
+	/// manually placing waypoints can work but comes with its own issues, eg: platform types complicate this (they move/dissapear)
+	/// </summary>
+	
 	//waypoint path generation
-	public void GetWaypointPath()
+	public List<Waypoint> GetWaypointPath()
 	{
 		Vector2 dogsPosition = GameManager.Instance.DogController.transform.position;
 		Vector2 robotsPosition = GameManager.Instance.RobotController.transform.position;
 
-		DogsClosestWaypoint = FindClosestWaypoint(dogsPosition);
-		RobotsClosestWaypoint = FindClosestWaypoint(robotsPosition);
-
-		Debug.LogError("(new path) dog pos: " + dogsPosition + " | closeset: " + DogsClosestWaypoint.transform.position);
-		Debug.LogError("(new path) robot pos: " + robotsPosition + " | closest: " + RobotsClosestWaypoint.transform.position);
+		UpdateDogsClosestWaypoint(dogsPosition);
+		UpdateRobotsClosestWaypoint(robotsPosition);
 
 		List<Waypoint> path = FindPathToTargetWaypoint(DogsClosestWaypoint, RobotsClosestWaypoint, true)
 			?? FindPathToTargetWaypoint(DogsClosestWaypoint, RobotsClosestWaypoint, false); //find path by looking at next/previous waypoints
@@ -57,7 +48,7 @@ public class WaypointManager : LocalSingleton<WaypointManager>
 		if (path == null)
 			Debug.LogError("found no path searching forwards and backwards");
 
-		MakeDogFollowWaypoint?.Invoke(path);
+		return path;
 	}
 	private List<Waypoint> FindPathToTargetWaypoint(Waypoint currentWaypoint, Waypoint targetWaypoint, bool searchNext)
 	{
@@ -110,8 +101,6 @@ public class WaypointManager : LocalSingleton<WaypointManager>
 		if (CheckForDuplicateJumpWaypoints(WaypointType.jumpStart, playerLeftGroundPosition, 2f) && 
 			CheckForDuplicateJumpWaypoints(WaypointType.jumpEnd, playerTouchedGroundPosition, 2f)) return; //stop dupe jump points for same jump
 
-		Debug.LogError("duplicate jump waypoints check passed");
-
 		Waypoint previousWaypoint = CreateWaypoint(playerLeftGroundPosition);
 		Waypoint nextWaypoint = CreateWaypoint(playerTouchedGroundPosition);
 
@@ -127,6 +116,50 @@ public class WaypointManager : LocalSingleton<WaypointManager>
 	}
 
 	//update info
+	public void UpdateRobotsClosestWaypoint(Vector2 position)
+	{
+		if (robotsClosestWaypointTimer > 0)
+			robotsClosestWaypointTimer -= Time.deltaTime;
+		else
+		{
+			Waypoint closestWaypoint = null;
+			float closestWaypointDistance = 100;
+
+			foreach (Waypoint waypoint in waypoints)
+			{
+				float waypointDistance = Vector2.Distance(position, waypoint.transform.position);
+				if (waypointDistance > closestWaypointDistance) continue;
+
+				closestWaypoint = waypoint;
+				closestWaypointDistance = waypointDistance;
+			}
+
+			RobotsClosestWaypoint = closestWaypoint;
+			robotsClosestWaypointTimer = 0.5f;
+		}
+	}
+	public void UpdateDogsClosestWaypoint(Vector2 position)
+	{
+		if (dogsClosestWaypointTimer > 0)
+			dogsClosestWaypointTimer -= Time.deltaTime;
+		else
+		{
+			Waypoint closestWaypoint = null;
+			float closestWaypointDistance = 100;
+
+			foreach (Waypoint waypoint in waypoints)
+			{
+				float waypointDistance = Vector2.Distance(position, waypoint.transform.position);
+				if (waypointDistance > closestWaypointDistance) continue;
+
+				closestWaypoint = waypoint;
+				closestWaypointDistance = waypointDistance;
+			}
+
+			DogsClosestWaypoint = closestWaypoint;
+			dogsClosestWaypointTimer = 0.5f;
+		}
+	}
 	private void UpdateInfoOnWaypointCreation(Waypoint newWaypoint)
 	{
 		if (LastPlacedWaypoint != null)
@@ -136,24 +169,6 @@ public class WaypointManager : LocalSingleton<WaypointManager>
 		RobotsClosestWaypoint = newWaypoint;
 		waypoints.Add(newWaypoint);
 		newWaypoint.name = $"Waypoint {waypoints.Count}";
-	}
-	private Waypoint FindClosestWaypoint(Vector2 position)
-	{
-		Collider2D[] hits = Physics2D.OverlapCircleAll(position, waypointsSpacing, waypointLayer);
-		Waypoint closestWaypoint = null;
-		float closestWaypointDistance = 100;
-
-		foreach (Collider2D hit in hits)
-		{
-			//Debug.LogError(hit.name + "for pos: " + position);
-
-			float waypointDistance = Vector2.Distance(position, hit.transform.position);
-			if (waypointDistance > closestWaypointDistance) continue;
-
-			closestWaypoint = hit.GetComponent<Waypoint>();
-			closestWaypointDistance = waypointDistance;
-		}
-		return closestWaypoint;
 	}
 
 	//waypoint checking

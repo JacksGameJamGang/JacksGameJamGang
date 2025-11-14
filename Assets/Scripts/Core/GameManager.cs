@@ -7,7 +7,7 @@ public class GameManager : LocalSingleton<GameManager>
     [SerializeField] private string nextSceneName = "Level_1";
     [SerializeField] private Transform robotController;
     [SerializeField] private Transform dogController;
-    [SerializeField] private Unity.Cinemachine.CinemachineCamera virtualCamera;
+    [SerializeField] private CinemachineCamera virtualCamera;
 
     private Transform currentCharacter;
     

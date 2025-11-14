@@ -3438,7 +3438,9 @@ MonoBehaviour:
   waypointLayer:
     serializedVersion: 2
     m_Bits: 2048
-  ClosestWaypoint: {fileID: 0}
+  waypointParentTransform: {fileID: 0}
+  RobotsClosestWaypoint: {fileID: 0}
+  DogsClosestWaypoint: {fileID: 0}
   LastPlacedWaypoint: {fileID: 0}
 --- !u!1001 &4022359062477813964
 PrefabInstance:

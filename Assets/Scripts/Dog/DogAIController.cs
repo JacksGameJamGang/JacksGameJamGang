@@ -431,7 +431,7 @@ public class DogAIController : MonoBehaviour, IInteractable
 
 		if (currentState == DogAIState.WaypointFollowing)
 		{
-			Gizmos.color = Color.blue;
+			Gizmos.color = Color.red;
 
 			for (int i = 0; i < waypointPath.Count; i++)
 			{

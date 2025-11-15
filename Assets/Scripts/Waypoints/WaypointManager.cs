@@ -24,16 +24,8 @@ public class WaypointManager : LocalSingleton<WaypointManager>
 
 	private float robotsClosestWaypointTimer;
 	private float dogsClosestWaypointTimer;
-
-	/// <summary>
-	/// DYNAMIC WAYPOINT PLACEMENT ISSUE FIXES:
-	/// link start and jump waypoints to other waypoints within waypointsSpacing limit
-	/// define a dictionary for linked waypoints including a ref to said waypoint + a new waypoint link type eg: basic, jump etc...
-	/// 
-	/// manually placing waypoints can work but comes with its own issues, eg: platform types complicate this (they move/dissapear)
-	/// </summary>
 	
-	//waypoint path generation
+	//waypoint pathfinding
 	public List<Waypoint> GetWaypointPath()
 	{
 		Vector2 dogsPosition = GameManager.Instance.DogController.transform.position;
@@ -42,35 +34,67 @@ public class WaypointManager : LocalSingleton<WaypointManager>
 		UpdateDogsClosestWaypoint(dogsPosition);
 		UpdateRobotsClosestWaypoint(robotsPosition);
 
-		List<Waypoint> path = FindPathToTargetWaypoint(DogsClosestWaypoint, RobotsClosestWaypoint, true)
-			?? FindPathToTargetWaypoint(DogsClosestWaypoint, RobotsClosestWaypoint, false); //find path by looking at next/previous waypoints
+		List<Waypoint> path = FindShortestWaypointPath(DogsClosestWaypoint, RobotsClosestWaypoint);
 
 		if (path == null)
 			Debug.LogError("found no path searching forwards and backwards");
 
 		return path;
 	}
-	private List<Waypoint> FindPathToTargetWaypoint(Waypoint currentWaypoint, Waypoint targetWaypoint, bool searchNext)
+	public List<Waypoint> FindShortestWaypointPath(Waypoint currentWaypoint, Waypoint targetWaypoint)
 	{
-		var waypoints = new List<Waypoint>();
-
-		if (currentWaypoint == null)
-			return null; //end of waypoint chain
-
-		waypoints.Add(currentWaypoint);
-
 		if (currentWaypoint == targetWaypoint)
-			return waypoints; //return waypoint path
+			return new List<Waypoint> { currentWaypoint };
 
-		List<Waypoint> nextPath = FindPathToTargetWaypoint(
-			searchNext ? currentWaypoint.GetNextWaypoint() : currentWaypoint.GetPreviousWaypoint(), targetWaypoint, searchNext);
+		//Queue waypoints for pathing BFS, record waypoints found
+		Queue<Waypoint> queue = new Queue<Waypoint>();
+		Dictionary<Waypoint, Waypoint> cameFrom = new Dictionary<Waypoint, Waypoint>();
+		HashSet<Waypoint> visited = new HashSet<Waypoint>();
 
-		if (nextPath != null)
-			waypoints.AddRange(nextPath);
-		else
-			return null; //end of path waypint chain
+		queue.Enqueue(currentWaypoint);
+		visited.Add(currentWaypoint);
 
-		return waypoints;
+		while (queue.Count > 0)
+		{
+			Waypoint current = queue.Dequeue();
+
+			foreach (WaypointLink waypointLink in current.waypointLinks)
+			{
+				Waypoint neighbor = waypointLink.waypoint;
+
+				if (visited.Contains(neighbor))
+					continue;
+
+				//return found path
+				if (neighbor == targetWaypoint)
+				{
+					cameFrom[neighbor] = current;
+					return ReconstructPath(cameFrom, currentWaypoint, targetWaypoint);
+				}
+
+				//add visited waypoints
+				visited.Add(neighbor);
+				cameFrom[neighbor] = current;
+				queue.Enqueue(neighbor);
+			}
+		}
+
+		Debug.LogError("Error found no valid path");
+		return null;
+	}
+	private List<Waypoint> ReconstructPath(Dictionary<Waypoint, Waypoint> cameFrom, Waypoint start, Waypoint goal)
+	{
+		List<Waypoint> path = new List<Waypoint>();
+		Waypoint current = goal;
+
+		while (current != start)
+		{
+			path.Insert(0, current);  // Insert at the front of the list
+			current = cameFrom[current];
+		}
+		path.Insert(0, start);  // Add the start waypoint at the beginning
+
+		return path;
 	}
 
 	//waypoint creation
@@ -79,11 +103,12 @@ public class WaypointManager : LocalSingleton<WaypointManager>
 		if (blockBasicWaypointPlacing) return;
 
 		Waypoint newWaypoint;
+		WaypointLink newWaypointLink = new(LastPlacedWaypoint, WaypointLink.LinkType.basic);
 
 		if (LastPlacedWaypoint == null)
 		{
 			newWaypoint = CreateWaypoint(robotCurrentPos);
-			newWaypoint.InitilizeWaypoint(WaypointType.start, LastPlacedWaypoint, null);
+			newWaypoint.InitilizeWaypoint(WaypointType.start);
 			UpdateInfoOnWaypointCreation(newWaypoint);
 		}
 
@@ -93,22 +118,35 @@ public class WaypointManager : LocalSingleton<WaypointManager>
 		if (CheckSurroundingsForWaypoints(robotCurrentPos, waypointsSpacing)) return;
 
 		newWaypoint = CreateWaypoint(robotCurrentPos);
-		newWaypoint.InitilizeWaypoint(WaypointType.basic, LastPlacedWaypoint, null);
+		newWaypoint.InitilizeWaypoint(WaypointType.basic, LastPlacedWaypoint);
 		UpdateInfoOnWaypointCreation(newWaypoint);
 	}
+	//NEEDS UPDATING TO ADD EXTRA LINKS TO SURROUNDING JUMP WAYPOINTS
 	public void CreateJumpWaypointPair(Vector2 playerLeftGroundPosition, Vector2 playerTouchedGroundPosition)
 	{
-		if (CheckForDuplicateJumpWaypoints(WaypointType.jumpStart, playerLeftGroundPosition, 2f) && 
-			CheckForDuplicateJumpWaypoints(WaypointType.jumpEnd, playerTouchedGroundPosition, 2f)) return; //stop dupe jump points for same jump
+		Waypoint jumpStartWaypoint = CheckForDuplicateJumpWaypoints(WaypointType.jumpStart, playerLeftGroundPosition, 2f);
+		Waypoint jumpEndWaypoint = CheckForDuplicateJumpWaypoints(WaypointType.jumpEnd, playerTouchedGroundPosition, 2f);
 
-		Waypoint previousWaypoint = CreateWaypoint(playerLeftGroundPosition);
-		Waypoint nextWaypoint = CreateWaypoint(playerTouchedGroundPosition);
+		List<Waypoint> jumpStartWaypointsToLink = new();
+		List<Waypoint> jumpEndWaypointsToLink = new();
 
-		previousWaypoint.InitilizeWaypoint(WaypointType.jumpStart, LastPlacedWaypoint, nextWaypoint);
-		nextWaypoint.InitilizeWaypoint(WaypointType.jumpEnd, previousWaypoint, null);
+		if (jumpStartWaypoint == null)
+		{
+			jumpStartWaypoint = CreateWaypoint(playerLeftGroundPosition);
+			jumpStartWaypointsToLink.Add(LastPlacedWaypoint);
+		}
+		if (jumpEndWaypoint == null)
+		{
+			jumpEndWaypoint = CreateWaypoint(playerTouchedGroundPosition);
+			jumpEndWaypointsToLink.Add(jumpStartWaypoint);
+		}
 
-		UpdateInfoOnWaypointCreation(previousWaypoint);
-		UpdateInfoOnWaypointCreation(nextWaypoint);
+		//initilize jump waypoints
+		jumpStartWaypoint.InitilizeWaypoint(WaypointType.jumpStart, jumpStartWaypointsToLink);
+		jumpEndWaypoint.InitilizeWaypoint(WaypointType.jumpEnd, jumpEndWaypointsToLink);
+
+		UpdateInfoOnWaypointCreation(jumpStartWaypoint);
+		UpdateInfoOnWaypointCreation(jumpEndWaypoint);
 	}
 	private Waypoint CreateWaypoint(Vector2 position)
 	{
@@ -162,9 +200,6 @@ public class WaypointManager : LocalSingleton<WaypointManager>
 	}
 	private void UpdateInfoOnWaypointCreation(Waypoint newWaypoint)
 	{
-		if (LastPlacedWaypoint != null)
-			LastPlacedWaypoint.AddNextWaypoint(newWaypoint);
-
 		LastPlacedWaypoint = newWaypoint;
 		RobotsClosestWaypoint = newWaypoint;
 		waypoints.Add(newWaypoint);
@@ -176,7 +211,7 @@ public class WaypointManager : LocalSingleton<WaypointManager>
 	{
 		return Physics2D.OverlapCircle(checkPosition, checkDistance - 1, waypointLayer);
 	}
-	private bool CheckForDuplicateJumpWaypoints(WaypointType waypointType, Vector2 checkPosition, float checkDistance)
+	private Waypoint CheckForDuplicateJumpWaypoints(WaypointType waypointType, Vector2 checkPosition, float checkDistance)
 	{
 		Collider2D[] hits = Physics2D.OverlapCircleAll(checkPosition, checkDistance, waypointLayer);
 
@@ -185,10 +220,10 @@ public class WaypointManager : LocalSingleton<WaypointManager>
 			Waypoint waypoint = hit.GetComponent<Waypoint>();
 
 			if (waypoint.GetWaypointType() == waypointType)
-				return true;
+				return waypoint;
 		}
 
-		return false;
+		return null;
 	}
 
 	//basic waypoint blocking after jumping
